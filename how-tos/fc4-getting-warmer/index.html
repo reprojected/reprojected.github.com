@@ -89,38 +89,38 @@ Z-Pulley Inc. Initial machine &hellip;">
 <time datetime="2007-01-11T22:35:50-08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2007</time></p>
   </header>
   
-  <p>Revised by APR - 01/24/06</p>
+  <pre><code>Revised by APR - 01/24/06
 
-<p>+++++++++++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++++++
-Z-Pulley Inc.</p>
++++++++++++++++++++++++++++++++++++
+Z-Pulley Inc.
 
-<p>Initial machine configuration
-Dell 9300 Laptop</p>
+Initial machine configuration
+Dell 9300 Laptop
 
-<p>Intel Box, 1 Gig main memory
+Intel Box, 1 Gig main memory
 1 - 100 Gig drive
-Redhat Fedora Core 4 + Updates</p>
+Redhat Fedora Core 4 + Updates
 
-<p>+++++++++++++++++++++++++++++++++++
-+++++++++++++++++++++++++++++++++++</p>
++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++
 
-<p>1) First check if what we need is there and make initial clean-up</p>
+1) First check if what we need is there and make initial clean-up
 
-<p>[root@localhost src]# rpm -qa | grep ming
+[root@localhost src]# rpm -qa | grep ming
 mingetty-1.07-5
 [root@localhost src]#
-<strong>Need to get Ming</strong></p>
+**Need to get Ming**
 
-<p>[root@localhost src]# rpm -qa | grep libpng
+[root@localhost src]# rpm -qa | grep libpng
 libpng10-1.0.18-2
 libpng10-devel-1.0.18-2
 libpng-devel-1.2.8-2
 libpng-1.2.8-2
 [root@localhost src]#
-<strong>Libpng is good to go</strong></p>
+**Libpng is good to go**
 
-<p>[root@localhost src]# rpm -qa | grep gd
+[root@localhost src]# rpm -qa | grep gd
 gdk-pixbuf-gnome-0.22.0-18.fc4.2
 gd-2.0.33-2
 gdb-6.3.0.0-1.84
@@ -135,47 +135,46 @@ gdm-2.6.0.8-16
 gd-devel-2.0.33-2
 aspell-gd-0.50-2
 [root@localhost src]#
-<strong>GD is good to go</strong></p>
+**GD is good to go**
 
-<p>*********** Changed on 03/27/06
+*********** Changed on 03/27/06
 Needed to compile GD inorder to get Chameleon running.
-Basically PHP needs to be compiled against a fresh GD with freetype support</p>
+Basically PHP needs to be compiled against a fresh GD with freetype support
+***************************************************************************
 
-<hr />
++++++++++++++++++++++++++++++++++++
 
-<p>+++++++++++++++++++++++++++++++++++</p>
+2) Ming
 
-<p>2) Ming</p>
-
-<p>wget http://easynews.dl.sourceforge.net/sourceforge/ming/ming-0.3beta1.tar.gz
+wget http://easynews.dl.sourceforge.net/sourceforge/ming/ming-0.3beta1.tar.gz
 tar -xzvf ming-0.3beta1.tar.gz
 cd ming-0.3beta1
 make
 make static
 cd php_ext/
 make
-make install</p>
+make install
 
-<p>echo &#8220;Don&#8217;t forget to add &#8216;extension=php_ming.so&#8217; to php.ini!&#8221;</p>
+echo "Don't forget to add 'extension=php_ming.so' to php.ini!"
 
-<p>3) Pdflib</p>
+3) Pdflib
 
-<p>wget http://www.pdflib.com/products/pdflib/download/602src/PDFlib-Lite-6.0.2.tar.gz
+wget http://www.pdflib.com/products/pdflib/download/602src/PDFlib-Lite-6.0.2.tar.gz
 tar -xzvf PDFlib-Lite-6.0.2.tar.gz
 cd PDFlib-Lite-6.0.2
 ./configure
 make
-make install</p>
+make install
 
-<p>&#8212;-Update ldconfig
+----Update ldconfig
 Add /usr/local/lib to /etc/ld.so.conf
-Run : /sbin/ldconfig</p>
+Run : /sbin/ldconfig
 
-<p>+++++++++++++++++++++++++++++++++++</p>
++++++++++++++++++++++++++++++++++++
 
-<p>4) Proj.4</p>
+4) Proj.4
 
-<p>tar -xzvf proj-4.4.9.tar.gz
+tar -xzvf proj-4.4.9.tar.gz
 cd proj-4.4.9
 cd nad/
 ls
@@ -184,13 +183,13 @@ tar -xzvf proj-nad27-1.2.tar.gz
 cd ..
 ./configure
 make
-make install</p>
+make install
 
-<p>+++++++++++++++++++++++++++++++++++</p>
++++++++++++++++++++++++++++++++++++
 
-<p>5) GDAL</p>
+5) GDAL
 
-<p>wget http://www.gdal.org/dl/gdal-1.3.1.tar.gz
+wget http://www.gdal.org/dl/gdal-1.3.1.tar.gz
 mkdir gdal
 cd gdal/
 wget http://gdal.org/dl/gdal-1.3.1.tar.gz
@@ -199,31 +198,30 @@ cd gdal-1.3.1
 ./configure
 make ogr-all
 make install
-which gdalinfo</p>
+which gdalinfo
 
-<p>*********** Changed APR 03/28/06
+*********** Changed APR 03/28/06
 Installed the ECW SDK (do a configure, make and install
-Installed the MrSid SDK (moved to /usr/local)</p>
+Installed the MrSid SDK (moved to /usr/local)
 
-<p>Added ECW, Grass, and MrSid support
-[root@localhost gdal-1.3.1]# ./configure &#8211;with-ecw &#8211;with-grass=/usr/local/grass_602rc4/grass-6.0.2RC4/ &#8211;with-mrsid=/usr/local/GeoExpressSDK/</p>
+Added ECW, Grass, and MrSid support
+[root@localhost gdal-1.3.1]# ./configure --with-ecw --with-grass=/usr/local/grass_602rc4/grass-6.0.2RC4/ --with-mrsid=/usr/local/GeoExpressSDK/
 
-<p>Then, needed to edit the GDALMake.opt file to change:
-&lt; -lxmlparse</p>
+Then, needed to edit the GDALMake.opt file to change:
+&lt; -lxmlparse
+&gt; -lexpat
 
-<blockquote><p>-lexpat</p></blockquote>
-
-<p>Then do the normal:
+Then do the normal:
 make ogr-all
-make install</p>
+make install
 
-<p>+++++++++++++++++++++++++++++++++++</p>
++++++++++++++++++++++++++++++++++++
 
-<p>6) GEOS</p>
+6) GEOS
 
-<p>wget http://geos.refractions.net/geos-2.2.1.tar.bz2
+wget http://geos.refractions.net/geos-2.2.1.tar.bz2
 ls
-tar &#8211;help
+tar --help
 tar -xjvf geos-2.2.1.tar.bz2
 ls
 cd geos-2.2.1
@@ -231,130 +229,127 @@ ls
 ./configure
 more INSTALL
 make
-make install</p>
+make install
 
-<p>+++++++++++++++++++++++++++++++++++</p>
++++++++++++++++++++++++++++++++++++
 
-<p>7) POSTGRESQL</p>
+7) POSTGRESQL
 
-<p>tar -xzvf postgresql-8.1.2.tar.gz
-cd postgresql-8.1.2</p>
+tar -xzvf postgresql-8.1.2.tar.gz
+cd postgresql-8.1.2
 
-<p>NOTE the LDFLAGS here&#8230; this is to support GEOS for postGIS
-LDFLAGS=-lstdc++ ./configure &#8211;with-perl &#8211;prefix=/usr/local/pgsql_8_1_2</p>
+NOTE the LDFLAGS here... this is to support GEOS for postGIS
+LDFLAGS=-lstdc++ ./configure --with-perl --prefix=/usr/local/pgsql_8_1_2
 
-<p>gmake
-gmake install</p>
+gmake
+gmake install
 
-<p>Add the shared library path to /etc/ld.so.conf :
+Add the shared library path to /etc/ld.so.conf :
 /usr/local/pgsql_8_1_2/lib
-Run /sbin/ldconfig</p>
+Run /sbin/ldconfig
 
-<p>Run make install in the ./doc directory to install the documentation</p>
+Run make install in the ./doc directory to install the documentation
 
-<p>Finally add the following to the profile file to make paths available:
+Finally add the following to the profile file to make paths available:
 PATH=$PATH:/usr/local/pgsql/bin
 MANPATH=$MANPATH:/usr/local/pgsql/man
-export MANPATH</p>
+export MANPATH
 
-<p>Add the postgis user
+Add the postgis user
 useradd postgis
-passwd xxxxxxx</p>
+passwd xxxxxxx
 
-<p>There is already a data repository location at:
-/var/lib/pgsql</p>
+There is already a data repository location at:
+/var/lib/pgsql
 
-<p>LOG IN AS POSTGRES!!!
+LOG IN AS POSTGRES!!!
 Make a database and launch Postgres
-Change the directory to the postgis home directory</p>
+Change the directory to the postgis home directory
 
-<p>initdb ./data
-[postgis@localhost pgsql]$ postmaster -D ./data/ > ./data/logfile.txt 2>&amp;1 &amp;
+initdb ./data
+[postgis@localhost pgsql]$ postmaster -D ./data/ &gt; ./data/logfile.txt 2&gt;&amp;1 &amp;
 [1] 18409
 [postgis@localhost pgsql]$
 [postgis@localhost pgsql]$
 [postgis@localhost pgsql]$ psql -l
 List of databases
 Name | Owner | Encoding
-&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;-
+-----------+---------+----------
 postgres | postgis | UTF8
 template0 | postgis | UTF8
 template1 | postgis | UTF8
-(3 rows)</p>
+(3 rows)
 
-<p>[postgis@localhost pgsql]$ createuser xxxxxxx
+[postgis@localhost pgsql]$ createuser xxxxxxx
 Shall the new role be a superuser? (y/n) y
 CREATE ROLE
 [postgis@localhost pgsql]$ which createuser
 /usr/local/pgsql_8_1_2/bin/createuser
-[postgis@localhost pgsql]$</p>
+[postgis@localhost pgsql]$
 
-<p>+++++++++++++++++++++++++++++++++++</p>
++++++++++++++++++++++++++++++++++++
 
-<p>10) POSTGIS</p>
+10) POSTGIS
 
-<p>Just make sure that the Postgresql is configured with the LDFLAGS variable set
-and that the GEOS software is downloaded and installed from Refractions.</p>
+Just make sure that the Postgresql is configured with the LDFLAGS variable set
+and that the GEOS software is downloaded and installed from Refractions.
 
-<p>./configure &#8211;with-proj &#8211;with-geos &#8211;with-pgsql
+./configure --with-proj --with-geos --with-pgsql
 make
-make install</p>
+make install
 
-<p>Now we can create the database:
+Now we can create the database:
 createdb -O xxxxxx test_db
 createlang -U xxxxxx plpgsql test_db
 psql -f /usr/local/pgsql_8_1_2/share/postgresql/contrib/lwpostgis.sql -d test_db
 (if you get an error here it is most likely because you did not do a /sbin/ldconfig after changing
-/etc/ld.so.conf to contain the /usr/local/lib directory.)</p>
+/etc/ld.so.conf to contain the /usr/local/lib directory.)
 
-<p>+++++++++++++++++++++++++++++++++++</p>
++++++++++++++++++++++++++++++++++++
 
-<p>11) PHP</p>
+11) PHP
 
-<h2>./configure &#8211;prefix=/usr/local/php4 &#8211;program-suffix=4 &#8211;enable-force-cgi-redirect &#8211;with-config-file-path=/etc/httpd/ &#8211;with-gd &#8211;with-jpeg &#8211;with-png &#8211;with-tiff &#8211;with-zlib &#8211;with-freetype &#8211;without-ttf &#8211;with-mysql &#8211;with-regex=system &#8211;enable-dbase &#8211;enable-dbx &#8211;enable-versioning &#8211;with-pgsql=/usr/local/pgsql_8_1_2/</h2>
+##./configure --prefix=/usr/local/php4 --program-suffix=4 --enable-force-cgi-redirect --with-config-file-path=/etc/httpd/ --with-gd --with-jpeg --with-png --with-tiff --with-zlib --with-freetype --without-ttf --with-mysql --with-regex=system --enable-dbase --enable-dbx --enable-versioning --with-pgsql=/usr/local/pgsql_8_1_2/
+## Changed 03/27/06 to add new GD with freetype for Chameleon install
+[root@localhost php-4.4.2]# ./configure --prefix=/usr/local/php4 --program-suffix=4 --enable-force-cgi-redirect --with-config-file-path=/etc/httpd/ --with-gd=/usr/local/ --with-jpeg --with-png --with-tiff --with-zlib --with-freetype-dir --without-ttf --with-mysql --with-regex=system --enable-dbase --enable-dbx --enable-versioning --with-pgsql=/usr/local/pgsql_8_1_2/
 
-<h2>Changed 03/27/06 to add new GD with freetype for Chameleon install</h2>
+make
+make install
 
-<p>[root@localhost php-4.4.2]# ./configure &#8211;prefix=/usr/local/php4 &#8211;program-suffix=4 &#8211;enable-force-cgi-redirect &#8211;with-config-file-path=/etc/httpd/ &#8211;with-gd=/usr/local/ &#8211;with-jpeg &#8211;with-png &#8211;with-tiff &#8211;with-zlib &#8211;with-freetype-dir &#8211;without-ttf &#8211;with-mysql &#8211;with-regex=system &#8211;enable-dbase &#8211;enable-dbx &#8211;enable-versioning &#8211;with-pgsql=/usr/local/pgsql_8_1_2/</p>
-
-<p>make
-make install</p>
-
-<p>strip sapi/cgi/php
+strip sapi/cgi/php
 cp sapi/cgi/php /var/www/cgi-bin/php4
-cp php.ini-dist /etc/httpd/php.ini</p>
+cp php.ini-dist /etc/httpd/php.ini
 
-<p>Made the following mod to /etc/httpd/php.ini:
+Made the following mod to /etc/httpd/php.ini:
 ; Directory in which the loadable extensions (modules) reside.
-;extension_dir = &#8220;./&#8221;
-extension_dir = &#8220;/etc/httpd/php_mods&#8221;</p>
+;extension_dir = "./"
+extension_dir = "/etc/httpd/php_mods"
 
-<p>mkdir /etc/httpd/php_mods</p>
+mkdir /etc/httpd/php_mods
 
-<p>Added the following to /etc/httpd/conf/httpd.conf</p>
+Added the following to /etc/httpd/conf/httpd.conf
 
-<p>#</p>
-
-<h1>For PHP scripts as CGI-BIN</h1>
-
-<p>#
+#
+# For PHP scripts as CGI-BIN
+#
 AddType application/x-httpd-php-cgi .php4 .phtml
-Action application/x-httpd-php-cgi /cgi-bin/php4</p>
+Action application/x-httpd-php-cgi /cgi-bin/php4
 
-<p>Now re-start the server:
+Now re-start the server:
 /etc/rc.d/init.d/httpd restart
 Stopping httpd: [ OK ]
-Starting httpd: [ OK ]</p>
+Starting httpd: [ OK ]
 
-<p>+++++++++++++++++++++++++++++++++++</p>
++++++++++++++++++++++++++++++++++++
 
-<p>11) MAPSERVER</p>
+11) MAPSERVER
 
-<p>./configure &#8211;with-jpeg &#8211;with-gd &#8211;with-freetype &#8211;with-zlib &#8211;with-png &#8211;with-pdf &#8211;without-tiff &#8211;with-proj &#8211;with-threads &#8211;with-ogr &#8211;with-gdal &#8211;with-postgis &#8211;with-wfs &#8211;with-wmsclient &#8211;with-wfsclient &#8211;enable-debug &#8211;with-php=/src/php/php-4.4.2</p>
+./configure --with-jpeg --with-gd --with-freetype --with-zlib --with-png --with-pdf --without-tiff --with-proj --with-threads --with-ogr --with-gdal --with-postgis --with-wfs --with-wmsclient --with-wfsclient --enable-debug --with-php=/src/php/php-4.4.2
 
-<p>make
+make
 cp legend mapserv scalebar /var/www/cgi-bin/
-cp mapscript/php3/php_mapscript.so /etc/httpd/php_mods/</p>
+cp mapscript/php3/php_mapscript.so /etc/httpd/php_mods/
+</code></pre>
 
   
     <footer>

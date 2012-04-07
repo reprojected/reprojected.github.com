@@ -9,9 +9,8 @@
   <meta name="author" content="Aaron Racicot">
 
   
-  <meta name="description" content="FC8 Jan 14th, 2008 *** Installs - 01/08/08 - Aaron Racicot **** RPMS FIRST
-* Emacs
-ftp://fr2.rpmfind.net/linux/fedora/updates/8/i386/emacs-common-22 &hellip;">
+  <meta name="description" content="FC8 Jan 14th, 2008 ******************************************************************************
+*** Installs - 01/08/08 - Aaron Racicot &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,101 +88,107 @@ ftp://fr2.rpmfind.net/linux/fedora/updates/8/i386/emacs-common-22 &hellip;">
 <time datetime="2008-01-14T11:12:03-08:00" pubdate data-updated="true">Jan 14<span>th</span>, 2008</time></p>
   </header>
   
-  <hr />
+  <pre><code>******************************************************************************
+*** Installs - 01/08/08 - Aaron Racicot
+******************************************************************************
 
-<p>*** Installs - 01/08/08 - Aaron Racicot</p>
-
-<hr />
-
-<p>**** RPMS FIRST
+**** RPMS FIRST
 * Emacs
-ftp://fr2.rpmfind.net/linux/fedora/updates/8/i386/emacs-common-22.1-8.fc8.i386.rpm</p>
+ftp://fr2.rpmfind.net/linux/fedora/updates/8/i386/emacs-common-22.1-8.fc8.i386.rpm
 
-<p>[root@mymachine RPMS]# rpm -Uvh emacs-common-22.1-8.fc8.i386.rpm
-Preparing&#8230; ########################################### [100%]
+[root@mymachine RPMS]# rpm -Uvh emacs-common-22.1-8.fc8.i386.rpm
+Preparing... ########################################### [100%]
 1:emacs-common ########################################### [100%]ftp://fr2.rpmfind.net/linux/fedora/updates/8/i386/emacs-22.1-8.fc8.i386.rpm
 [root@mymachine RPMS]# rpm -Uvh emacs-22.1-8.fc8.i386.rpm
-Preparing&#8230; ########################################### [100%]
-1:emacs ########################################### [100%]</p>
+Preparing... ########################################### [100%]
+1:emacs ########################################### [100%]
 
-<ul>
-<li><p>Python Dev Tools
+* Python Dev Tools
 ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/x86_64/os/Packages/py
 thon-devel-2.5.1-15.fc8.i386.rpm
 [root@mymachine RPMS]# rpm -Uvh python-devel-2.5.1-15.fc8.i386.rpm
-Preparing&#8230; ########################################### [100%]
-1:python-devel ########################################### [100%]</p></li>
-<li><p>Swig
+Preparing... ########################################### [100%]
+1:python-devel ########################################### [100%]
+
+* Swig
 ftp://fr2.rpmfind.net/linux/fedora/updates/8/i386/swig-1.3.33-1.fc8.i386.rpm
 [root@mymachine RPMS]# rpm -Uvh swig-1.3.33-1.fc8.i386.rpm
-Preparing&#8230; ########################################### [100%]
-1:swig ########################################### [100%]</p></li>
-<li><p>C++ tools
+Preparing... ########################################### [100%]
+1:swig ########################################### [100%]
+
+* C++ tools
 ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/i386/os/Packages/libs
 tdc++-devel-4.1.2-33.i386.rpm
 ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/i386/os/Packages/gcc-
 c++-4.1.2-33.i386.rpm
 [root@mymachine RPMS]# rpm -Uvh libstdc++-devel-4.1.2-33.i386.rpm
-Preparing&#8230; ########################################### [100%]
+Preparing... ########################################### [100%]
 1:libstdc++-devel ########################################### [100%]
 [root@mymachine RPMS]# rpm -Uvh gcc-c++-4.1.2-33.i386.rpm
-Preparing&#8230; ########################################### [100%]
-1:gcc-c++ ########################################### [100%]</p></li>
-<li><p>CURL
+Preparing... ########################################### [100%]
+1:gcc-c++ ########################################### [100%]
+
+* CURL
 ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/i386/os/Packages/libi
 dn-devel-0.6.14-4.i386.rpm
 ftp://fr2.rpmfind.net/linux/fedora/updates/8/i386/curl-devel-7.17.1-1.fc8.i386
 .rpm
 [root@mymachine RPMS]# rpm -Uvh libidn-devel-0.6.14-4.i386.rpm
-Preparing&#8230; ########################################### [100%]
+Preparing... ########################################### [100%]
 1:libidn-devel ########################################### [100%]
 [root@mymachine RPMS]# rpm -Uvh curl-devel-7.17.1-1.fc8.i386.rpm
-Preparing&#8230; ########################################### [100%]
-1:curl-devel ########################################### [100%]</p></li>
-<li><p>Expat
+Preparing... ########################################### [100%]
+1:curl-devel ########################################### [100%]
+
+* Expat
 ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/i386/os/Packages/expa
 t-devel-2.0.1-2.i386.rpm
 [root@mymachine RPMS]# rpm -Uvh expat-devel-2.0.1-2.i386.rpm
-Preparing&#8230; ########################################### [100%]
-1:expat-devel ########################################### [100%]</p></li>
-<li><p>readline-devel
+Preparing... ########################################### [100%]
+1:expat-devel ########################################### [100%]
+
+* readline-devel
 ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
 s/8/Fedora/i386/os/Packages/ncurses-devel-5.6-12.20070812.fc8.i386.rpm
 ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
 s/8/Fedora/i386/os/Packages/readline-devel-5.2-7.fc8.i386.rpm
 [root@mymachine RPMS]# rpm -Uvh ncurses-devel-5.6-12.20070812.fc8.i386.rpm
-Preparing&#8230; ########################################### [100%]
+Preparing... ########################################### [100%]
 1:ncurses-devel ########################################### [100%]
 [root@mymachine RPMS]# rpm -Uvh readline-devel-5.2-7.fc8.i386.rpm
-Preparing&#8230; ########################################### [100
+Preparing... ########################################### [100
 %]
-1:readline-devel ########################################### [100%]</p></li>
-<li><p>flex
+1:readline-devel ########################################### [100%]
+
+* flex
 ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
 s/8/Fedora/i386/os/Packages/flex-2.5.33-11.fc8.i386.rpm
 [root@mymachine RPMS]# rpm -Uvh flex-2.5.33-11.fc8.i386.rpm
-Preparing&#8230; ########################################### [100%]
-1:flex ########################################### [100%]</p></li>
-<li><p>AGG
+Preparing... ########################################### [100%]
+1:flex ########################################### [100%]
+
+* AGG
 ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/i386/os/Packages/agg-
 2.5-4.fc8.i386.rpm
 ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/i386/os/Packages/agg-
 devel-2.5-4.fc8.i386.rpm
 [root@mymachine RPMS]# rpm -Uvh agg-2.5-4.fc8.i386.rpm
-Preparing&#8230; ########################################### [100%]
+Preparing... ########################################### [100%]
 1:agg ########################################### [100%]
 [root@mymachine RPMS]# rpm -Uvh agg-devel-2.5-4.fc8.i386.rpm
-Preparing&#8230; ########################################### [100%]
-1:agg-devel ########################################### [100%]</p></li>
-<li><p>libxml2
+Preparing... ########################################### [100%]
+1:agg-devel ########################################### [100%]
+
+* libxml2
 ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
 s/8/Fedora/i386/os/Packages/libxml2-2.6.30-1.i386.rpm
 ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
 s/8/Fedora/i386/os/Packages/libxml2-devel-2.6.30-1.i386.rpm
 [root@mymachine RPMS]# rpm -Uvh libxml2-devel-2.6.30-1.i386.rpm
-Preparing&#8230; ########################################### [100%]
-1:libxml2-devel ########################################### [100%]</p></li>
-<li><p>openssl-devel
+Preparing... ########################################### [100%]
+1:libxml2-devel ########################################### [100%]
+
+* openssl-devel
 ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
 s/8/Fedora/i386/os/Packages/krb5-devel-1.6.2-9.fc8.i386.rpm
 ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
@@ -199,145 +204,135 @@ ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/updates
 ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/updates
 /8/i386/e2fsprogs-libs-1.40.2-11.fc8.i386.rpm
 [root@mymachine RPMS]# rpm -Uvh libsepol-devel-2.0.15-1.fc8.i386.rpm
-Preparing&#8230; ########################################### [100%]
+Preparing... ########################################### [100%]
 1:libsepol-devel ########################################### [100%]
 [root@mymachine RPMS]# rpm -Uvh libselinux-devel-2.0.43-1.fc8.i386.rpm
-Preparing&#8230; ########################################### [100
+Preparing... ########################################### [100
 %]
 1:libselinux-devel ########################################### [100%]
 [root@mymachine RPMS]# rpm -Uvh keyutils-libs-devel-1.2-2.fc6.i386.rpm
-Preparing&#8230; ########################################### [100%]
+Preparing... ########################################### [100%]
 1:keyutils-libs-devel ########################################### [100%]
 [root@mymachine RPMS]# rpm -Uvh e2fsprogs-devel-1.40.2-11.fc8.i386.rpm
-Preparing&#8230; ########################################### [100%]
+Preparing... ########################################### [100%]
 1:e2fsprogs-devel ########################################### [100%]
 [root@mymachine RPMS]# rpm -Uvh krb5-devel-1.6.2-9.fc8.i386.rpm
-Preparing&#8230; ########################################### [100
+Preparing... ########################################### [100
 %]
 1:krb5-devel ########################################### [100%]
 [root@mymachine RPMS]# rpm -Uvh openssl-devel-0.9.8b-17.fc8.i386.rpm
-Preparing&#8230; ########################################### [100%]
-1:openssl-devel ########################################### [100%]</p></li>
-<li><p>MySQL development libs
+Preparing... ########################################### [100%]
+1:openssl-devel ########################################### [100%]
+
+* MySQL development libs
 ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
 s/8/Everything/i386/os/Packages/mysql-devel-5.0.45-4.fc8.i386.rpm
 [root@mymachine RPMS]# rpm -Uvh mysql-devel-5.0.45-4.fc8.i386.rpm
-Preparing&#8230; ########################################### [100
+Preparing... ########################################### [100
 %]
-1:mysql-devel ########################################### [100%]</p></li>
-</ul>
+1:mysql-devel ########################################### [100%]
 
-
-<p>**** Proj4
+**** Proj4
 ftp://ftp.remotesensing.org/proj/proj-4.6.0.tar.gz
 ftp://ftp.remotesensing.org/proj/proj-datumgrid-1.3.zip
 ./configure
 make
-make install</p>
+make install
 
-<p>**** GEOS
+**** GEOS
 http://geos.refractions.net/downloads/geos-3.0.0.tar.bz2
-./configure &#8211;enable-python
+./configure --enable-python
 make
-make install</p>
+make install
 
-<p>**** GDAL/OGR
+**** GDAL/OGR
 http://download.osgeo.org/gdal/gdal-1.5.0.tar.gz
-./configure &#8211;with-python
+./configure --with-python
 make
-make install</p>
+make install
 
-<p>**** Postgresql
+**** Postgresql
 http://wwwmaster.postgresql.org/redir?setmir=347&amp;typ=h&amp;url=http://ftp7.us.post
-gresql.org/pub/postgresql//source/v8.2.6/postgresql-8.2.6.tar.gz</p>
+gresql.org/pub/postgresql//source/v8.2.6/postgresql-8.2.6.tar.gz
 
-<p>LDFLAGS=-lstdc++ ./configure &#8211;prefix=/usr/local/pgsql_8_2_6
+LDFLAGS=-lstdc++ ./configure --prefix=/usr/local/pgsql_8_2_6
 make
-make install</p>
+make install
 
-<p>Add the shared library path to /etc/ld.so.conf :
+Add the shared library path to /etc/ld.so.conf :
 /usr/local/pgsql_8_2_6/lib
-/usr/local/lib</p>
+/usr/local/lib
 
-<p>Run /sbin/ldconfig</p>
+Run /sbin/ldconfig
 
-<h1>Add postgres system user</h1>
-
-<p>/usr/sbin/useradd postgres
+# Add postgres system user
+/usr/sbin/useradd postgres
 passwd postgres
-(new pass is &#8216;xxxxx&#8217;)</p>
+(new pass is 'xxxxx')
 
-<h1>Setup the database to run</h1>
-
-<p>cd /usr/local/pgsql_8_2_6/
+# Setup the database to run
+cd /usr/local/pgsql_8_2_6/
 mkdir data
 chown postgres data
 su postgres
 ./bin/initdb ./data
-./bin/postmaster -D ./data/ > ./data/logfile.txt 2>&amp;1 &amp;</p>
+./bin/postmaster -D ./data/ &gt; ./data/logfile.txt 2&gt;&amp;1 &amp;
 
-<h1>Create a user</h1>
+# Create a user
+./bin/createuser xxxxxxxx
 
-<p>./bin/createuser xxxxxxxx</p>
+* PostGIS
+http://postgis.refractions.net/download/postgis-1.3.2.tar.gz
 
-<ul>
-<li>PostGIS
-http://postgis.refractions.net/download/postgis-1.3.2.tar.gz</li>
-</ul>
-
-
-<p>./configure &#8211;with-proj &#8211;with-geos &#8211;with-pgsql=/usr/local/pgsql_8_2_6/bin/pg
+./configure --with-proj --with-geos --with-pgsql=/usr/local/pgsql_8_2_6/bin/pg
 _config
 make
-make install</p>
+make install
 
-<h1>As a regular user:</h1>
-
-<p>createdb -O xxxxxxx test_db
+# As a regular user:
+createdb -O xxxxxxx test_db
 createlang -U xxxxxxxx plpgsql test_db
-psql -f /usr/local/pgsql_8_2_6/share/lwpostgis.sql -d test_db</p>
+psql -f /usr/local/pgsql_8_2_6/share/lwpostgis.sql -d test_db
 
-<h1>Test it out&#8230;</h1>
+# Test it out...
+psql test_db
 
-<p>psql test_db</p>
+**** PHP
+./configure --prefix=/usr/local/php525 --program-suffix=525 --enable-force-cgi
+-redirect --with-config-file-path=/etc/httpd/ --with-gd --with-jpeg-dir=/usr/l
+ib --with-png-dir=/usr/lib --with-zlib-dir=/usr/lib --with-freetype-dir --with
+out-ttf --with-mysql --with-regex=system --enable-dbase --with-pgsql=/usr/loca
+l/pgsql_8_2_6/
 
-<p>**** PHP
-./configure &#8211;prefix=/usr/local/php525 &#8211;program-suffix=525 &#8211;enable-force-cgi
--redirect &#8211;with-config-file-path=/etc/httpd/ &#8211;with-gd &#8211;with-jpeg-dir=/usr/l
-ib &#8211;with-png-dir=/usr/lib &#8211;with-zlib-dir=/usr/lib &#8211;with-freetype-dir &#8211;with
-out-ttf &#8211;with-mysql &#8211;with-regex=system &#8211;enable-dbase &#8211;with-pgsql=/usr/loca
-l/pgsql_8_2_6/</p>
-
-<p>make
+make
 make install
 strip sapi/cgi/php-cgi
 cp sapi/cgi/php-cgi /var/www/cgi-bin/php525
-cp php.ini-dist /etc/httpd/php.ini</p>
+cp php.ini-dist /etc/httpd/php.ini
 
-<h1>Add extension_dir = &#8220;/etc/httpd/php_mods&#8221; to php.ini</h1>
+# Add extension_dir = "/etc/httpd/php_mods" to php.ini
 
-<h1>Add the following to httpd conf file</h1>
+# Add the following to httpd conf file
+# Added by APR for purposes of CGI php with mapserver
+AddType application/x-httpd-php-cgi .php5 .phtml
+Action application/x-httpd-php-cgi /cgi-bin/php525
 
-<h1>Added by APR for purposes of CGI php with mapserver</h1>
+Now re-start the server:
+/etc/rc.d/init.d/httpd restart
 
-<p>AddType application/x-httpd-php-cgi .php5 .phtml
-Action application/x-httpd-php-cgi /cgi-bin/php525</p>
+**** Mapserver
+http://download.osgeo.org/mapserver/mapserver-5.0.0.tar.gz
 
-<p>Now re-start the server:
-/etc/rc.d/init.d/httpd restart</p>
+./configure --with-jpeg --with-agg --with-gd --with-freetype --with-zlib --wit
+h-png .without-tiff --with-proj --with-threads --with-ogr --with-gdal --with-g
+eos --with-postgis=/usr/local/pgsql_8_2_6/bin/pg_config --with-wfs --with-wmsc
+lient --with-wfsclient --enable-debug --with-php=/usr/local/src/php/php-5.2.5
 
-<p>**** Mapserver
-http://download.osgeo.org/mapserver/mapserver-5.0.0.tar.gz</p>
+make
 
-<p>./configure &#8211;with-jpeg &#8211;with-agg &#8211;with-gd &#8211;with-freetype &#8211;with-zlib &#8211;wit
-h-png .without-tiff &#8211;with-proj &#8211;with-threads &#8211;with-ogr &#8211;with-gdal &#8211;with-g
-eos &#8211;with-postgis=/usr/local/pgsql_8_2_6/bin/pg_config &#8211;with-wfs &#8211;with-wmsc
-lient &#8211;with-wfsclient &#8211;enable-debug &#8211;with-php=/usr/local/src/php/php-5.2.5</p>
-
-<p>make</p>
-
-<p>cp legend mapserv scalebar /var/www/cgi-bin/
-cp mapscript/php3/php_mapscript.so /etc/httpd/php_mods/</p>
+cp legend mapserv scalebar /var/www/cgi-bin/
+cp mapscript/php3/php_mapscript.so /etc/httpd/php_mods/
+</code></pre>
 
   
     <footer>
