@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: GIS Industry | Reprojected]]></title>
+  <link href="http://reprojected.github.com/blog/categories/gis-industry/atom.xml" rel="self"/>
+  <link href="http://reprojected.github.com/"/>
+  <updated>2012-04-06T22:17:47-07:00</updated>
+  <id>http://reprojected.github.com/</id>
+  <author>
+    <name><![CDATA[Aaron Racicot]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[None]]></title>
+    <link href="http://reprojected.github.com/blog/2007/04/23/45/"/>
+    <updated>2007-04-23T14:12:58-07:00</updated>
+    <id>http://reprojected.github.com/blog/2007/04/23/45</id>
+    <content type="html"><![CDATA[<p><img src="http://www.orurisa.org/graphics/hom_bnnr.gif" alt="URISA" /></p>
+
+<p>Just returned from a week on the road and one of the highlights was <a href="http://www.orurisa.org/events/gisinact/2007event/index.html">GIS in Action</a>, the <a href="http://www.orurisa.org/">Oregon and Southwest Washington URISA</a> annual GIS event.  There were over 300 people on site for 2 days of great talks, workshops and panels.  I was asked again to host one of the Open Source sessions at the conference and we participated on Wednesday.  I presented on the OSGeo, some sample applications of the Open Source GIS technology, and even had a quick online IRC chat with Chris Schmidt of Openlayers in front of the crowd.  We also had <a href="http://www.co.polk.or.us/Central%20Services/GIS.asp">Dean Anderson from Polk County</a> talking about doing open development when confined to a proprietary environment (often the case in government).  He had some great examples of developing Arc based software on SourceForge.  Finally we had <a href="http://staff.osuosl.org/~deborah/">Deborah Bryant</a> from the <a href="http://osuosl.org/">Oregon State University Open Source Lab (OSU OSL)</a> to talk about government uptake of Open Source technology.  She provides great insight to the front lines of getting Open Source accepted in main stream government.  She runs the <a href="http://goscon.org/">GOSCON</a> conference and is a wealth of knowledge on the current state of Open Source in government, big and small.</p>
+
+<p><a href="http://www.reprojected.com/geoblog/presentations/">All of the presentations from our Open Source session are posted in my presentation archive...</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[CUGOS - Cascadia Users of Geospatial Open Source]]></title>
+    <link href="http://reprojected.github.com/blog/2007/03/20/cugos-cascadia-users-of-geospatial-open-source-2/"/>
+    <updated>2007-03-20T13:53:57-07:00</updated>
+    <id>http://reprojected.github.com/blog/2007/03/20/cugos-cascadia-users-of-geospatial-open-source-2</id>
+    <content type="html"><![CDATA[<p>CUGOSians,</p>
+
+<p>Hope all are well.  I just wanted to send out a quick reminder that we will be having our first <a href="http://groups.google.com/group/cugos">CUGOS meeting</a> tomorrow (Wednesday - 03/21/07) at the <a href="http://www.lizardtech.com/company/contact.php">Seattle LizardTech offices</a>.  We will kick things off at 5:30pm and wrap-up by 7pm.  Some of us will most likely grab a beer near by after as well.  Looks to be a great turnout with about 30 new people signed up!</p>
+
+<p>I am really looking forward to meeting everyone and making these meetings a great venue for social interaction and learning for Open Source GIS professionals.  See you all tomorrow!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What a day...]]></title>
+    <link href="http://reprojected.github.com/blog/2007/02/15/what-a-day/"/>
+    <updated>2007-02-15T10:05:25-08:00</updated>
+    <id>http://reprojected.github.com/blog/2007/02/15/what-a-day</id>
+    <content type="html"><![CDATA[<p>A little "trip report" from Whidbey Island!</p>
+
+<p>Yesterday I ventured off the Island in the afternoon for a whirl  wind tour of Seattle events.</p>
+
+<p>1) Met with some folks from <a href="http://www.lizardtech.com/">LizardTech</a>, a GIS shop in Seattle  who has been in the imagery/compression business for a  long time and is really trying to re-define their  business around what is happening in the GIS industry as a whole.</p>
+
+<p><img src="http://www.lizardtech.com/images/global/header_left.gif" alt="LizardTech" /></p>
+
+<p>They are now an Associate Sponsor of the <a href="https://www.osgeo.org/">OSGeo (Open Source  Geospatial</a><a href="https://www.osgeo.org/"> </a><a href="https://www.osgeo.org/">Foundation)</a> and very actively engaging parts  of their business in the OS paradigm.  Very  cool office downtown and some great Northwest contacts.</p>
+
+<p>2) <a href="http://www.biothinking.com/greendrinks/index.php?country=USA&amp;city=Seattle">Seattle Green Drinks</a>.</p>
+
+<p><img src="http://www.iamsamcampaign.org/downloads/exterior_park_and_pavilion_smaller.jpg" alt="SAM" />A group of us hit this event at the new <a href="http://wwwseattleartmuseum.org/visit/OSP/default.asp">Seattle Art Museum  waterfront</a><a href="http://wwwseattleartmuseum.org/visit/OSP/default.asp"> </a><a href="http://wwwseattleartmuseum.org/visit/OSP/default.asp">sculpture garden</a> and had a great time.  Defiantly worth seeing the 60  foot nurse log... on display as a "living" piece of  art.  Probably one of the largest and most active Enviro  social events I have been to.  300+ people all bumping into each other with free beer and wine... great stuff.  With my tour guides  from <a href="http://www.umbrellaconsulting.com/">Umbrella Consulting</a> I got a very good introduction to many of the  organizations based out of Seattle including OneNW (<a href="http://www.onenw.org/">http://www.onenw.org/</a>), Grist (<a href="http://www.grist.org/">http://www.grist.org/</a>), Cascade  Agenda (<a href="http://www.cascadeagenda.org/">http://www.cascadeagenda.org/</a>),  and many more.  Awesome event and will hopefully be a  monthly thing for me.</p>
+
+<p>3) <a href="http://igniteseattle.com/">Ignite Seattle</a>.</p>
+
+<p><img src="http://www.reprojected.com/images/general/Ignite.jpg" alt="Ignite" />Wow... you  have never seen so many hackers, geeks, and crazy people  in one room... it was good to feel welcome!  8pm until almost midnight of straight  through 5-minute talks... about 22 of them from every topic including new technology out of the Google and Microsoft labs to building a  multi-person pogo stick for Burning Man!  Crazy stuff,  high energy event which is gaining in popularity (now  sponsored by <a href="http://www.google.com/">Google</a> and <a href="http://www.oreilly.com/">O'Reilly</a>).  Again, every couple  of months and a great connection to the roots of the OS and hacker  community in Seattle.  I do hope it does not get taken over by the corporate mongers (I hope you are listening O'Reilly!)</p>
+
+<p>2am arrival back home has not done great things for productivity, but all in all one of the most productive  days I have spent in the community.</p>
+]]></content>
+  </entry>
+  
+</feed>

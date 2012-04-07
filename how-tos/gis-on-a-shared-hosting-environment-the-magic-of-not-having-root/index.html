@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Shared host - Reprojected</title>
+  <meta name="author" content="Aaron Racicot">
+
+  
+  <meta name="description" content="Shared Host Aug 11th, 2006 +++++++++++++++++++++++++++++++++++
+Aaron Racicot Z-Pulley Inc.
+reprojected.com/org/net Host - Dreamhost
+Shared Hosting &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://reprojected.github.com/how-tos/gis-on-a-shared-hosting-environment-the-magic-of-not-having-root">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Reprojected" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Reprojected</a></h1>
+  
+    <h2>A warped look at spatial...</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:reprojected.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Shared Host</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-08-11T13:16:29-07:00" pubdate data-updated="true">Aug 11<span>th</span>, 2006</time></p>
+  </header>
+  
+  <p>+++++++++++++++++++++++++++++++++++
+Aaron Racicot</p>
+
+<p>Z-Pulley Inc.
+reprojected.com/org/net</p>
+
+<p>Host - Dreamhost
+Shared Hosting environment (no root access)
+Debian based</p>
+
+<p>20 GIG Storage
+1 Terabyte/month Transfer
+The idea is to create a local build area that is completly independent and will not require root access. All applications are installed into that local area through the use of the &#8211;prefix option at config time.
+The use of RPATH in many instances gets around the need to modify the LD_CONFIG_PATH (or /etc/ld.so.config and /sbin/ldconfig)</p>
+
+<p>Start by creating a build environment under the home directory of the shared host:</p>
+
+<p><code>/home/racicot/usr
+/home/racicot/usr/local
+/home/racicot/etc
+/home/racicot/etc/httpd
+/home/racicot/var
+/home/racicot/var/www
+/home/racicot/var/www/cgi-bin</code></p>
+
+<p>Next we start marching through all the installs&#8230;</p>
+
+<p>1) Ming (optional)</p>
+
+<p><code>cd ming-0.3.0
+./configure --prefix=/home/racicot/usr/local
+make
+make install
+</code>
+**Don&#8217;t forget to add &#8216;extension=php_ming.so&#8217; to php.ini!</p>
+
+<p>2) Pdflib (optional)</p>
+
+<p><code>cd PDFlib-Lite-6.0.3
+./configure --prefix=/home/racicot/usr/local
+make
+make install</code></p>
+
+<p>3) Proj.4</p>
+
+<p><code>cd proj-4.4.9
+cd nad/
+cp ../../proj-datumgrid-1.3.zip .
+unzip proj-datumgrid-1.3.zip
+cd ..
+./configure --prefix=/home/racicot/usr/local
+make
+make install</code>
+   </p>
+
+<p>4) GDAL</p>
+
+<p><code>cd gdal-1.3.1
+./configure --prefix=/home/racicot/usr/local --with-static-proj4=/home/racicot/usr/local/lib --with-local=/home/racicot/usr/local
+make ogr-all
+make install</code></p>
+
+<p>5) GEOS</p>
+
+<p><code>cd geos-2.2.1
+./configure --prefix=/home/racicot/usr/local
+make
+make install</code></p>
+
+<p>6) READLINE</p>
+
+<p><code>cd readline-5.1
+./configure --prefix=home/racicot/usr/local
+make
+make install</code></p>
+
+<p>7) POSTGRESQL</p>
+
+<p>NOTE the LDFLAGS here&#8230; this is to support GEOS for postGIS
+<code>setenv LDFLAGS -lstdc++
+./configure --prefix=/home/racicot/usr/local --with-libs=/home/racicot/usr/local/lib --with-includes=/home/racicot/usr/local/include</code></p>
+
+<h6>######### Had to change the sockets file location to keep the</h6>
+
+<h6>######### reaper from getting the file in /tmp</h6>
+
+<p>edit ~/usr/local/src/postgresql/postgresql-8.1.4/src/include/pg_config_manual.h
+&lt; #define DEFAULT_PGSOCKET_DIR &#8220;/tmp&#8221;</p>
+
+<blockquote><h1>define DEFAULT_PGSOCKET_DIR &#8220;/home/racicot/tmp&#8221;</h1>
+
+<p>rebuild&#8230;.</p>
+
+<h6>#</h6></blockquote>
+
+<p><code>make
+make install</code></p>
+
+<p>Run make install in the ./doc directory to install the documentation</p>
+
+<p><code>../usr/local/bin/initdb -D /home/racicot/postgresql_data
+../usr/local/bin/pg_ctl -D /home/racicot/postgresql_data -l logfile start</code></p>
+
+<p>Finally add the following to the .cshrc profile file to make paths available:
+setenv PATH ${PATH}:/home/racicot/usr/local/bin</p>
+
+<p>Add the postgres user
+useradd postgres
+passwd xxxxxx
+Execute psql -l to verify the database is running.
+List of databases
+Name | Owner | Encoding
+&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;-
+postgres | postgis | UTF8
+template0 | postgis | UTF8
+template1 | postgis | UTF8
+(3 rows)</p>
+
+<p>Create a new postgres user:</p>
+
+<p><code>[postgis@localhost pgsql]$ createuser aaronr
+Shall the new role be a superuser? (y/n) y
+CREATE ROLE</code></p>
+
+<p>8) POSTGIS</p>
+
+<p>Just make sure that the Postgresql is configured with the LDFLAGS variable set
+and that the GEOS software is downloaded and installed from Refractions.</p>
+
+<p><code>./configure --prefix=/home/racicot/usr/local --with-pgsql=/home/racicot/usr/local/bin/pg_config --with-proj=/home/racicot/usr/local --with-geos=/home/racicot/usr/local/bin/geos-config
+make
+make install</code></p>
+
+<p>Now we can create the database:
+<code>createdb -O aaronr test_db
+createlang -U aaronr plpgsql test_db
+psql -f /home/racicot/usr/local/share/lwpostgis.sql -d test_db</code></p>
+
+<p>9) PHP</p>
+
+<p><code>./configure --prefix=/home/racicot/usr/local --enable-force-cgi-redirect --with-gd --with-jpeg-dir=/usr/lib --with-png-dir=/usr/lib --with-tiff-dir=/usr/lib --with-zlib-dir=/usr/lib --with-freetype-dir --without-ttf --with-mysql --with-regex=system --enable-dbase --enable-dbx --enable-versioning --with-config-file-path=/home/racicot/etc/httpd/</code></p>
+
+<p><code>make
+make install</code></p>
+
+<p><code>strip sapi/cgi/php
+cp sapi/cgi/php /home/racicot/var/www/cgi-bin/php.cgi
+cp php.ini-dist /home/racicot/etc/httpd/php.ini</code></p>
+
+<p>Made the following mod to /etc/httpd/php.ini:
+; Directory in which the loadable extensions (modules) reside.
+;extension_dir = &#8220;./&#8221;
+extension_dir = &#8220;/home/racicot/etc/httpd/php_mods&#8221;</p>
+
+<p>mkdir /home/racicot/etc/httpd/php_mods</p>
+
+<p>Added the following to the .htaccess</p>
+
+<p>AddType application/x-httpd-php-cgi .php .phtml
+Action application/x-httpd-php-cgi /cgi-bin/php.cgi</p>
+
+<p>10) MAPSERVER</p>
+
+<p>Had to change the following to get php_mapscript to statically get the library
+path for gdal. This is done in the makefile in the php directory:</p>
+
+<p>RUNPATHS= -Wl,-rpath,/home/racicot/gis/proj4/proj-4.4.9/src/.libs -Wl,-rpath,/home/racicot/gis/mapserver/mapserver-4.8.3</p>
+
+<p>To:</p>
+
+<p>RUNPATHS= -Wl,-rpath,/home/racicot/usr/local/lib -Wl,-rpath,/home/racicot/usr/local/src/proj4/proj-4.4.9/src/.libs -Wl,-rpath,/home/racicot/usr/local/src/mapserver/mapserver-4.8.3</p>
+
+<p>Now configure and build&#8230;</p>
+
+<p><code>./configure --with-jpeg --with-gd --with-freetype --with-zlib --with-png --with-pdf=/home/racicot/usr/local --without-tiff --with-proj=/home/racicot/usr/local --with-threads --with-ogr=/home/racicot/usr/local/bin --with-gdal=/home/racicot/usr/local/bin/gdal-config --enable-debug --with-php=/home/racicot/usr/local/src/php/php-4.4.2 --enable-runpath</code></p>
+
+<p><code>make
+cp legend mapserv scalebar /var/www/cgi-bin/
+cp mapscript/php3/php_mapscript.so /etc/httpd/php_mods/</code></p>
+
+<p>11) libtiff</p>
+
+<p><code>wget ftp://ftp.remotesensing.org/pub/libtiff/tiff-3.8.2.tar.gz
+tar -xzvf tiff-3.8.2.tar.gz
+./configure --prefix=home/racicot/usr/local
+make
+make install</code></p>
+
+<p>12) TCL/TK
+<code>wget http://superb-west.dl.sourceforge.net/sourceforge/tcl/tcl8.4.13-src.tar.gz
+wget http://superb-west.dl.sourceforge.net/sourceforge/tcl/tk8.4.13-src.tar.gz</code></p>
+
+<p><code>cd ~/usr/local/src/tcltk/tcl8.4.13/unix
+./configure --prefix=/home/racicot/usr/local
+make
+make install</code></p>
+
+<p><code>cd ~/usr/local/src/tcltk/tk8.4.13/unix
+./configure --prefix=/home/racicot/usr/local --with-tcl=/home/racicot/usr/local/src/tcltk/tcl8.4.13/unix
+make
+make install</code></p>
+
+<p>13) FFTW</p>
+
+<p><code>wget http://www.fftw.org/fftw-3.1.1.tar.gz</code></p>
+
+<p><code>cd fftw-3.1.1
+./configure --prefix=/home/racicot/usr/local
+make
+make install</code></p>
+
+<p>14) GRASS</p>
+
+<p><code>./configure --prefix=/home/racicot/usr/local --with-gdal=/home/racicot/usr/local/bin/gdal-config --with-postgres-includes=/home/racicot/usr/local/include --with-postgres-libs=/home/racicot/usr/local/lib --with-includes=/home/racicot/usr/local/include --with-libs=/home/racicot/usr/local/lib --with-proj-share=/home/racicot/usr/local/share/proj --without-opengl</code></p>
+
+<p>I then made a change to the makefile to statically add the lib path
+so I would not have to update LD_LIBRARY_PATH</p>
+
+<p>emacs include/Make/Platform.make</p>
+
+<p>Added &#8220;-Wl,-rpath,/home/racicot/usr/local/lib&#8221; to both the CC and LD SEARCH_FLAGS</p>
+
+<p>CC_SEARCH_FLAGS = -Wl,-rpath-link,${LIB_RUNTIME_DIR} -Wl,-rpath,/home/racicot/usr/local/lib
+LD_SEARCH_FLAGS = -Wl,-rpath-link,${LIB_RUNTIME_DIR} -Wl,-rpath,/home/racicot/usr/local/lib</p>
+
+<p><code>make
+make install</code></p>
+
+<p>15) GMT</p>
+
+<p>Make a GMTParams.txt file
+run install_gmt shell script</p>
+
+<p>Needed to re-run:
+<code>make install install-suppl clean
+make install-data
+make install-man
+make install-www</code></p>
+
+<p>Make sure to point all of the GMT directories in the param file to the local user area&#8230;</p>
+
+<p>Well&#8230; that is it. Mapserver, GMT, and command line GRASS all installed and working!</p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+  
+    <footer>
+      <p class="meta">
+        
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-08-11T13:16:29-07:00" pubdate data-updated="true">Aug 11<span>th</span>, 2006</time>
+        
+      </p>
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://reprojected.github.com/how-tos/gis-on-a-shared-hosting-environment-the-magic-of-not-having-root/index.html" data-via="reprojected" data-counturl="http://reprojected.github.com/how-tos/gis-on-a-shared-hosting-environment-the-magic-of-not-having-root/index.html" >Tweet</a>
+  
+  
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2009/02/17/mirrormap/">MirrorMap</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/10/tidal-power-dss/">Tidal Power DSS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/09/refmap-webkit-in-pyqt/">RefMap - WebKit in PyQt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/06/debugging-qgis-plugins/">Debugging QGIS Plugins...</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/05/back-in-the-saddle/">Back in the saddle...</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/aaronr">@aaronr</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'aaronr',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("reprojected", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/reprojected" class="twitter-follow-button" data-show-count="false">Follow @reprojected</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Aaron Racicot -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

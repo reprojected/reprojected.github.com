@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Getting QGIS to install on windows AND support Python apps... - Reprojected</title>
+  <meta name="author" content="Aaron Racicot">
+
+  
+  <meta name="description" content="So here are the simple (kind of) steps as of today to get a windows install of QGIS working that supports PyQt and the python bindings to QGIS&#8230 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://reprojected.github.com/blog/2007/10/11/getting-qgis-to-install-on-windows-and-support-python-apps">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Reprojected" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Reprojected</a></h1>
+  
+    <h2>A warped look at spatial...</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:reprojected.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Getting QGIS to Install on Windows and Support Python Apps...</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-10-11T09:55:56-07:00" pubdate data-updated="true">Oct 11<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>So here are the simple (kind of) steps as of today to get a windows install of QGIS working that supports PyQt and the python bindings to QGIS&#8230; all with out having to compile anything:</p>
+
+<p>1) Make sure you have Python 2.5 or newer installed on your machine&#8230; if you don&#8217;t have it you can download it from <a href="http://www.python.org/ftp/python/2.5.1/python-2.5.1.msi">HERE</a> (official) or <a href="http://www.reprojected.com/qgis_dev/dev_files/qt4.3.1_based/Python/python-2.5.1.msi">HERE</a> (my archive).</p>
+
+<p>2) Install PyQt4.3.1 from <a href="http://www.riverbankcomputing.com/Downloads/PyQt4/GPL/PyQt-Py2.5-gpl-4.3.1-1.exe">HERE</a> (official) or <a href="http://www.reprojected.com/qgis_dev/dev_files/qt4.3.1_based/PyQt/PyQt-Py2.5-gpl-4.3.1-1.exe">HERE</a> (my archive)</p>
+
+<p>3) Download and unpack <a href="http://www.reprojected.com/qgis_dev/dev_files/qt4.3.1_based/PyQt/PyQt4.zip">THIS</a> zip file.  Copy the PyQt4 directory unpacked from the zip into your Python 2.5 site-packages directory.  Make sure to save the old PyQt4 directory in the site-packages by renaming it in case something goes wrong!</p>
+
+<p>4) Download and install QGIS from <a href="http://www.reprojected.com/qgis_dev/dev_files/qt4.3.1_based/QGIS/qgis_setup0.9.0.11_10_2007.exe">HERE</a> (my archive).  This is the latest release candidate from what_nick that is based on the Qt4.3.1 series.</p>
+
+<p>5) In the QGIS install there are some GRASS documentation files that are missing and can cause warning dialogs to pop up when using the GRASS toolbox.  You can unzip the contents of <a href="http://www.reprojected.com/qgis_dev/dev_files/qt4.3.1_based/QGIS/qgis0.9_grass_docs.zip">THIS</a> archive into the QGISDIR\grass\docs\html directory to stop the warnings.</p>
+
+<p>You can still follow the instructions <a href="http://wiki.qgis.org/qgiswiki/BuildingFromSource">HERE</a> to build QGIS yourself and play to your hearts content, but I know that there are many windows users out there that really would just like to get moving without the hassle of compiling.  This post is for you.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Aaron Racicot</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-10-11T09:55:56-07:00" pubdate data-updated="true">Oct 11<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/gis-tool-install/'>GIS Tool Install</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://reprojected.github.com/blog/2007/10/11/getting-qgis-to-install-on-windows-and-support-python-apps/" data-via="reprojected" data-counturl="http://reprojected.github.com/blog/2007/10/11/getting-qgis-to-install-on-windows-and-support-python-apps/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2007/10/02/foss4g-2007-back-home/" title="Previous Post: FOSS4G 2007... Back home">&laquo; FOSS4G 2007... Back home</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2007/12/19/the-new-eee/" title="Next Post: The new eee....">The new eee.... &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2009/02/17/mirrormap/">MirrorMap</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/10/tidal-power-dss/">Tidal Power DSS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/09/refmap-webkit-in-pyqt/">RefMap - WebKit in PyQt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/06/debugging-qgis-plugins/">Debugging QGIS Plugins...</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/05/back-in-the-saddle/">Back in the saddle...</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/aaronr">@aaronr</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'aaronr',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("reprojected", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/reprojected" class="twitter-follow-button" data-show-count="false">Follow @reprojected</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Aaron Racicot -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

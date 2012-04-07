@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: GIS Projects Personal | Reprojected]]></title>
+  <link href="http://reprojected.github.com/blog/categories/gis-projects-personal/atom.xml" rel="self"/>
+  <link href="http://reprojected.github.com/"/>
+  <updated>2012-04-06T22:17:47-07:00</updated>
+  <id>http://reprojected.github.com/</id>
+  <author>
+    <name><![CDATA[Aaron Racicot]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[FREE web hosting for non-profits]]></title>
+    <link href="http://reprojected.github.com/blog/2006/12/09/free-web-hosting-for-non-profits/"/>
+    <updated>2006-12-09T00:37:28-08:00</updated>
+    <id>http://reprojected.github.com/blog/2006/12/09/free-web-hosting-for-non-profits</id>
+    <content type="html"><![CDATA[<p>Man you cant get any better than this:</p>
+
+<p><a href="http://wiki.dreamhost.com/index.php/Non-profit_Discount">http://wiki.dreamhost.com/index.php/Non-profit_Discount</a></p>
+
+<p>We at <a href="http://www.ecotrust.org/">Ecotrust</a> just signed up... can't beat 1/2 terabyte of storage and 5 terabytes of bandwidth... FREE!</p>
+
+<p>This personal blog is hosted there as well under my personal account, but if you are a non-profit interested in playing with Mapserver/PostGIS/GMT/GRASS you can check out <a href="http://www.reprojected.com/geoblog/how-tos/gis-on-a-shared-hosting-environment-the-magic-of-not-having-root/">my post</a> on installation in this environment to get up and running with web mapping... FOR FREE!!!</p>
+
+<p>Enjoy</p>
+
+<p>UPDATE (12/09/06): For those who are not in the non-profit world but are still interested in Dreamhost for cheap hosting I just created a promo code that gives the FULL $97 discount to you… Nothing to me.  Dreamhost works on this crazy "reward" system for getting people to use you as a referal, offering a finders fee to the current customer.  I have created this code to apply all of the finders fee to your discount... I get NOTHING.  It is <strong>ZPULLEYFULL </strong>, enjoy!</p>
+]]></content>
+  </entry>
+  
+</feed>

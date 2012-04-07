@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>FC8 - Reprojected</title>
+  <meta name="author" content="Aaron Racicot">
+
+  
+  <meta name="description" content="FC8 Jan 14th, 2008 *** Installs - 01/08/08 - Aaron Racicot **** RPMS FIRST
+* Emacs
+ftp://fr2.rpmfind.net/linux/fedora/updates/8/i386/emacs-common-22 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://reprojected.github.com/how-tos/fc8-oh-why-am-i-installing-on-fedora">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Reprojected" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Reprojected</a></h1>
+  
+    <h2>A warped look at spatial...</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:reprojected.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">FC8</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-14T11:12:03-08:00" pubdate data-updated="true">Jan 14<span>th</span>, 2008</time></p>
+  </header>
+  
+  <hr />
+
+<p>*** Installs - 01/08/08 - Aaron Racicot</p>
+
+<hr />
+
+<p>**** RPMS FIRST
+* Emacs
+ftp://fr2.rpmfind.net/linux/fedora/updates/8/i386/emacs-common-22.1-8.fc8.i386.rpm</p>
+
+<p>[root@mymachine RPMS]# rpm -Uvh emacs-common-22.1-8.fc8.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:emacs-common ########################################### [100%]ftp://fr2.rpmfind.net/linux/fedora/updates/8/i386/emacs-22.1-8.fc8.i386.rpm
+[root@mymachine RPMS]# rpm -Uvh emacs-22.1-8.fc8.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:emacs ########################################### [100%]</p>
+
+<ul>
+<li><p>Python Dev Tools
+ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/x86_64/os/Packages/py
+thon-devel-2.5.1-15.fc8.i386.rpm
+[root@mymachine RPMS]# rpm -Uvh python-devel-2.5.1-15.fc8.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:python-devel ########################################### [100%]</p></li>
+<li><p>Swig
+ftp://fr2.rpmfind.net/linux/fedora/updates/8/i386/swig-1.3.33-1.fc8.i386.rpm
+[root@mymachine RPMS]# rpm -Uvh swig-1.3.33-1.fc8.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:swig ########################################### [100%]</p></li>
+<li><p>C++ tools
+ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/i386/os/Packages/libs
+tdc++-devel-4.1.2-33.i386.rpm
+ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/i386/os/Packages/gcc-
+c++-4.1.2-33.i386.rpm
+[root@mymachine RPMS]# rpm -Uvh libstdc++-devel-4.1.2-33.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:libstdc++-devel ########################################### [100%]
+[root@mymachine RPMS]# rpm -Uvh gcc-c++-4.1.2-33.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:gcc-c++ ########################################### [100%]</p></li>
+<li><p>CURL
+ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/i386/os/Packages/libi
+dn-devel-0.6.14-4.i386.rpm
+ftp://fr2.rpmfind.net/linux/fedora/updates/8/i386/curl-devel-7.17.1-1.fc8.i386
+.rpm
+[root@mymachine RPMS]# rpm -Uvh libidn-devel-0.6.14-4.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:libidn-devel ########################################### [100%]
+[root@mymachine RPMS]# rpm -Uvh curl-devel-7.17.1-1.fc8.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:curl-devel ########################################### [100%]</p></li>
+<li><p>Expat
+ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/i386/os/Packages/expa
+t-devel-2.0.1-2.i386.rpm
+[root@mymachine RPMS]# rpm -Uvh expat-devel-2.0.1-2.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:expat-devel ########################################### [100%]</p></li>
+<li><p>readline-devel
+ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
+s/8/Fedora/i386/os/Packages/ncurses-devel-5.6-12.20070812.fc8.i386.rpm
+ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
+s/8/Fedora/i386/os/Packages/readline-devel-5.2-7.fc8.i386.rpm
+[root@mymachine RPMS]# rpm -Uvh ncurses-devel-5.6-12.20070812.fc8.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:ncurses-devel ########################################### [100%]
+[root@mymachine RPMS]# rpm -Uvh readline-devel-5.2-7.fc8.i386.rpm
+Preparing&#8230; ########################################### [100
+%]
+1:readline-devel ########################################### [100%]</p></li>
+<li><p>flex
+ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
+s/8/Fedora/i386/os/Packages/flex-2.5.33-11.fc8.i386.rpm
+[root@mymachine RPMS]# rpm -Uvh flex-2.5.33-11.fc8.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:flex ########################################### [100%]</p></li>
+<li><p>AGG
+ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/i386/os/Packages/agg-
+2.5-4.fc8.i386.rpm
+ftp://fr2.rpmfind.net/linux/fedora/releases/8/Everything/i386/os/Packages/agg-
+devel-2.5-4.fc8.i386.rpm
+[root@mymachine RPMS]# rpm -Uvh agg-2.5-4.fc8.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:agg ########################################### [100%]
+[root@mymachine RPMS]# rpm -Uvh agg-devel-2.5-4.fc8.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:agg-devel ########################################### [100%]</p></li>
+<li><p>libxml2
+ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
+s/8/Fedora/i386/os/Packages/libxml2-2.6.30-1.i386.rpm
+ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
+s/8/Fedora/i386/os/Packages/libxml2-devel-2.6.30-1.i386.rpm
+[root@mymachine RPMS]# rpm -Uvh libxml2-devel-2.6.30-1.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:libxml2-devel ########################################### [100%]</p></li>
+<li><p>openssl-devel
+ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
+s/8/Fedora/i386/os/Packages/krb5-devel-1.6.2-9.fc8.i386.rpm
+ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
+s/8/Fedora/i386/os/Packages/openssl-devel-0.9.8b-17.fc8.i386.rpm
+ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
+s/8/Fedora/i386/os/Packages/e2fsprogs-devel-1.40.2-11.fc8.i386.rpm
+ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
+s/8/Fedora/i386/os/Packages/keyutils-libs-devel-1.2-2.fc6.i386.rpm
+ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/updates
+/8/i386/libselinux-devel-2.0.43-1.fc8.i386.rpm
+ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/updates
+/8/i386/libsepol-devel-2.0.15-1.fc8.i386.rpm
+ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/updates
+/8/i386/e2fsprogs-libs-1.40.2-11.fc8.i386.rpm
+[root@mymachine RPMS]# rpm -Uvh libsepol-devel-2.0.15-1.fc8.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:libsepol-devel ########################################### [100%]
+[root@mymachine RPMS]# rpm -Uvh libselinux-devel-2.0.43-1.fc8.i386.rpm
+Preparing&#8230; ########################################### [100
+%]
+1:libselinux-devel ########################################### [100%]
+[root@mymachine RPMS]# rpm -Uvh keyutils-libs-devel-1.2-2.fc6.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:keyutils-libs-devel ########################################### [100%]
+[root@mymachine RPMS]# rpm -Uvh e2fsprogs-devel-1.40.2-11.fc8.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:e2fsprogs-devel ########################################### [100%]
+[root@mymachine RPMS]# rpm -Uvh krb5-devel-1.6.2-9.fc8.i386.rpm
+Preparing&#8230; ########################################### [100
+%]
+1:krb5-devel ########################################### [100%]
+[root@mymachine RPMS]# rpm -Uvh openssl-devel-0.9.8b-17.fc8.i386.rpm
+Preparing&#8230; ########################################### [100%]
+1:openssl-devel ########################################### [100%]</p></li>
+<li><p>MySQL development libs
+ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/release
+s/8/Everything/i386/os/Packages/mysql-devel-5.0.45-4.fc8.i386.rpm
+[root@mymachine RPMS]# rpm -Uvh mysql-devel-5.0.45-4.fc8.i386.rpm
+Preparing&#8230; ########################################### [100
+%]
+1:mysql-devel ########################################### [100%]</p></li>
+</ul>
+
+
+<p>**** Proj4
+ftp://ftp.remotesensing.org/proj/proj-4.6.0.tar.gz
+ftp://ftp.remotesensing.org/proj/proj-datumgrid-1.3.zip
+./configure
+make
+make install</p>
+
+<p>**** GEOS
+http://geos.refractions.net/downloads/geos-3.0.0.tar.bz2
+./configure &#8211;enable-python
+make
+make install</p>
+
+<p>**** GDAL/OGR
+http://download.osgeo.org/gdal/gdal-1.5.0.tar.gz
+./configure &#8211;with-python
+make
+make install</p>
+
+<p>**** Postgresql
+http://wwwmaster.postgresql.org/redir?setmir=347&amp;typ=h&amp;url=http://ftp7.us.post
+gresql.org/pub/postgresql//source/v8.2.6/postgresql-8.2.6.tar.gz</p>
+
+<p>LDFLAGS=-lstdc++ ./configure &#8211;prefix=/usr/local/pgsql_8_2_6
+make
+make install</p>
+
+<p>Add the shared library path to /etc/ld.so.conf :
+/usr/local/pgsql_8_2_6/lib
+/usr/local/lib</p>
+
+<p>Run /sbin/ldconfig</p>
+
+<h1>Add postgres system user</h1>
+
+<p>/usr/sbin/useradd postgres
+passwd postgres
+(new pass is &#8216;xxxxx&#8217;)</p>
+
+<h1>Setup the database to run</h1>
+
+<p>cd /usr/local/pgsql_8_2_6/
+mkdir data
+chown postgres data
+su postgres
+./bin/initdb ./data
+./bin/postmaster -D ./data/ > ./data/logfile.txt 2>&amp;1 &amp;</p>
+
+<h1>Create a user</h1>
+
+<p>./bin/createuser xxxxxxxx</p>
+
+<ul>
+<li>PostGIS
+http://postgis.refractions.net/download/postgis-1.3.2.tar.gz</li>
+</ul>
+
+
+<p>./configure &#8211;with-proj &#8211;with-geos &#8211;with-pgsql=/usr/local/pgsql_8_2_6/bin/pg
+_config
+make
+make install</p>
+
+<h1>As a regular user:</h1>
+
+<p>createdb -O xxxxxxx test_db
+createlang -U xxxxxxxx plpgsql test_db
+psql -f /usr/local/pgsql_8_2_6/share/lwpostgis.sql -d test_db</p>
+
+<h1>Test it out&#8230;</h1>
+
+<p>psql test_db</p>
+
+<p>**** PHP
+./configure &#8211;prefix=/usr/local/php525 &#8211;program-suffix=525 &#8211;enable-force-cgi
+-redirect &#8211;with-config-file-path=/etc/httpd/ &#8211;with-gd &#8211;with-jpeg-dir=/usr/l
+ib &#8211;with-png-dir=/usr/lib &#8211;with-zlib-dir=/usr/lib &#8211;with-freetype-dir &#8211;with
+out-ttf &#8211;with-mysql &#8211;with-regex=system &#8211;enable-dbase &#8211;with-pgsql=/usr/loca
+l/pgsql_8_2_6/</p>
+
+<p>make
+make install
+strip sapi/cgi/php-cgi
+cp sapi/cgi/php-cgi /var/www/cgi-bin/php525
+cp php.ini-dist /etc/httpd/php.ini</p>
+
+<h1>Add extension_dir = &#8220;/etc/httpd/php_mods&#8221; to php.ini</h1>
+
+<h1>Add the following to httpd conf file</h1>
+
+<h1>Added by APR for purposes of CGI php with mapserver</h1>
+
+<p>AddType application/x-httpd-php-cgi .php5 .phtml
+Action application/x-httpd-php-cgi /cgi-bin/php525</p>
+
+<p>Now re-start the server:
+/etc/rc.d/init.d/httpd restart</p>
+
+<p>**** Mapserver
+http://download.osgeo.org/mapserver/mapserver-5.0.0.tar.gz</p>
+
+<p>./configure &#8211;with-jpeg &#8211;with-agg &#8211;with-gd &#8211;with-freetype &#8211;with-zlib &#8211;wit
+h-png .without-tiff &#8211;with-proj &#8211;with-threads &#8211;with-ogr &#8211;with-gdal &#8211;with-g
+eos &#8211;with-postgis=/usr/local/pgsql_8_2_6/bin/pg_config &#8211;with-wfs &#8211;with-wmsc
+lient &#8211;with-wfsclient &#8211;enable-debug &#8211;with-php=/usr/local/src/php/php-5.2.5</p>
+
+<p>make</p>
+
+<p>cp legend mapserv scalebar /var/www/cgi-bin/
+cp mapscript/php3/php_mapscript.so /etc/httpd/php_mods/</p>
+
+  
+    <footer>
+      <p class="meta">
+        
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-14T11:12:03-08:00" pubdate data-updated="true">Jan 14<span>th</span>, 2008</time>
+        
+      </p>
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://reprojected.github.com/how-tos/fc8-oh-why-am-i-installing-on-fedora/index.html" data-via="reprojected" data-counturl="http://reprojected.github.com/how-tos/fc8-oh-why-am-i-installing-on-fedora/index.html" >Tweet</a>
+  
+  
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2009/02/17/mirrormap/">MirrorMap</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/10/tidal-power-dss/">Tidal Power DSS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/09/refmap-webkit-in-pyqt/">RefMap - WebKit in PyQt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/06/debugging-qgis-plugins/">Debugging QGIS Plugins...</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/05/back-in-the-saddle/">Back in the saddle...</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/aaronr">@aaronr</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'aaronr',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("reprojected", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/reprojected" class="twitter-follow-button" data-show-count="false">Follow @reprojected</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Aaron Racicot -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

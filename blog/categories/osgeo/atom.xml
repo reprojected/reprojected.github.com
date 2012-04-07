@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: OSGeo | Reprojected]]></title>
+  <link href="http://reprojected.github.com/blog/categories/osgeo/atom.xml" rel="self"/>
+  <link href="http://reprojected.github.com/"/>
+  <updated>2012-04-06T22:17:47-07:00</updated>
+  <id>http://reprojected.github.com/</id>
+  <author>
+    <name><![CDATA[Aaron Racicot]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[LinuxFestNW 2008 - Another great event!]]></title>
+    <link href="http://reprojected.github.com/blog/2008/04/28/linuxfestnw-2008-another-great-event/"/>
+    <updated>2008-04-28T12:22:27-07:00</updated>
+    <id>http://reprojected.github.com/blog/2008/04/28/linuxfestnw-2008-another-great-event</id>
+    <content type="html"><![CDATA[<p><img src="http://www.reprojected.com/presentations/Presentations/linuxfestnw2008/totem350a.png" alt="LinuxFestNW" /></p>
+
+<p>I had the privilege of giving a talk at <a href="http://www.linuxfestnorthwest.org/">LinuxFest Northwest</a> this year... and what a cool event this is.  We had a great room full of people interested in Geospatial technology, some great questions and I think some genuine interest from participants that could lead to some folks going home and hacking away with some mapping.  Great job to the organizers of the event and looking forward to helping make LinuxFestNW 2009 an even bigger and better event!</p>
+
+<p>Here are the links to my talk:</p>
+
+<p>(<a href="http://www.reprojected.com/presentations/Presentations/linuxfestnw2008/racicot_linuxfest042708.pdf">PDF 4.5M</a>) - (<a href="http://www.reprojected.com/presentations/Presentations/linuxfestnw2008/racicot_linuxfest042708.odp">ODP 8M</a>) - (<a href="http://www.reprojected.com/presentations/Presentations/linuxfestnw2008/racicot_linuxfest042708.ppt">PPT 8M</a>)</p>
+
+<p>(UPDATE 042808): They have now posted a link to the video of my talk:</p>
+
+<p><a href="http://www.ustream.tv/recorded/377931">http://www.ustream.tv/recorded/377931</a></p>
+
+<p>(<a href="http://www.cugos.org">CUGOS</a>) - For those local to the Pacific Northwest, come visit us and make some local Geospatial friends!!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[None]]></title>
+    <link href="http://reprojected.github.com/blog/2007/04/23/45/"/>
+    <updated>2007-04-23T14:12:58-07:00</updated>
+    <id>http://reprojected.github.com/blog/2007/04/23/45</id>
+    <content type="html"><![CDATA[<p><img src="http://www.orurisa.org/graphics/hom_bnnr.gif" alt="URISA" /></p>
+
+<p>Just returned from a week on the road and one of the highlights was <a href="http://www.orurisa.org/events/gisinact/2007event/index.html">GIS in Action</a>, the <a href="http://www.orurisa.org/">Oregon and Southwest Washington URISA</a> annual GIS event.  There were over 300 people on site for 2 days of great talks, workshops and panels.  I was asked again to host one of the Open Source sessions at the conference and we participated on Wednesday.  I presented on the OSGeo, some sample applications of the Open Source GIS technology, and even had a quick online IRC chat with Chris Schmidt of Openlayers in front of the crowd.  We also had <a href="http://www.co.polk.or.us/Central%20Services/GIS.asp">Dean Anderson from Polk County</a> talking about doing open development when confined to a proprietary environment (often the case in government).  He had some great examples of developing Arc based software on SourceForge.  Finally we had <a href="http://staff.osuosl.org/~deborah/">Deborah Bryant</a> from the <a href="http://osuosl.org/">Oregon State University Open Source Lab (OSU OSL)</a> to talk about government uptake of Open Source technology.  She provides great insight to the front lines of getting Open Source accepted in main stream government.  She runs the <a href="http://goscon.org/">GOSCON</a> conference and is a wealth of knowledge on the current state of Open Source in government, big and small.</p>
+
+<p><a href="http://www.reprojected.com/geoblog/presentations/">All of the presentations from our Open Source session are posted in my presentation archive...</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[New Open Source Paper Submitted]]></title>
+    <link href="http://reprojected.github.com/blog/2007/03/02/new-open-source-paper-submitted/"/>
+    <updated>2007-03-02T23:58:51-08:00</updated>
+    <id>http://reprojected.github.com/blog/2007/03/02/new-open-source-paper-submitted</id>
+    <content type="html"><![CDATA[<p><img src="http://www.csc.noaa.gov/cz/images/logo.jpg" alt="CZ07" /></p>
+
+<p>Just <a href="http://www.reprojected.com/geoblog/academic-papers/">posted</a> an <a href="http://www.reprojected.com/presentations/Papers/CZ07/cz07_aaron_racicot.pdf">extended abstract</a> for <a href="http://www.csc.noaa.gov/cz/index.html">Coastal Zone 07</a> to take place in Portland OR July 22nd-26th.  Great to get some more Open Source geospatial published...</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[New presentation...]]></title>
+    <link href="http://reprojected.github.com/blog/2007/02/26/new-presentation/"/>
+    <updated>2007-02-26T11:30:21-08:00</updated>
+    <id>http://reprojected.github.com/blog/2007/02/26/new-presentation</id>
+    <content type="html"><![CDATA[<p><img src="http://www.reprojected.com/images/general/psu.jpg" alt="PSU" /></p>
+
+<p>I have posted a <a href="http://www.reprojected.com/geoblog/presentations/">new presentation</a> on Open Source GIS that I gave on Feb 21st 2007 at Portland State University. Included is an audio recording of the talk, a ppt presentation, and a flash demo of doing some simple GRASS interaction.</p>
+
+<p><a href="http://www.reprojected.com/geoblog/presentations/">http://www.reprojected.com/geoblog/presentations/</a></p>
+
+<p>Enjoy!</p>
+
+<p>Aaron</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[FOSS4G 2007]]></title>
+    <link href="http://reprojected.github.com/blog/2007/01/16/foss4g-2007/"/>
+    <updated>2007-01-16T09:13:16-08:00</updated>
+    <id>http://reprojected.github.com/blog/2007/01/16/foss4g-2007</id>
+    <content type="html"><![CDATA[<p><img src="http://www.reprojected.com/images/FOSS4G/tempbanner.gif" alt="FOSS4G 2007" /></p>
+
+<p>Paul and company up in Victoria BC have posted info about the <a href="http://www.foss4g2007.org/index.html">2007 FOSS4G conference</a>.  I cant wait for September to role around... this should be a great conference this year!</p>
+
+<blockquote><p>FOSS4G takes place September 24-27, 2007, at the <a href="http://www.foss4g2007.org/conference_venue.html">Victoria Conference Center</a>, in <a href="http://www.foss4g2007.org/about_victoria.html">Victoria</a>, British Columbia, Canada.</p></blockquote>
+
+<p>This year the OSGeo will be taking a large role in the development of this conference and it will be great to see how it works out.  I personally have high hopes that this will be a defining moment for the OSGeo and the FOSS4G community as a whole.</p>
+
+<blockquote></blockquote>
+]]></content>
+  </entry>
+  
+</feed>

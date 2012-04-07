@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: GIS Projects Ecotrust | Reprojected]]></title>
+  <link href="http://reprojected.github.com/blog/categories/gis-projects-ecotrust/atom.xml" rel="self"/>
+  <link href="http://reprojected.github.com/"/>
+  <updated>2012-04-06T22:17:47-07:00</updated>
+  <id>http://reprojected.github.com/</id>
+  <author>
+    <name><![CDATA[Aaron Racicot]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Demo's of new web mapping decision support tools...]]></title>
+    <link href="http://reprojected.github.com/blog/2007/03/28/demos-of-new-web-mapping-decision-support-tools/"/>
+    <updated>2007-03-28T22:00:31-07:00</updated>
+    <id>http://reprojected.github.com/blog/2007/03/28/demos-of-new-web-mapping-decision-support-tools</id>
+    <content type="html"><![CDATA[<p><img src="http://www.reprojected.com/geoblog/wp-content/uploads/2007/03/film_reel270.thumbnail.jpg" alt="film2" /></p>
+
+<p>(UPDATE: Ecotrust has asked me to remove material related to the Calzone and Gulf Tool.  Please feel free to contact Ecotrust directly to find out more about those tools)</p>
+
+<p>I have been working on a new decision support tool for <a href="http://www.ecotrust.org/">Ecotrust</a> over the last few months, so today I decided to make some screen casts (with audio!) of some of our work.</p>
+
+<p><a href="http://www.reprojected.com/demo/cal-zone-demo.html">Cal-Zone</a> - Web based DST based on <a href="http://www.ecology.uq.edu.au/marxan.htm">Marxan / Marzone</a> for helping evaluate site selection of <a href="http://www.dfg.ca.gov/Mrd/mlpa/index.html">marine protected areas</a>.  Marxan / Marzone results are generated and stored in <a href="http://www.postgis.org/">PostGIS</a> for display via <a href="http://www.openlayers.org/">OpenLayers</a>.  New windowing functionality introduced to allow for future enhancements such as multi-run comparisons and use of region of interest tools for site selection.</p>
+
+<p><a href="http://www.reprojected.com/demo/cal-zone-demo.html">http://www.reprojected.com/demo/cal-zone-demo.html</a></p>
+
+<p><a href="http://www.reprojected.com/demo/gulf-demo.html">Gulf Tool</a> - Web based DST based around scenario development for Gulf of Mexico fisheries.  Uses a <a href="http://chameleon.maptools.org/index.phtml">Chameleon</a> based frontend, <a href="http://mapserver.gis.umn.edu/">Mapserver</a> on the backend and all data storage and queries through <a href="http://www.postgis.org/">PostGIS</a>.  <a href="http://gmt.soest.hawaii.edu/">GMT</a> is used for graphing.</p>
+
+<p><a href="http://www.reprojected.com/demo/gulf-demo.html">http://www.reprojected.com/demo/gulf-demo.html</a></p>
+
+<p>Just a snapshot into some of the DST development we are undertaking and very excited about.  Hope you enjoy...</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[New presentation...]]></title>
+    <link href="http://reprojected.github.com/blog/2007/02/26/new-presentation/"/>
+    <updated>2007-02-26T11:30:21-08:00</updated>
+    <id>http://reprojected.github.com/blog/2007/02/26/new-presentation</id>
+    <content type="html"><![CDATA[<p><img src="http://www.reprojected.com/images/general/psu.jpg" alt="PSU" /></p>
+
+<p>I have posted a <a href="http://www.reprojected.com/geoblog/presentations/">new presentation</a> on Open Source GIS that I gave on Feb 21st 2007 at Portland State University. Included is an audio recording of the talk, a ppt presentation, and a flash demo of doing some simple GRASS interaction.</p>
+
+<p><a href="http://www.reprojected.com/geoblog/presentations/">http://www.reprojected.com/geoblog/presentations/</a></p>
+
+<p>Enjoy!</p>
+
+<p>Aaron</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[FREE web hosting for non-profits]]></title>
+    <link href="http://reprojected.github.com/blog/2006/12/09/free-web-hosting-for-non-profits/"/>
+    <updated>2006-12-09T00:37:28-08:00</updated>
+    <id>http://reprojected.github.com/blog/2006/12/09/free-web-hosting-for-non-profits</id>
+    <content type="html"><![CDATA[<p>Man you cant get any better than this:</p>
+
+<p><a href="http://wiki.dreamhost.com/index.php/Non-profit_Discount">http://wiki.dreamhost.com/index.php/Non-profit_Discount</a></p>
+
+<p>We at <a href="http://www.ecotrust.org/">Ecotrust</a> just signed up... can't beat 1/2 terabyte of storage and 5 terabytes of bandwidth... FREE!</p>
+
+<p>This personal blog is hosted there as well under my personal account, but if you are a non-profit interested in playing with Mapserver/PostGIS/GMT/GRASS you can check out <a href="http://www.reprojected.com/geoblog/how-tos/gis-on-a-shared-hosting-environment-the-magic-of-not-having-root/">my post</a> on installation in this environment to get up and running with web mapping... FOR FREE!!!</p>
+
+<p>Enjoy</p>
+
+<p>UPDATE (12/09/06): For those who are not in the non-profit world but are still interested in Dreamhost for cheap hosting I just created a promo code that gives the FULL $97 discount to you… Nothing to me.  Dreamhost works on this crazy "reward" system for getting people to use you as a referal, offering a finders fee to the current customer.  I have created this code to apply all of the finders fee to your discount... I get NOTHING.  It is <strong>ZPULLEYFULL </strong>, enjoy!</p>
+]]></content>
+  </entry>
+  
+</feed>

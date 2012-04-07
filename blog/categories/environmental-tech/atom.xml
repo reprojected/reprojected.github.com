@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Environmental Tech | Reprojected]]></title>
+  <link href="http://reprojected.github.com/blog/categories/environmental-tech/atom.xml" rel="self"/>
+  <link href="http://reprojected.github.com/"/>
+  <updated>2012-04-06T22:17:47-07:00</updated>
+  <id>http://reprojected.github.com/</id>
+  <author>
+    <name><![CDATA[Aaron Racicot]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[CUGOS - Cascadia Users of Geospatial Open Source]]></title>
+    <link href="http://reprojected.github.com/blog/2007/02/26/cugos-cascadia-users-of-geospatial-open-source/"/>
+    <updated>2007-02-26T23:31:29-08:00</updated>
+    <id>http://reprojected.github.com/blog/2007/02/26/cugos-cascadia-users-of-geospatial-open-source</id>
+    <content type="html"><![CDATA[<p><img src="http://www.reprojected.com/images/general/cugos.jpg" alt="CUGOS" /></p>
+
+<p><a href="http://groups.google.com/group/cugos">We are off and running!</a>  Josh Livni (<a href="http://www.umbrellaconsulting.com/">Umbrella Consulting</a>), Michael Gerlek (<a href="http://www.lizardtech.com/">LizardTech</a>) and Aaron  Racicot [ME!] (<a href="http://www.ecotrust.org/">Ecotrust</a>) got together and decided it was time to rally the troops.  We have scheduled our first official meeting to take place at the <a href="http://groups.google.com/group/cugos/browse_thread/thread/e659be865da00fc3/d4959a9210402ee5#d4959a9210402ee5">LizardTech office in Seattle on the 21st of March</a>.  We hope to see many of the GIS professionals in the Puget Sound region for this great time to meet others in the area who share a passion for Open Source GIS.</p>
+
+<p>See you there!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What a day...]]></title>
+    <link href="http://reprojected.github.com/blog/2007/02/15/what-a-day/"/>
+    <updated>2007-02-15T10:05:25-08:00</updated>
+    <id>http://reprojected.github.com/blog/2007/02/15/what-a-day</id>
+    <content type="html"><![CDATA[<p>A little "trip report" from Whidbey Island!</p>
+
+<p>Yesterday I ventured off the Island in the afternoon for a whirl  wind tour of Seattle events.</p>
+
+<p>1) Met with some folks from <a href="http://www.lizardtech.com/">LizardTech</a>, a GIS shop in Seattle  who has been in the imagery/compression business for a  long time and is really trying to re-define their  business around what is happening in the GIS industry as a whole.</p>
+
+<p><img src="http://www.lizardtech.com/images/global/header_left.gif" alt="LizardTech" /></p>
+
+<p>They are now an Associate Sponsor of the <a href="https://www.osgeo.org/">OSGeo (Open Source  Geospatial</a><a href="https://www.osgeo.org/"> </a><a href="https://www.osgeo.org/">Foundation)</a> and very actively engaging parts  of their business in the OS paradigm.  Very  cool office downtown and some great Northwest contacts.</p>
+
+<p>2) <a href="http://www.biothinking.com/greendrinks/index.php?country=USA&amp;city=Seattle">Seattle Green Drinks</a>.</p>
+
+<p><img src="http://www.iamsamcampaign.org/downloads/exterior_park_and_pavilion_smaller.jpg" alt="SAM" />A group of us hit this event at the new <a href="http://wwwseattleartmuseum.org/visit/OSP/default.asp">Seattle Art Museum  waterfront</a><a href="http://wwwseattleartmuseum.org/visit/OSP/default.asp"> </a><a href="http://wwwseattleartmuseum.org/visit/OSP/default.asp">sculpture garden</a> and had a great time.  Defiantly worth seeing the 60  foot nurse log... on display as a "living" piece of  art.  Probably one of the largest and most active Enviro  social events I have been to.  300+ people all bumping into each other with free beer and wine... great stuff.  With my tour guides  from <a href="http://www.umbrellaconsulting.com/">Umbrella Consulting</a> I got a very good introduction to many of the  organizations based out of Seattle including OneNW (<a href="http://www.onenw.org/">http://www.onenw.org/</a>), Grist (<a href="http://www.grist.org/">http://www.grist.org/</a>), Cascade  Agenda (<a href="http://www.cascadeagenda.org/">http://www.cascadeagenda.org/</a>),  and many more.  Awesome event and will hopefully be a  monthly thing for me.</p>
+
+<p>3) <a href="http://igniteseattle.com/">Ignite Seattle</a>.</p>
+
+<p><img src="http://www.reprojected.com/images/general/Ignite.jpg" alt="Ignite" />Wow... you  have never seen so many hackers, geeks, and crazy people  in one room... it was good to feel welcome!  8pm until almost midnight of straight  through 5-minute talks... about 22 of them from every topic including new technology out of the Google and Microsoft labs to building a  multi-person pogo stick for Burning Man!  Crazy stuff,  high energy event which is gaining in popularity (now  sponsored by <a href="http://www.google.com/">Google</a> and <a href="http://www.oreilly.com/">O'Reilly</a>).  Again, every couple  of months and a great connection to the roots of the OS and hacker  community in Seattle.  I do hope it does not get taken over by the corporate mongers (I hope you are listening O'Reilly!)</p>
+
+<p>2am arrival back home has not done great things for productivity, but all in all one of the most productive  days I have spent in the community.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Man am I slow...]]></title>
+    <link href="http://reprojected.github.com/blog/2006/12/11/man-am-i-slow/"/>
+    <updated>2006-12-11T12:27:11-08:00</updated>
+    <id>http://reprojected.github.com/blog/2006/12/11/man-am-i-slow</id>
+    <content type="html"><![CDATA[<p><a href="http://zcologia.com/">Sean Gillies</a> <a href="http://zcologia.com/news/314">posted</a> about this talk at the end of November and it just got posted on <a href="http://slashdot.org/article.pl?sid=06/12/10/1553242">Slashdot</a> yesterday, but it was only until last night that I woke up and watched it.  While _ <a href="http://plone.org/events/conferences/seattle-2006/agenda/watch-eben-moglen-s-plone-conference-keynote-address">Eben Moglen</a> _might not be able to bring down the house with his camera presence, his talk on social justice and Open Source software is truly interesting and inspiring.</p>
+
+<p>Well worth it... an hour well spent.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[WISER Commons - Seattle Dec.1st]]></title>
+    <link href="http://reprojected.github.com/blog/2006/12/07/wiser-commons-seattle-dec1st/"/>
+    <updated>2006-12-07T17:01:56-08:00</updated>
+    <id>http://reprojected.github.com/blog/2006/12/07/wiser-commons-seattle-dec1st</id>
+    <content type="html"><![CDATA[<p>I had the pleasure of attending a <a href="http://www.brownpapertickets.com/event/8542">meeting</a> on the <a href="http://sustainapedianw.org/index.php?title=Image:BaWClittle.jpg">WISER commons</a> last Friday (December 1st) in Seattle Washington.  It was a great meeting bringing together environmentally minded individuals and organizations that have a common "technology" thread.  The event was sponsored by the <a href="http://www.interraproject.org/">Interra Project</a> and the <a href="http://www.naturalcapital.org/index.html">Natural Capital Institute</a>.  <a href="http://www.paulhawken.com/">Paul Hawken</a> spoke about the need and relevance of a "commons" and promoted a new project called WISER.  The <a href="http://www.wiserbusiness.org/">demo shown</a> was an impressive database of socially responsible organizations around the world.  I am excited to see this project grow as it is aiming to socially connect the environmental movement.</p>
+
+<p>I am interested to tear into their code as the software being developed is Open Source and should be interesting.  They are due to put out a public release in January!</p>
+
+<p><img src="http://www.reprojected.com/images/WISER/WISER.jpg" alt="WISER" /></p>
+
+<p>AUDIO</p>
+
+<p><a href="http://www.reprojected.com/audio/WISER/Overview_Of_Day.WMA">Jon Ramer - Overview of the Day</a></p>
+
+<p><a href="http://www.reprojected.com/audio/WISER/Paul_Hawken.WMA">Paul Hawken - WISER</a></p>
+
+<p><a href="http://www.reprojected.com/audio/WISER/WISER_Earth_Overview.WMA">WISER Earth Overview</a></p>
+
+<p><a href="http://www.reprojected.com/audio/WISER/WISER_Business_Overview.WMA">WISER Business Overview</a></p>
+
+<p><a href="http://www.reprojected.com/audio/WISER/WISER_Wrapup.WMA">WISER Wrapup</a></p>
+
+<p><a href="http://www.reprojected.com/audio/WISER/Cecile_Hansen_Duwamish_Tribe.WMA">Cecile Hansen - Duamish Tribe - Grounding on tribal issues and relevance to the community</a></p>
+
+<p><a href="http://www.reprojected.com/audio/WISER/WISER.zip">ALL AUDIO (ZIP FORMAT - 40 Megs)</a></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Web-GIS on the cheap... - Reprojected</title>
+  <meta name="author" content="Aaron Racicot">
+
+  
+  <meta name="description" content="OK, I have servers at work that I use daily to develop Mapserver/GDAL/OGR/GRASS/GMT/etc&#8230; based apps, but how about on a shared hosting &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://reprojected.github.com/blog/2006/10/23/web-gis-on-the-cheap">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Reprojected" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Reprojected</a></h1>
+  
+    <h2>A warped look at spatial...</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:reprojected.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Web-GIS on the Cheap...</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-10-23T17:30:48-07:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>OK, I have servers at work that I use daily to develop Mapserver/GDAL/OGR/GRASS/GMT/etc&#8230; based apps, but how about on a shared hosting environment?</p>
+
+<p>Well, I finally got it going. I have written up my <a href="http://www.reprojected.com/geoblog/?page_id=6">install instructions</a> for Mapserver/GDAL/OGR/Proj/Postgres/Postgis/Geos/GMT/GRASS on <a href="http://www.dreamhost.com">Dreamhost</a>, a debian based shared hosting service. The great thing about it&#8230;</p>
+
+<p><strong>1)</strong> It cost $9.95/month (1 year contract) *12 = $119.40</p>
+
+<p><strong>2)</strong> You can use a discount code to get $97 off&#8230; Total cost at sign-up = $119.40-$97 = $22.40</p>
+
+<p>UPDATE (12/09/06): I just created a propmo code that gives the FULL discount to you&#8230; Nothing to me.  It is <strong>ZPULLEYFULL </strong>, enjoy!</p>
+
+<p><strong>3)</strong> Add a domain for $9.95 and the first year of this site cost $32.35 &#8230; WOW</p>
+
+<p>With this <a href="http://www.dreamhost.com/shared">package</a> I get 200 Gigs of space (grows weekely!) and 1 Terabyte of bandwidth/month (grows weekly!).</p>
+
+<p>So what good is it if I cant do some mapping work with it? Well, I have posted notes how I was able to get a fully functional Mapserver/PostGIS environment up. I went as far as to get command line GRASS installed to do geo-processing sans the GUI. GMT installed like a breeze, and bammmm&#8230; a GIS work environment.</p>
+
+<p>Cant beat the rent ;-)</p>
+
+<p>Check out some demo&#8217;s running on the server:</p>
+
+<p><strong>1)</strong> <a href="http://www.reprojected.com/apps/ka-map/">ka-map</a></p>
+
+<p><strong>2)</strong> GMT</p>
+
+<p>pretzel:~/usr/local/src/gmt/GMT4.1.2/examples> ./do_examples.csh
+Doing example 01&#8230;done
+Doing example 02&#8230;done
+Doing example 03&#8230;done
+Doing example 04&#8230;done
+Doing example 05&#8230;done
+Doing example 06&#8230;done
+Doing example 07&#8230;done
+Doing example 08&#8230;done
+Doing example 09&#8230;done
+Doing example 10&#8230;done
+Doing example 11&#8230;done
+Doing example 12&#8230;done
+Doing example 13&#8230;done
+Doing example 14&#8230;done
+Doing example 15&#8230;done
+Doing example 16&#8230;done
+Doing example 17&#8230;done
+Doing example 18&#8230;done
+Doing example 19&#8230;done
+Doing example 20&#8230;done
+Doing example 21&#8230;done
+Doing example 22&#8230;done
+Doing example 23&#8230;done
+Doing example 24&#8230;done
+Doing example 25&#8230;done
+Completed all examples
+pretzel:~/usr/local/src/gmt/GMT4.1.2/examples></p>
+
+<p><a href="http://www.reprojected.com/apps/gmt/">Check out the Output Images</a></p>
+
+<p><strong>3)</strong> GRASS</p>
+
+<p>IMPORT &#8212;&#8212;></p>
+
+<p><code>GRASS 6.1.cvs &gt; r.in.gdal input=world-topo-bathy-97_32_84_24.tif output=bmng_grass location=blue_marble
+A datum name wgs84 (WGS_1984) was specified without transformation parameters.
+Note that the GRASS default for wgs84 is towgs84=0.000,0.000,0.000.
+100%
+CREATING SUPPORT FILES FOR bmng_grass.red
+SETTING GREY COLOR TABLE FOR bmng_grass.red (8bit, full range)
+100%
+CREATING SUPPORT FILES FOR bmng_grass.green
+SETTING GREY COLOR TABLE FOR bmng_grass.green (8bit, full range)
+100%
+CREATING SUPPORT FILES FOR bmng_grass.blue
+SETTING GREY COLOR TABLE FOR bmng_grass.blue (8bit, full range)
+r.in.gdal complete.
+Mapset  in Location
+GRASS 6.1.cvs&gt;</code></p>
+
+<p>VERIFY &#8212;&#8212;-></p>
+
+<p>`Welcome to GRASS 6.1.cvs (2006)
+GRASS homepage:                          http://grass.itc.it/
+This version running thru:               TC Shell (/usr/bin/tcsh)
+Help is available with the command:      g.manual -i
+See the licence terms with:              g.version -c
+Start the graphical user interface with: gis.m &amp;
+When ready to quit enter:                exit</p>
+
+<h2>Mapset  in Location  GRASS 6.1.cvs > g.list type=rast</h2>
+
+<p>raster files available in mapset PERMANENT:
+bmng_grass.blue  bmng_grass.green bmng_grass.red`</p>
+
+<p><code>----------------------------------------------
+Mapset  in Location  GRASS 6.1.cvs&gt;</code></p>
+
+<p>Thats it for now&#8230; Up and running!!!!!!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Aaron Racicot</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-10-23T17:30:48-07:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2006</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/gis-tool-install/'>GIS Tool Install</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://reprojected.github.com/blog/2006/10/23/web-gis-on-the-cheap/" data-via="reprojected" data-counturl="http://reprojected.github.com/blog/2006/10/23/web-gis-on-the-cheap/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2006/10/23/working-toward-publishing-presentations-and-papers/" title="Previous Post: Working toward publishing presentations and papers">&laquo; Working toward publishing presentations and papers</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2006/10/23/adding-session-based-data-store-for-chameleon-based-apps/" title="Next Post: Adding SESSION based data store for Chameleon based apps.">Adding SESSION based data store for Chameleon based apps. &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2009/02/17/mirrormap/">MirrorMap</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/10/tidal-power-dss/">Tidal Power DSS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/09/refmap-webkit-in-pyqt/">RefMap - WebKit in PyQt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/06/debugging-qgis-plugins/">Debugging QGIS Plugins...</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/05/back-in-the-saddle/">Back in the saddle...</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/aaronr">@aaronr</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'aaronr',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("reprojected", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/reprojected" class="twitter-follow-button" data-show-count="false">Follow @reprojected</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Aaron Racicot -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

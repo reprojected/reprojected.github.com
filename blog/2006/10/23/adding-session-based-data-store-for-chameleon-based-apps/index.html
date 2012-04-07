@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Adding SESSION based data store for Chameleon based apps. - Reprojected</title>
+  <meta name="author" content="Aaron Racicot">
+
+  
+  <meta name="description" content="I have had a great need for a directory structure like the following in my Chameleon based apps: SESSION_DIR
+|
+&#8212;>data
+|
+&#8212;>base_data (Base &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://reprojected.github.com/blog/2006/10/23/adding-session-based-data-store-for-chameleon-based-apps">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Reprojected" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Reprojected</a></h1>
+  
+    <h2>A warped look at spatial...</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:reprojected.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Adding SESSION Based Data Store for Chameleon Based Apps.</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-10-23T17:31:34-07:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I have had a great need for a directory structure like the following in my Chameleon based apps:</p>
+
+<p><strong><em>SESSION_DIR
+|
+&#8212;>data
+|
+&#8212;>base_data (Base data shared with all apps on file server)
+|
+&#8212;>app_data (Application specific data residing on local server)
+|
+&#8212;>dyn_data (User specific dynamically generated layers)</em></strong></p>
+
+<p>The way I have tackeled this is to create a new directory in the session space of the Chameleon app and create symbolic links for the base and application data to common data storage areas on my file sservers.  Lastly a new directory is created in that session data directory for dynamically created data.  Pretty basic, but many questions have been asked to me about this, so here is an example.</p>
+
+<p><strong>index.phtml</strong></p>
+
+<p><code>// Make sure we have a data dir that is session based:
+// sessionSavePath/data/base_data -&gt; symbolic link to base data dir (shared)
+// sessionSavePath/data/app_data -&gt; application specific data (shared)
+// sessionSavePath/data/dyn_data -&gt; user specific dynamic data (not shared)
+// If the directory does not exist, then we need to make one.
+$data_dir = getSessionSavePath()."/data";
+$data_base_dir = $data_dir."/base_data";
+$data_app_dir = $data_dir."/app_data";
+$data_dyn_dir = $data_dir."/dyn_data";
+//save the current application working directory
+$cwd = getcwd();
+if  (!file_exists($data_dir))
+{
+// Here we make the session data dir
+$dir_exec = sprintf("mkdir ".$data_dir);
+exec ($dir_exec,$arr,$err1);
+$_SESSION['sessDataDir'] = $data_dir;
+// Here we make the user dynamic data dir
+$dir_exec = sprintf("mkdir ".$data_dyn_dir);
+exec ($dir_exec,$arr,$err1);
+// Here we make the base data link
+$dir_exec = sprintf("ln -s ".
+``$cwd."/../../base_data ".$data_base_dir);
+exec ($dir_exec,$arr,$err1);
+// Here we make the app data link
+$dir_exec = sprintf("ln -s ".
+$cwd."/../app_data ".$data_app_dir);
+exec ($dir_exec,$arr,$err1);
+}
+// Finally we modify the data path of our map object
+$oMap = $oApp-&gt;moMapSession-&gt;getMapObj();
+$oMap-&gt;set("shapepath", $data_dir);</code></p>
+
+<hr />
+
+<p><strong>mapfile.map</strong></p>
+
+<p><code># For base data items
+DATA Political/counties.shp
+becomes...
+DATA base_data/Political/counties.shp```# For app specific data
+DATA Marinezones/contiguous_us_eez.shp
+becomes...
+DATA app_data/Marinezones/contiguous_us_eez.shp```
+</code># For dynamic data
+Most apps will just create a layer dynamically in Mapscript and point the data statement toward the dyn_data directory.&#8220;</p>
+
+<p>That is it.  Pretty basic, but allows you to keep your data separated between base data all apps will use, application specific data, and data that is generated dynamically by users on the fly.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Aaron Racicot</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-10-23T17:31:34-07:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2006</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/gis-tool-use/'>GIS Tool Use</a>, <a class='category' href='/blog/categories/gis-tools/'>GIS Tools</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://reprojected.github.com/blog/2006/10/23/adding-session-based-data-store-for-chameleon-based-apps/" data-via="reprojected" data-counturl="http://reprojected.github.com/blog/2006/10/23/adding-session-based-data-store-for-chameleon-based-apps/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2006/10/23/web-gis-on-the-cheap/" title="Previous Post: Web-GIS on the cheap...">&laquo; Web-GIS on the cheap...</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2006/12/07/wiser-commons-seattle-dec1st/" title="Next Post: WISER Commons - Seattle Dec.1st">WISER Commons - Seattle Dec.1st &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2009/02/17/mirrormap/">MirrorMap</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/10/tidal-power-dss/">Tidal Power DSS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/09/refmap-webkit-in-pyqt/">RefMap - WebKit in PyQt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/06/debugging-qgis-plugins/">Debugging QGIS Plugins...</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/02/05/back-in-the-saddle/">Back in the saddle...</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/aaronr">@aaronr</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'aaronr',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("reprojected", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/reprojected" class="twitter-follow-button" data-show-count="false">Follow @reprojected</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Aaron Racicot -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
