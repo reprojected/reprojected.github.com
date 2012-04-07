@@ -4,7 +4,7 @@
   <title><![CDATA[Category: GIS Tool Dev | Reprojected]]></title>
   <link href="http://reprojected.github.com/blog/categories/gis-tool-dev/atom.xml" rel="self"/>
   <link href="http://reprojected.github.com/"/>
-  <updated>2012-04-06T22:44:02-07:00</updated>
+  <updated>2012-04-06T23:06:35-07:00</updated>
   <id>http://reprojected.github.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
@@ -35,7 +35,7 @@
     <link href="http://reprojected.github.com/blog/2009/02/06/debugging-qgis-plugins/"/>
     <updated>2009-02-06T14:08:12-08:00</updated>
     <id>http://reprojected.github.com/blog/2009/02/06/debugging-qgis-plugins</id>
-    <content type="html"><![CDATA[<p>Well, the title might better read "debugging <a href="http://www.riverbankcomputing.co.uk/software/pyqt/intro">PyQt</a> applications...", but much of my PyQt foo happens when developing <a href="http://qgisplugins.z-pulley.com/">QGIS plugins</a>.  In general I am old school... <a href="http://www.gnu.org/software/emacs/">emacs</a> and <a href="http://www.gnu.org/software/gdb/">gdb</a> are my friends.  When it comes to developing in PyQt there is one life saving code snip that will make your life much easier:</p>
+    <content type="html"><![CDATA[<p>Well, the title might better read "debugging <a href="http://www.riverbankcomputing.co.uk/software/pyqt/intro">PyQt</a> applications...", but much of my PyQt foo happens when developing <a href="http://qgisplugins.z-pulley.com/">QGIS plugins</a>. In general I am old school... <a href="http://www.gnu.org/software/emacs/">emacs</a> and <a href="http://www.gnu.org/software/gdb/">gdb</a> are my friends. When it comes to developing in PyQt there is one life saving code snip that will make your life much easier:</p>
 
 <pre><code>from PyQt4 import QtCore
 import pdb
@@ -44,7 +44,7 @@ QtCore.pyqtRemoveInputHook()
 pdb.set_trace()
 </code></pre>
 
-<p>This not only sets a trace (breakpoint) in your code, but it stops the PyQt event loop.  The call to <a href="http://www.riverbankcomputing.co.uk/static/Docs/PyQt4/pyqt4ref.html#using-pyqt-from-the-python-shell">pyqtRemoveInputHook()</a> is a tasty little tidbit in PyQt to allow for this "stop it in it's tracks" behavior.  This is a must have for debugging PyQGIS or Python based plugins.</p>
+<p>This not only sets a trace (breakpoint) in your code, but it stops the PyQt event loop. The call to <a href="http://www.riverbankcomputing.co.uk/static/Docs/PyQt4/pyqt4ref.html#using-pyqt-from-the-python-shell">pyqtRemoveInputHook()</a> is a tasty little tidbit in PyQt to allow for this "stop it in it's tracks" behavior.  This is a must have for debugging PyQGIS or Python based plugins.</p>
 
 <p>Once you are in <a href="http://docs.python.org/library/pdb.html">pdb</a>, you are set to go with interactive debugging:</p>
 

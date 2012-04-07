@@ -4,7 +4,7 @@
   <title><![CDATA[Category: GIS Tool Install | Reprojected]]></title>
   <link href="http://reprojected.github.com/blog/categories/gis-tool-install/atom.xml" rel="self"/>
   <link href="http://reprojected.github.com/"/>
-  <updated>2012-04-06T22:44:02-07:00</updated>
+  <updated>2012-04-06T23:06:35-07:00</updated>
   <id>http://reprojected.github.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
@@ -18,7 +18,7 @@
     <link href="http://reprojected.github.com/blog/2008/01/14/updated-install-notes-for-mapserver-50-with-agg-on-fc8/"/>
     <updated>2008-01-14T11:19:45-08:00</updated>
     <id>http://reprojected.github.com/blog/2008/01/14/updated-install-notes-for-mapserver-50-with-agg-on-fc8</id>
-    <content type="html"><![CDATA[<p>Had the need to install Mapserver/PostGIS/GDAL etc on a FC8 box.  While 99% of what I do now is on Ubuntu (<a href="http://www.reprojected.com/geoblog/how-tos/video/">here are some notes and vids on installing there</a>)... I occasionally need to play on a Fedora box.  So, <a href="http://www.reprojected.com/geoblog/how-tos/fc8-oh-why-am-i-installing-on-fedora/">here are some recent install notes</a> from a bare bones FC8 box to get it all going from source...</p>
+    <content type="html"><![CDATA[<p>Had the need to install Mapserver/PostGIS/GDAL etc on a FC8 box. While 99% of what I do now is on Ubuntu (<a href="http://www.reprojected.com/geoblog/how-tos/video/">here are some notes and vids on installing there</a>)... I occasionally need to play on a Fedora box. So, <a href="http://www.reprojected.com/geoblog/how-tos/fc8-oh-why-am-i-installing-on-fedora/">here are some recent install notes</a> from a bare bones FC8 box to get it all going from source...</p>
 ]]></content>
   </entry>
   
@@ -96,7 +96,7 @@
 
 <p>Enjoy</p>
 
-<p>UPDATE (12/09/06): For those who are not in the non-profit world but are still interested in Dreamhost for cheap hosting I just created a promo code that gives the FULL $97 discount to you… Nothing to me.  Dreamhost works on this crazy "reward" system for getting people to use you as a referal, offering a finders fee to the current customer.  I have created this code to apply all of the finders fee to your discount... I get NOTHING.  It is <strong>ZPULLEYFULL </strong>, enjoy!</p>
+<p>UPDATE (12/09/06): For those who are not in the non-profit world but are still interested in Dreamhost for cheap hosting I just created a promo code that gives the FULL $97 discount to you… Nothing to me. Dreamhost works on this crazy "reward" system for getting people to use you as a referal, offering a finders fee to the current customer. I have created this code to apply all of the finders fee to your discount... I get NOTHING. It is <strong>ZPULLEYFULL </strong>, enjoy!</p>
 ]]></content>
   </entry>
   
