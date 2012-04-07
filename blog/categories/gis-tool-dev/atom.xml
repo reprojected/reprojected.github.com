@@ -4,7 +4,7 @@
   <title><![CDATA[Category: GIS Tool Dev | Reprojected]]></title>
   <link href="http://reprojected.github.com/blog/categories/gis-tool-dev/atom.xml" rel="self"/>
   <link href="http://reprojected.github.com/"/>
-  <updated>2012-04-06T22:40:13-07:00</updated>
+  <updated>2012-04-06T22:44:02-07:00</updated>
   <id>http://reprojected.github.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
@@ -24,7 +24,9 @@
 
 <p>*** This plugin is very "Alpha" in that it makes the size of the map canvas static after invoking the plugin (until you launch QGIS again), does not handle layers of differing projections, does not allow for re-ordering layers in the mirror canvas, and many other deficiencies I am sure. But hey, its just a test!</p>
 
-<p><a href="http://www.reprojected.com/geoblog/wp-content/uploads/2009/02/mirrormap-300x248.png">MirrorMap in action</a></p>
+<p><img src="http://www.reprojected.com/geoblog/wp-content/uploads/2009/02/mirrormap-300x248.png" alt="MirrorMap in action" /></p>
+
+<p><a href="http://www.reprojected.com/presentations/Videos/mirrormap/alpha/mirrormap_final.html">Presentation</a></p>
 ]]></content>
   </entry>
   
