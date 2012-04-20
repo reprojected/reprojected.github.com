@@ -1,0 +1,26 @@
+---
+date: '2007-02-26 23:31:29'
+layout: post
+slug: cugos-cascadia-users-of-geospatial-open-source
+status: publish
+title: CUGOS - Cascadia Users of Geospatial Open Source
+wordpress_id: '35'
+categories:
+- Environmental Tech
+- General
+---
+
+![CUGOS](http://media.reprojected.com/images/general/cugos.jpg)
+
+
+
+
+[We are off and running!](http://groups.google.com/group/cugos) Josh Livni ([Umbrella Consulting](http://www.umbrellaconsulting.com/)), Michael Gerlek ([LizardTech](http://www.lizardtech.com/)) and Aaron  Racicot [ME!] ([Ecotrust](http://www.ecotrust.org/)) got together and decided it was time to rally the troops. We have scheduled our first official meeting to take place at the [LizardTech office in Seattle on the 21st of March](http://groups.google.com/group/cugos/browse_thread/thread/e659be865da00fc3/d4959a9210402ee5#d4959a9210402ee5). We hope to see many of the GIS professionals in the Puget Sound region for this great time to meet others in the area who share a passion for Open Source GIS.
+
+
+
+
+See you there!
+
+
+

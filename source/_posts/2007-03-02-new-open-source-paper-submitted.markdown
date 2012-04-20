@@ -1,0 +1,18 @@
+---
+date: '2007-03-02 23:58:51'
+layout: post
+slug: new-open-source-paper-submitted
+status: publish
+title: New Open Source Paper Submitted
+wordpress_id: '36'
+categories:
+- Conferences
+- GIS Projects
+- GIS Tools
+- OSGeo
+---
+
+![CZ07](http://www.csc.noaa.gov/cz/images/logo.jpg)
+
+Just [posted](http://www.reprojected.com/academic-papers/) an [extended abstract](http://media.reprojected.com/presentations/Papers/CZ07/cz07_aaron_racicot.pdf) for [Coastal Zone 07](http://www.csc.noaa.gov/cz/index.html) to take place in Portland OR July 22nd-26th.  Great to get some more Open Source geospatial published...
+

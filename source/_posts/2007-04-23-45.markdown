@@ -1,0 +1,18 @@
+---
+date: '2007-04-23 14:12:58'
+layout: post
+slug: '45'
+status: publish
+title: None
+wordpress_id: '45'
+categories:
+- Conferences
+- GIS Industry
+- OSGeo
+---
+
+![URISA](http://www.orurisa.org/graphics/hom_bnnr.gif)
+
+Just returned from a week on the road and one of the highlights was [GIS in Action](http://www.orurisa.org/events/gisinact/2007event/index.html), the [Oregon and Southwest Washington URISA](http://www.orurisa.org/) annual GIS event.  There were over 300 people on site for 2 days of great talks, workshops and panels.  I was asked again to host one of the Open Source sessions at the conference and we participated on Wednesday.  I presented on the OSGeo, some sample applications of the Open Source GIS technology, and even had a quick online IRC chat with Chris Schmidt of Openlayers in front of the crowd.  We also had [Dean Anderson from Polk County](http://www.co.polk.or.us/Central%20Services/GIS.asp) talking about doing open development when confined to a proprietary environment (often the case in government).  He had some great examples of developing Arc based software on SourceForge.  Finally we had [Deborah Bryant](http://staff.osuosl.org/~deborah/) from the [Oregon State University Open Source Lab (OSU OSL)](http://osuosl.org/) to talk about government uptake of Open Source technology.  She provides great insight to the front lines of getting Open Source accepted in main stream government.  She runs the [GOSCON](http://goscon.org/) conference and is a wealth of knowledge on the current state of Open Source in government, big and small.
+
+[All of the presentations from our Open Source session are posted in my presentation archive...](http://www.reprojected.com/presentations/)

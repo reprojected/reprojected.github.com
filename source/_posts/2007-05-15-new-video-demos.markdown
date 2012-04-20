@@ -1,0 +1,24 @@
+---
+date: '2007-05-15 14:04:09'
+layout: post
+slug: new-video-demos
+status: publish
+title: New video demo's...
+wordpress_id: '48'
+---
+
+![Making Movies](http://media.reprojected.com/images/general/holy.jpg)
+
+Well, you can now [watch me fumble around installing](http://www.reprojected.com/how-tos/video/) a new Ubuntu system and getting it all ready for development using much of the Open Source GIS stack, including QGIS, PostGIS, GDAL/OGR and many others...
+
+Of particular interest:
+
+1) Demo of installing new 0.9 branch of QGIS on Ubuntu Linux
+
+2) Demo of using Python bindings for QGIS
+
+I have a habit of installing from source, and most of the demos I am producing are walking through the install process doing just that... beware!
+
+Enjoy, and I would be interested if there are things in the Open Source stack that people are interested in seeing a demo of...
+
+NOTE: you can link to the video page from the right pane of the blog window under [GIS How-To's -> Video](http://www.reprojected.com/how-tos/video/)

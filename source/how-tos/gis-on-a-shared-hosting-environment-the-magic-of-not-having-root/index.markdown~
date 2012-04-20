@@ -1,0 +1,247 @@
+---
+date: '2006-08-11 13:16:29'
+layout: page
+slug: gis-on-a-shared-hosting-environment-the-magic-of-not-having-root
+status: publish
+title: Shared host
+wordpress_id: '6'
+---
+
++++++++++++++++++++++++++++++++++++
+Aaron Racicot
+Z-Pulley Inc.
+reprojected.com/org/net
+Host - Dreamhost
+Shared Hosting environment (no root access)
+Debian based
+
+20 GIG Storage
+1 Terabyte/month Transfer
+The idea is to create a local build area that is completly independent and will not require root access. All applications are installed into that local area through the use of the --prefix option at config time.
+The use of RPATH in many instances gets around the need to modify the LD_CONFIG_PATH (or /etc/ld.so.config and /sbin/ldconfig)
+
+Start by creating a build environment under the home directory of the shared host:
+
+
+`/home/racicot/usr
+/home/racicot/usr/local
+/home/racicot/etc
+/home/racicot/etc/httpd
+/home/racicot/var
+/home/racicot/var/www
+/home/racicot/var/www/cgi-bin `
+
+Next we start marching through all the installs...
+
+1) Ming (optional)
+
+`cd ming-0.3.0
+./configure --prefix=/home/racicot/usr/local
+make
+make install
+`
+**Don't forget to add 'extension=php_ming.so' to php.ini!
+
+2) Pdflib (optional)
+
+`cd PDFlib-Lite-6.0.3
+./configure --prefix=/home/racicot/usr/local
+make
+make install`
+
+3) Proj.4
+
+`cd proj-4.4.9
+cd nad/
+cp ../../proj-datumgrid-1.3.zip .
+unzip proj-datumgrid-1.3.zip
+cd ..
+./configure --prefix=/home/racicot/usr/local
+make
+make install`
+
+4) GDAL
+
+`cd gdal-1.3.1
+./configure --prefix=/home/racicot/usr/local --with-static-proj4=/home/racicot/usr/local/lib --with-local=/home/racicot/usr/local
+make ogr-all
+make install`
+
+5) GEOS
+
+`cd geos-2.2.1
+./configure --prefix=/home/racicot/usr/local
+make
+make install`
+
+6) READLINE
+
+`cd readline-5.1
+./configure --prefix=home/racicot/usr/local
+make
+make install`
+
+7) POSTGRESQL
+
+NOTE the LDFLAGS here... this is to support GEOS for postGIS
+`setenv LDFLAGS -lstdc++
+./configure --prefix=/home/racicot/usr/local --with-libs=/home/racicot/usr/local/lib --with-includes=/home/racicot/usr/local/include`
+
+############### Had to change the sockets file location to keep the
+############### reaper from getting the file in /tmp
+edit ~/usr/local/src/postgresql/postgresql-8.1.4/src/include/pg_config_manual.h
+< #define DEFAULT_PGSOCKET_DIR "/tmp"
+> #define DEFAULT_PGSOCKET_DIR "/home/racicot/tmp"
+rebuild....
+###############
+
+`make
+make install`
+
+Run make install in the ./doc directory to install the documentation
+
+`../usr/local/bin/initdb -D /home/racicot/postgresql_data
+../usr/local/bin/pg_ctl -D /home/racicot/postgresql_data -l logfile start`
+
+
+Finally add the following to the .cshrc profile file to make paths available:
+setenv PATH ${PATH}:/home/racicot/usr/local/bin
+
+Add the postgres user
+useradd postgres
+passwd xxxxxx
+Execute psql -l to verify the database is running.
+List of databases
+Name | Owner | Encoding
+-----------+---------+----------
+postgres | postgis | UTF8
+template0 | postgis | UTF8
+template1 | postgis | UTF8
+(3 rows)
+
+
+Create a new postgres user:
+
+`[postgis@localhost pgsql]$ createuser aaronr
+Shall the new role be a superuser? (y/n) y
+CREATE ROLE`
+
+8) POSTGIS
+
+Just make sure that the Postgresql is configured with the LDFLAGS variable set
+and that the GEOS software is downloaded and installed from Refractions.
+
+`./configure --prefix=/home/racicot/usr/local --with-pgsql=/home/racicot/usr/local/bin/pg_config --with-proj=/home/racicot/usr/local --with-geos=/home/racicot/usr/local/bin/geos-config
+make
+make install`
+
+Now we can create the database:
+`createdb -O aaronr test_db
+createlang -U aaronr plpgsql test_db
+psql -f /home/racicot/usr/local/share/lwpostgis.sql -d test_db`
+
+9) PHP
+
+`./configure --prefix=/home/racicot/usr/local --enable-force-cgi-redirect --with-gd --with-jpeg-dir=/usr/lib --with-png-dir=/usr/lib --with-tiff-dir=/usr/lib --with-zlib-dir=/usr/lib --with-freetype-dir --without-ttf --with-mysql --with-regex=system --enable-dbase --enable-dbx --enable-versioning --with-config-file-path=/home/racicot/etc/httpd/`
+
+`make
+make install`
+
+`strip sapi/cgi/php
+cp sapi/cgi/php /home/racicot/var/www/cgi-bin/php.cgi
+cp php.ini-dist /home/racicot/etc/httpd/php.ini`
+
+Made the following mod to /etc/httpd/php.ini:
+; Directory in which the loadable extensions (modules) reside.
+;extension_dir = "./"
+extension_dir = "/home/racicot/etc/httpd/php_mods"
+
+mkdir /home/racicot/etc/httpd/php_mods
+
+Added the following to the .htaccess
+
+AddType application/x-httpd-php-cgi .php .phtml
+Action application/x-httpd-php-cgi /cgi-bin/php.cgi
+
+10) MAPSERVER
+
+Had to change the following to get php_mapscript to statically get the library
+path for gdal. This is done in the makefile in the php directory:
+
+RUNPATHS= -Wl,-rpath,/home/racicot/gis/proj4/proj-4.4.9/src/.libs -Wl,-rpath,/home/racicot/gis/mapserver/mapserver-4.8.3
+
+To:
+
+RUNPATHS= -Wl,-rpath,/home/racicot/usr/local/lib -Wl,-rpath,/home/racicot/usr/local/src/proj4/proj-4.4.9/src/.libs -Wl,-rpath,/home/racicot/usr/local/src/mapserver/mapserver-4.8.3
+
+Now configure and build...
+
+`./configure --with-jpeg --with-gd --with-freetype --with-zlib --with-png --with-pdf=/home/racicot/usr/local --without-tiff --with-proj=/home/racicot/usr/local --with-threads --with-ogr=/home/racicot/usr/local/bin --with-gdal=/home/racicot/usr/local/bin/gdal-config --enable-debug --with-php=/home/racicot/usr/local/src/php/php-4.4.2 --enable-runpath`
+
+`make
+cp legend mapserv scalebar /var/www/cgi-bin/
+cp mapscript/php3/php_mapscript.so /etc/httpd/php_mods/`
+
+11) libtiff
+
+`wget ftp://ftp.remotesensing.org/pub/libtiff/tiff-3.8.2.tar.gz
+tar -xzvf tiff-3.8.2.tar.gz
+./configure --prefix=home/racicot/usr/local
+make
+make install`
+
+
+12) TCL/TK
+`wget http://superb-west.dl.sourceforge.net/sourceforge/tcl/tcl8.4.13-src.tar.gz
+wget http://superb-west.dl.sourceforge.net/sourceforge/tcl/tk8.4.13-src.tar.gz`
+
+`cd ~/usr/local/src/tcltk/tcl8.4.13/unix
+./configure --prefix=/home/racicot/usr/local
+make
+make install`
+
+`cd ~/usr/local/src/tcltk/tk8.4.13/unix
+./configure --prefix=/home/racicot/usr/local --with-tcl=/home/racicot/usr/local/src/tcltk/tcl8.4.13/unix
+make
+make install`
+
+13) FFTW
+
+`wget http://www.fftw.org/fftw-3.1.1.tar.gz`
+
+`cd fftw-3.1.1
+./configure --prefix=/home/racicot/usr/local
+make
+make install`
+
+14) GRASS
+
+`./configure --prefix=/home/racicot/usr/local --with-gdal=/home/racicot/usr/local/bin/gdal-config --with-postgres-includes=/home/racicot/usr/local/include --with-postgres-libs=/home/racicot/usr/local/lib --with-includes=/home/racicot/usr/local/include --with-libs=/home/racicot/usr/local/lib --with-proj-share=/home/racicot/usr/local/share/proj --without-opengl`
+
+I then made a change to the makefile to statically add the lib path
+so I would not have to update LD_LIBRARY_PATH
+
+emacs include/Make/Platform.make
+
+Added "-Wl,-rpath,/home/racicot/usr/local/lib" to both the CC and LD SEARCH_FLAGS
+
+CC_SEARCH_FLAGS = -Wl,-rpath-link,${LIB_RUNTIME_DIR} -Wl,-rpath,/home/racicot/usr/local/lib
+LD_SEARCH_FLAGS = -Wl,-rpath-link,${LIB_RUNTIME_DIR} -Wl,-rpath,/home/racicot/usr/local/lib
+
+`make
+make install`
+
+15) GMT
+
+Make a GMTParams.txt file
+run install_gmt shell script
+
+Needed to re-run:
+`make install install-suppl clean
+make install-data
+make install-man
+make install-www`
+
+Make sure to point all of the GMT directories in the param file to the local user area...
+
+Well... that is it. Mapserver, GMT, and command line GRASS all installed and working!

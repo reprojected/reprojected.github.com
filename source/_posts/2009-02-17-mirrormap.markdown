@@ -1,0 +1,21 @@
+---
+date: '2009-02-17 22:39:35'
+layout: post
+slug: mirrormap
+status: publish
+title: MirrorMap
+wordpress_id: '94'
+categories:
+- General
+- GIS Tool Dev
+---
+
+Another QGIS plugin idea I have had is to create a method of splitting the map canvas within QGIS to have two side-by-side maps that can track and interact with each other. There are lots of possibilities for this type of "reconfiguring" of the QGIS interface on the fly via plugins, so I decided to dive in and give it a go.
+
+[Here is a link to a video](http://media.reprojected.com/presentations/Videos/mirrormap/alpha/mirrormap_final.html) showing some of the basic operation of the MirrorMap plugin.
+
+*** This plugin is very "Alpha" in that it makes the size of the map canvas static after invoking the plugin (until you launch QGIS again), does not handle layers of differing projections, does not allow for re-ordering layers in the mirror canvas, and many other deficiencies I am sure. But hey, its just a test!
+
+![MirrorMap in action](http://media.reprojected.com/geoblog/wp-content/uploads/2009/02/mirrormap-300x248.png)
+
+[Presentation](http://media.reprojected.com/presentations/Videos/mirrormap/alpha/mirrormap_final.html)

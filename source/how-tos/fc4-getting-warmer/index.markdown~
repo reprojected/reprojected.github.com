@@ -1,0 +1,271 @@
+---
+date: '2007-01-11 22:35:50'
+layout: page
+slug: fc4-getting-warmer
+status: publish
+title: FC4
+wordpress_id: '29'
+---
+
+Revised by APR - 01/24/06
+
++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++
+Z-Pulley Inc.
+
+Initial machine configuration
+Dell 9300 Laptop
+
+Intel Box, 1 Gig main memory
+1 - 100 Gig drive
+Redhat Fedora Core 4 + Updates
+
++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++
+
+1) First check if what we need is there and make initial clean-up
+
+[root@localhost src]# rpm -qa | grep ming
+mingetty-1.07-5
+[root@localhost src]#
+**Need to get Ming**
+
+[root@localhost src]# rpm -qa | grep libpng
+libpng10-1.0.18-2
+libpng10-devel-1.0.18-2
+libpng-devel-1.2.8-2
+libpng-1.2.8-2
+[root@localhost src]#
+**Libpng is good to go**
+
+[root@localhost src]# rpm -qa | grep gd
+gdk-pixbuf-gnome-0.22.0-18.fc4.2
+gd-2.0.33-2
+gdb-6.3.0.0-1.84
+gdbm-devel-1.8.0-25
+gdbm-1.8.0-25
+gdk-pixbuf-0.22.0-18.fc4.2
+gdk-pixbuf-devel-0.22.0-18.fc4.2
+php-gd-5.0.4-10.5
+gd-progs-2.0.33-2
+sysklogd-1.4.1-30
+gdm-2.6.0.8-16
+gd-devel-2.0.33-2
+aspell-gd-0.50-2
+[root@localhost src]#
+**GD is good to go**
+
+*********** Changed on 03/27/06
+Needed to compile GD inorder to get Chameleon running.
+Basically PHP needs to be compiled against a fresh GD with freetype support
+***************************************************************************
+
++++++++++++++++++++++++++++++++++++
+
+2) Ming
+
+wget http://easynews.dl.sourceforge.net/sourceforge/ming/ming-0.3beta1.tar.gz
+tar -xzvf ming-0.3beta1.tar.gz
+cd ming-0.3beta1
+make
+make static
+cd php_ext/
+make
+make install
+
+echo "Don't forget to add 'extension=php_ming.so' to php.ini!"
+
+3) Pdflib
+
+wget http://www.pdflib.com/products/pdflib/download/602src/PDFlib-Lite-6.0.2.tar.gz
+tar -xzvf PDFlib-Lite-6.0.2.tar.gz
+cd PDFlib-Lite-6.0.2
+./configure
+make
+make install
+
+----Update ldconfig
+Add /usr/local/lib to /etc/ld.so.conf
+Run : /sbin/ldconfig
+
++++++++++++++++++++++++++++++++++++
+
+4) Proj.4
+
+tar -xzvf proj-4.4.9.tar.gz
+cd proj-4.4.9
+cd nad/
+ls
+cp ../../proj-nad27-1.2.tar.gz .
+tar -xzvf proj-nad27-1.2.tar.gz
+cd ..
+./configure
+make
+make install
+
++++++++++++++++++++++++++++++++++++
+
+5) GDAL
+
+wget http://www.gdal.org/dl/gdal-1.3.1.tar.gz
+mkdir gdal
+cd gdal/
+wget http://gdal.org/dl/gdal-1.3.1.tar.gz
+tar -xzvf gdal-1.3.1.tar.gz
+cd gdal-1.3.1
+./configure
+make ogr-all
+make install
+which gdalinfo
+
+*********** Changed APR 03/28/06
+Installed the ECW SDK (do a configure, make and install
+Installed the MrSid SDK (moved to /usr/local)
+
+Added ECW, Grass, and MrSid support
+[root@localhost gdal-1.3.1]# ./configure --with-ecw --with-grass=/usr/local/grass_602rc4/grass-6.0.2RC4/ --with-mrsid=/usr/local/GeoExpressSDK/
+
+Then, needed to edit the GDALMake.opt file to change:
+< -lxmlparse
+> -lexpat
+
+Then do the normal:
+make ogr-all
+make install
+
++++++++++++++++++++++++++++++++++++
+
+6) GEOS
+
+wget http://geos.refractions.net/geos-2.2.1.tar.bz2
+ls
+tar --help
+tar -xjvf geos-2.2.1.tar.bz2
+ls
+cd geos-2.2.1
+ls
+./configure
+more INSTALL
+make
+make install
+
++++++++++++++++++++++++++++++++++++
+
+7) POSTGRESQL
+
+tar -xzvf postgresql-8.1.2.tar.gz
+cd postgresql-8.1.2
+
+NOTE the LDFLAGS here... this is to support GEOS for postGIS
+LDFLAGS=-lstdc++ ./configure --with-perl --prefix=/usr/local/pgsql_8_1_2
+
+gmake
+gmake install
+
+Add the shared library path to /etc/ld.so.conf :
+/usr/local/pgsql_8_1_2/lib
+Run /sbin/ldconfig
+
+Run make install in the ./doc directory to install the documentation
+
+Finally add the following to the profile file to make paths available:
+PATH=$PATH:/usr/local/pgsql/bin
+MANPATH=$MANPATH:/usr/local/pgsql/man
+export MANPATH
+
+Add the postgis user
+useradd postgis
+passwd xxxxxxx
+
+There is already a data repository location at:
+/var/lib/pgsql
+
+LOG IN AS POSTGRES!!!
+Make a database and launch Postgres
+Change the directory to the postgis home directory
+
+initdb ./data
+[postgis@localhost pgsql]$ postmaster -D ./data/ > ./data/logfile.txt 2>&1 &
+[1] 18409
+[postgis@localhost pgsql]$
+[postgis@localhost pgsql]$
+[postgis@localhost pgsql]$ psql -l
+List of databases
+Name | Owner | Encoding
+-----------+---------+----------
+postgres | postgis | UTF8
+template0 | postgis | UTF8
+template1 | postgis | UTF8
+(3 rows)
+
+[postgis@localhost pgsql]$ createuser xxxxxxx
+Shall the new role be a superuser? (y/n) y
+CREATE ROLE
+[postgis@localhost pgsql]$ which createuser
+/usr/local/pgsql_8_1_2/bin/createuser
+[postgis@localhost pgsql]$
+
++++++++++++++++++++++++++++++++++++
+
+10) POSTGIS
+
+Just make sure that the Postgresql is configured with the LDFLAGS variable set
+and that the GEOS software is downloaded and installed from Refractions.
+
+./configure --with-proj --with-geos --with-pgsql
+make
+make install
+
+Now we can create the database:
+createdb -O xxxxxx test_db
+createlang -U xxxxxx plpgsql test_db
+psql -f /usr/local/pgsql_8_1_2/share/postgresql/contrib/lwpostgis.sql -d test_db
+(if you get an error here it is most likely because you did not do a /sbin/ldconfig after changing
+/etc/ld.so.conf to contain the /usr/local/lib directory.)
+
++++++++++++++++++++++++++++++++++++
+
+11) PHP
+
+##./configure --prefix=/usr/local/php4 --program-suffix=4 --enable-force-cgi-redirect --with-config-file-path=/etc/httpd/ --with-gd --with-jpeg --with-png --with-tiff --with-zlib --with-freetype --without-ttf --with-mysql --with-regex=system --enable-dbase --enable-dbx --enable-versioning --with-pgsql=/usr/local/pgsql_8_1_2/
+## Changed 03/27/06 to add new GD with freetype for Chameleon install
+[root@localhost php-4.4.2]# ./configure --prefix=/usr/local/php4 --program-suffix=4 --enable-force-cgi-redirect --with-config-file-path=/etc/httpd/ --with-gd=/usr/local/ --with-jpeg --with-png --with-tiff --with-zlib --with-freetype-dir --without-ttf --with-mysql --with-regex=system --enable-dbase --enable-dbx --enable-versioning --with-pgsql=/usr/local/pgsql_8_1_2/
+
+make
+make install
+
+strip sapi/cgi/php
+cp sapi/cgi/php /var/www/cgi-bin/php4
+cp php.ini-dist /etc/httpd/php.ini
+
+Made the following mod to /etc/httpd/php.ini:
+; Directory in which the loadable extensions (modules) reside.
+;extension_dir = "./"
+extension_dir = "/etc/httpd/php_mods"
+
+mkdir /etc/httpd/php_mods
+
+Added the following to /etc/httpd/conf/httpd.conf
+
+#
+# For PHP scripts as CGI-BIN
+#
+AddType application/x-httpd-php-cgi .php4 .phtml
+Action application/x-httpd-php-cgi /cgi-bin/php4
+
+Now re-start the server:
+/etc/rc.d/init.d/httpd restart
+Stopping httpd: [ OK ]
+Starting httpd: [ OK ]
+
++++++++++++++++++++++++++++++++++++
+
+11) MAPSERVER
+
+./configure --with-jpeg --with-gd --with-freetype --with-zlib --with-png --with-pdf --without-tiff --with-proj --with-threads --with-ogr --with-gdal --with-postgis --with-wfs --with-wmsclient --with-wfsclient --enable-debug --with-php=/src/php/php-4.4.2
+
+make
+cp legend mapserv scalebar /var/www/cgi-bin/
+cp mapscript/php3/php_mapscript.so /etc/httpd/php_mods/
+
+

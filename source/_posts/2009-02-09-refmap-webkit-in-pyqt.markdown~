@@ -1,0 +1,20 @@
+---
+date: '2009-02-09 10:25:39'
+layout: post
+slug: refmap-webkit-in-pyqt
+status: publish
+title: RefMap - WebKit in PyQt
+wordpress_id: '86'
+categories:
+- General
+---
+
+So one of the ideas I have been pondering is how WebKit integration into QT (and PyQt) could be leveraged inside of my favorite open source desktop GIS, QGIS. I decided to make a very alpha plugin to show some of the cool possibilities, but I am still looking for a final direction to take the plugin. As always my plugins for QGIS [can be found here](http://qgisplugins.z-pulley.com/).
+
+The general idea is to integrate many of the web based mapping API's that exist into QGIS via a WebKit interface and try to link the QGIS map canvas to actions in those web pages.
+
+[Here is a quick video](http://www.reprojected.com/presentations/Videos/refmap/alpha/refmap_final.html) of the initial version of RefMap in action. There are still kinks to be worked out and more providers to add, but it is a good attempt at linking in bi-directional communication between a web page in WebKit and python in PyQt.
+
+![RefMap Plugin at work](http://www.reprojected.com/geoblog/wp-content/uploads/2009/02/refmap-226x300.png)
+
+[Presentation](http://www.reprojected.com/presentations/Videos/refmap/alpha/refmap_final.html)

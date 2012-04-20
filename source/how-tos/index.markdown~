@@ -1,0 +1,17 @@
+---
+date: '2006-08-14 21:19:48'
+layout: page
+slug: how-tos
+status: publish
+title: GIS How-To's
+wordpress_id: '11'
+---
+
+PLEASE SELECT A SUB-TOPIC
+
+[GIS on a shared hosting environment]({{ root_url }}/how-tos/gis-on-a-shared-hosting-environment-the-magic-of-not-having-root) 
+[FC3 - Old but good]({{ root_url }}/how-tos/fc3-setup-old-but-good)
+[FC4 - Getting warmer]({{ root_url }}/how-tos/fc4-getting-warmer)
+[FC8 - Oh why am I still installing on Fedora]({{ root_url }}/how-tos/fc8-oh-why-am-i-installing-on-fedora)
+[Videos]({{ root_url }}/how-tos/video)
+

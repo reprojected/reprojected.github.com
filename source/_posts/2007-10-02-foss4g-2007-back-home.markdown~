@@ -1,0 +1,33 @@
+---
+date: '2007-10-02 15:33:33'
+layout: post
+slug: foss4g-2007-back-home
+status: publish
+title: FOSS4G 2007... Back home
+wordpress_id: '50'
+categories:
+- General
+---
+
+![](http://www.foss4g2007.org/images/header_logo.gif)
+
+Well, it was a great week in Victoria BC for this years [FOSS4G](http://www.foss4g2007.org/) conference!  Besides the great chance to hang out with the OS GIS community, it was a great chance to take a look at what is hot in our field.  Keep checking back to the FOSS4G web site as many of the presentations as well as video from the plenaries are being uploaded.
+
+[My talk on the use of PyQGIS](http://www.foss4g2007.org/presentations/view.php?abstract_id=210) (Python bindings to QGIS) for development of some stand alone desktop tools went well.  My powerpoints are [here (6 meg)](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/racicot_foss4g07_0926.ppt).  I even have a [couple](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/racicot_talk_2.jpg) of [snapshots](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/racicot_talk_3.jpg) of [giving the talk](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/racicot_talk_5.jpg) (thanks to Gary Sherman).
+
+Gary Sherman gave a great [workshop on Monday](http://www.foss4g2007.org/workshops/W-02/).  He has [posted the slides](http://blog.qgis.org/?q=node/86) and [ISO image of the live CD](http://blog.qgis.org/?q=node/85) on the QGIS blog.  Here are a [couple images](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/workshop_gary_1.jpg) that show [Gary](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/workshop_gary_2.jpg) laying it out and some of the [students](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/workshop_student_1.jpg) [soaking it in](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/workshop_student_2.jpg).  I also had a voice recorder and have made streaming mp3's of the session available at the following links:
+
+Clip #1 ([streaming](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_1.m3u)  or  [mp3](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_1.mp3))
+
+Clip #2 ([streaming](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_2.m3u)  or  [mp3](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_2.mp3))
+
+Clip #3 ([streaming](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_3.m3u)  or  [mp3](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_3.mp3))
+
+Clip #4 ([streaming](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_4.m3u)  or  [mp3](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_4.mp3))
+
+Clip #5 ([streaming](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_5.m3u)  or  [mp3](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_5.mp3))
+
+Clip #6 ([streaming](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_6.m3u)  or  [mp3](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_6.mp3))
+
+We also had a great [QGIS BOF](http://wiki.osgeo.org/index.php/FOSS4G2007_BOF_Sessions) session which was well attended by a [diverse group](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/bof_2.jpg) of [developers](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/bof_3.jpg), [users](http://www.reprojected.com/presentations/Presentations/FOSS4G_2007/bof_1.jpg), and interested newbies.  All in all I think QGIS had a great showing at FOSS4G and am looking forward to pushing many of the ideas talked about there forward.
+

@@ -1,0 +1,27 @@
+---
+date: '2008-04-28 12:22:27'
+layout: post
+slug: linuxfestnw-2008-another-great-event
+status: publish
+title: LinuxFestNW 2008 - Another great event!
+wordpress_id: '57'
+categories:
+- Conferences
+- OSGeo
+---
+
+![LinuxFestNW](http://media.reprojected.com/presentations/Presentations/linuxfestnw2008/totem350a.png)
+
+I had the privilege of giving a talk at [LinuxFest Northwest](http://www.linuxfestnorthwest.org/) this year... and what a cool event this is.  We had a great room full of people interested in Geospatial technology, some great questions and I think some genuine interest from participants that could lead to some folks going home and hacking away with some mapping.  Great job to the organizers of the event and looking forward to helping make LinuxFestNW 2009 an even bigger and better event!
+
+Here are the links to my talk:
+
+[PDF 4.5M](http://media.reprojected.com/presentations/Presentations/linuxfestnw2008/racicot_linuxfest042708.pdf)
+[ODP 8M](http://media.reprojected.com/presentations/Presentations/linuxfestnw2008/racicot_linuxfest042708.odp)
+[PPT 8M](http://media.reprojected.com/presentations/Presentations/linuxfestnw2008/racicot_linuxfest042708.ppt)
+
+(UPDATE 042808): They have now posted a link to the video of my talk:
+
+[http://www.ustream.tv/recorded/377931](http://www.ustream.tv/recorded/377931)
+
+[CUGOS](http://www.cugos.org) - For those local to the Pacific Northwest, come visit us and make some local Geospatial friends!!

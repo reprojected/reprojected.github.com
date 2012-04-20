@@ -1,0 +1,299 @@
+---
+date: '2007-01-11 22:29:18'
+layout: page
+slug: fc3-setup-old-but-good
+status: publish
+title: FC3
+wordpress_id: '28'
+---
+
+Revised by APR - 04/25/05 - Update to 4.4.2 Mapserver. Added SDE raster to config.
+Revised by APR - 03/10/05
+
++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++
+Intel Box, 2 Gig main memory
+2 - 200 Gig SATA drives
+Redhat Fedora Core 3 + Updates
++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++
+
+1) First check if what we need is there and make initial clean-up
+
+[aaronr@pearl ~]$ rpm -qa | grep ming
+mingetty-1.07-3
+**Need to get Ming**
+
+[aaronr@pearl ~]$ rpm -qa | grep pdflib
+**Need to get pdflib**
+
+[aaronr@pearl ~]$ rpm -qa | grep freetype
+freetype-2.1.9-1
+freetype-demos-2.1.9-1
+freetype-devel-2.1.9-1
+freetype-utils-2.1.9-1
+**Freetype is good to go**
+
+[aaronr@pearl ~]$ rpm -qa | grep libjpeg
+libjpeg-6b-33
+libjpeg-devel-6b-33
+**Libjpeg is good to go**
+
+[aaronr@pearl ~]$ rpm -qa | grep libpng
+libpng10-1.0.18-1.fc3
+libpng-devel-1.2.8-1.fc3
+libpng-1.2.8-1.fc3
+libpng10-devel-1.0.18-1.fc3
+**Libpng is good to go**
+
+Need to get rid of the following to get ready to re-install custom
+
+GD::
+gd-2.0.28-1.30.1
+gd-devel-2.0.28-1.30.1
+
+rpm -e --nodeps gd-2.0.28-1.30.1
+rpm -e --nodeps gd-devel-2.0.28-1.30.1
+
+PHP::
+php-4.3.10-3.2
+php-devel-4.3.10-3.2
+
+rpm -e --nodeps php-4.3.10-3.2
+rpm -e --nodeps php-devel-4.3.10-3.2
+
++++++++++++++++++++++++++++++++++++
+
+2) RPM magic - Install Ming and Pfdlib
+
+All RPMS that were installed are stored in the /src/RPMS directory
+
+MING::
+[root@pearl ming]# wget ftp://194.199.20.114/linux/PLD/current/dists/ra/PLD/i386/PLD/RPMS/ming-0.2a-5.i386.rpm
+[root@pearl pdflib]# rpm -Uvh pdflib-4.0.3-4.i386.rpm
+warning: pdflib-4.0.3-4.i386.rpm: V3 DSA signature: NOKEY, key ID e01260f1
+Preparing... ########################################### [100%]
+1:pdflib ########################################### [100%]
+
+PDFLIB::
+[root@pearl pdflib]# wget ftp://194.199.20.114/linux/PLD/current/dists/ac/ready/i386/pdflib-4.0.3-4.i386.rpm
+[root@pearl ming]# rpm -Uvh ming-0.2a-5.i386.rpm
+warning: ming-0.2a-5.i386.rpm: V3 DSA signature: NOKEY, key ID e01260f1
+Preparing... ########################################### [100%]
+1:ming ########################################### [100%]
+
++++++++++++++++++++++++++++++++++++
+
+3) Update ldconfig
+Add /usr/local/lib to /etc/ld.so.conf
+Run : /sbin/ldconfig
+
++++++++++++++++++++++++++++++++++++
+
+4) Proj.4
+
+mkdir proj4
+cd proj4/
+wget ftp://ftp.remotesensing.org/pub/proj/proj-4.4.9.tar.gz
+tar -xzvf proj-4.4.9.tar.gz
+cd proj-4.4.9
+cd nad/
+wget ftp://ftp.remotesensing.org/pub/proj/proj-nad27-1.2.tar.gz
+tar -xzvf proj-nad27-1.2.tar.gz
+cd ..
+make
+ls
+./configure
+make
+make install
+which proj
+
++++++++++++++++++++++++++++++++++++
+
+5) GDAL
+
+(First get the Mr Sid DSDK from lizard tech...)
+
+mkdir gdal
+cd gdal/
+wget http://gdal.org/dl/gdal-1.2.5.tar.gz
+tar -xzvf gdal-1.2.5.tar.gz
+cd gdal-1.2.5
+./configure --with-mrsid=/src/mrsid/Geo_DSDK-4.0.10.720
+make ogr-all
+make install
+which gdalinfo
+
++++++++++++++++++++++++++++++++++++
+
+6) GD
+
+mkdir gd
+cd gd
+wget http://www.boutell.com/gd/http/gd-2.0.33.tar.gz
+tar -xzvf gd-2.0.33.tar.gz
+cd gd-2.0.33
+./configure
+make
+make install
+
++++++++++++++++++++++++++++++++++++
+
+7) POSTGRESQL
+
+mkdir postgresql
+cd postgresql
+wget ftp://ftp3.us.postgresql.org/pub/postgresql/v8.0.1/postgresql-8.0.1.tar.gz
+tar -xzvf postgresql-8.0.1.tar.gz
+cd postgresql-8.0.1
+
+NOTE the LDFLAGS here... this is to support GEOS for postGIS
+LDFLAGS=-lstdc++ ./configure --with-perl
+
+gmake
+gmake install
+
+Add the shared library path to /etc/ld.so.conf :
+/usr/local/pgsql/lib
+Run /sbin/ldconfig
+
+Run make install in the ./doc directory to install the documentation
+
+Finally add the following to the profile file to make paths available:
+PATH=$PATH:/usr/local/pgsql/bin
+MANPATH=$MANPATH:/usr/local/pgsql/man
+export MANPATH
+
+Add the postgres user
+useradd postgres
+passwd xxxxxxxx
+
+There is already a data repository location at:
+/var/lib/pgsql
+
+LOG IN AS POSTGRES!!!
+Make a database and launch Postgres
+[postgres@localhost pgsql]$ initdb ./data
+[postgres@localhost data]$ postmaster -D ./data > ./data/logfile.txt 2>&1 &
+
+Add new user
+[postgres@localhost bin]$ ./createuser
+Enter name of user to add: xxxxxxx
+Shall the new user be allowed to create databases? (y/n) y
+Shall the new user be allowed to create more new users? (y/n) y
+CREATE USER
+[postgres@localhost bin]$
+
++++++++++++++++++++++++++++++++++++
+
+8) PHP
+
+First get the new version:
+mkdir php
+cd php
+wget http://us2.php.net/get/php-4.3.10.tar.gz/from/this/mirror
+tar -xzvf php-4.3.10.tar.gz
+cd php-4.3.10
+
+./configure --enable-force-cgi-redirect --with-config-file-path=/etc/httpd/ --with-gd=/usr/local --with-jpeg-dir=/usr/lib --with-png-dir=/usr/lib --with-tiff-dir=/usr/lib --with-zlib-dir=/usr/lib --with-freetype-dir --without-ttf --with-mysql --with-regex=system --enable-dbase --enable-dbx --enable-versioning --with-pgsql=/usr/local/pgsql
+
+make
+make install
+
+strip sapi/cgi/php
+cp sapi/cgi/php /var/www/cgi-bin/
+cp php.ini-dist /etc/httpd/php.ini
+
+Made the following mod to /etc/httpd/php.ini:
+; Directory in which the loadable extensions (modules) reside.
+;extension_dir = "./"
+extension_dir = "/etc/httpd/php_mods"
+
+mkdir /etc/httpd/php_mods
+
+Added the following to /etc/httpd/conf/httpd.conf
+
+#
+# For PHP scripts as CGI-BIN
+#
+AddType application/x-httpd-php-cgi .php .php4 .php3 .phtml
+Action application/x-httpd-php-cgi /cgi-bin/php
+
+Now re-start the server:
+/etc/rc.d/init.d/httpd restart
+Stopping httpd: [ OK ]
+Starting httpd: [ OK ]
+
++++++++++++++++++++++++++++++++++++
+
+9) GEOS
+
+mkdir geos
+cd geos
+wget http://geos.refractions.net/geos-2.1.1.tar.bz2
+tar -xjvf geos-2.1.1.tar.bz2
+cd geos-2.1.1
+./configure
+make
+make install
+
++++++++++++++++++++++++++++++++++++
+
+10) POSTGIS
+
+Just make sure that the Postgresql is configured with the LDFLAGS variable set
+and that the GEOS software is downloaded and installed from Refractions.
+
+mkdir postgis
+cd postgis
+wget http://postgis.refractions.net/postgis-1.0.0-rc3.tar.gz
+tar -xzvf postgis-1.0.0-rc3.tar.gz
+cd postgis-1.0.0-rc3
+
+Changed the following for Makefile.config
+
+USE_PROJ ?= 1
+USE_GEOS ?= 1
+PGSQL_SRC=/src/postgresql/postgresql-8.0.1
+
+make
+make install
+
+Now we can create the database:
+createdb -O postgres foo_test
+createlang -U postgres plpgsql foo_test
+psql -f ./lwpostgis.sql -d foo_test
+
+(if you get an error here it is most likely because you did not do a /sbin/ldconfig after changing
+/etc/ld.so.conf to contain the /usr/local/lib directory.)
+
++++++++++++++++++++++++++++++++++++
+
+11) MAPSERVER
+
+Updated to 4.4.2 - 04/25/05
+//**** ended up having to use mapserver-4.2.5 due to conflicts with maplab in the projection function *****
+
+mkdir mapserver
+cd mapserver
+wget http://cvs.gis.umn.edu/dist/mapserver-4.4.2.tar.gz
+tar -xzvf mapserver-4.4.2.tar.gz
+cd mapserver-4.4.2
+./configure --with-jpeg --with-gd --with-freetype --with-zlib --with-png --with-pdf --without-tiff --with-proj --with-threads --with-ogr --with-gdal --with-postgis --with-wfs --with-wmsclient --with-wfsclient --enable-debug --with-php=/src/php/php-4.3.10 --with-sde=/src/arcsde_client/sdeexe83 --with-sde-version=83 --with-sderaster
+make
+cp legend mapserv scalebar /var/www/cgi-bin/
+cp mapscript/php3/php_mapscript.so /etc/httpd/php_mods/
+
++++++++++++++++++++++++++++++++++++
+
+12) MAPLAB
+
+mkdir maplab
+cd maplab
+wget http://www.maptools.org/dl/maplab-2.2.tar.gz
+tar -xzvf maplab-2.2.tar.gz
+cd maplab-2.2
+
+Unpack and point the html directory at it
+
+

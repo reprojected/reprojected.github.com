@@ -1,0 +1,35 @@
+---
+date: '2007-03-28 22:00:31'
+layout: post
+slug: demos-of-new-web-mapping-decision-support-tools
+status: publish
+title: Demo's of new web mapping decision support tools...
+wordpress_id: '43'
+categories:
+- General
+- GIS Projects Ecotrust
+---
+
+![film2](http://media.reprojected.com/geoblog/wp-content/uploads/2007/03/film_reel270.thumbnail.jpg)
+
+(UPDATE: Ecotrust has asked me to remove material related to the Calzone and Gulf Tool. Please feel free to contact Ecotrust directly to find out more about those tools)
+
+I have been working on a new decision support tool for [Ecotrust](http://www.ecotrust.org/) over the last few months, so today I decided to make some screen casts (with audio!) of some of our work.
+
+[Cal-Zone](http://media.reprojected.com/demo/cal-zone-demo.html) - Web based DST based on [Marxan / Marzone](http://www.ecology.uq.edu.au/marxan.htm) for helping evaluate site selection of [marine protected areas](http://www.dfg.ca.gov/Mrd/mlpa/index.html).  Marxan / Marzone results are generated and stored in [PostGIS](http://www.postgis.org/) for display via [OpenLayers](http://www.openlayers.org/).  New windowing functionality introduced to allow for future enhancements such as multi-run comparisons and use of region of interest tools for site selection.
+
+[http://media.reprojected.com/demo/cal-zone-demo.html](http://media.reprojected.com/demo/cal-zone-demo.html)
+
+[Gulf Tool](http://media.reprojected.com/demo/gulf-demo.html) - Web based DST based around scenario development for Gulf of Mexico fisheries.  Uses a [Chameleon](http://chameleon.maptools.org/index.phtml) based frontend, [Mapserver](http://mapserver.gis.umn.edu/) on the backend and all data storage and queries through [PostGIS](http://www.postgis.org/).  [GMT](http://gmt.soest.hawaii.edu/) is used for graphing.
+
+[http://media.reprojected.com/demo/gulf-demo.html](http://media.reprojected.com/demo/gulf-demo.html)
+
+Just a snapshot into some of the DST development we are undertaking and very excited about.  Hope you enjoy...
+
+
+
+
+
+
+
+

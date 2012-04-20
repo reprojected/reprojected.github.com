@@ -1,0 +1,46 @@
+---
+date: '2006-12-08 13:00:16'
+layout: post
+slug: new-open-source-based-web-mapping-app-map-fu
+status: publish
+title: New Open Source based web mapping app - Map-Fu
+wordpress_id: '22'
+categories:
+- GIS Projects
+- GIS Tools
+---
+
+A local group here at Portland State University has just announced a new mapping interface into the mix.  Check out the live demos and download the code.  Looks to be a great resource!  Thanks guys...
+
+
+     We are delighted to announce a new open source framework for web-mapping, your personal Ninja of web-mapping, ladies and gentlemen, it's:
+     
+     *Map-Fu*
+     
+     Available for download, contribution of code, or reporting of bugs at our not-so-secret location on sourceforge: http://sourceforge.net/projects/map-fu/
+     
+     It features a true object-oriented PHP-Mapscript backend, with a variety
+    f classes and interfaces, ease of extensibility, and other
+    onfiguration zoink-zoink.
+     
+     On the front end is a fat Javascript client, using XMLHttpRequest to communicate with the server for updating the map and map-related data. It employs JSON for messaging and goes for a Web 2.0 feel. Some features on the front-end include pop-up tabs for reference map, legend, map information and query results. We try to maximize screen area for the map, since that's what we are interested in visually!
+     
+     Based on Minnesota Mapserver (of course) and PostGIS, we developed this interface to satisfy actual needs of clients for creating web-mapping applications that served SPECIFIC needs and required SPECIFIC tools.
+     
+     Some production sites that are using the Map-Fu or related codebase (formerly known as YAMI (Yet Another Map Interface)):
+     
+     http://glaciers.us - A database of glacier change in the Western US, including a linked assets database of aerial and oblique photos from the last century
+     
+     http://www.oregongeology.com/sub/ogdc/index.htm - The most up-to-date geology compilation for Oregon, soon to be used for other states!
+     
+     http://oscdl.research.pdx.edu/ - Oregon Sustainable
+    ommunities Digital Library, a temporal database of regional planning for the Portland Metro area (ten years of regional planning data, plus links to documents tied to spatial objects)
+     
+     We look forward to collaborating with a larger group of developers, and receiving feedback on our efforts! We're interested in incorporating the OpenLayers interface, and "through the web" feature editing via WFS-T.
+     
+     In the current vacuum of viable enterprise GIS solutions, we see this as a ripe time for rapid development!
+     
+     The Map-Fu development team,
+    Morgan, Cris, Tim, Percy & Will
+    Portland State University
+----

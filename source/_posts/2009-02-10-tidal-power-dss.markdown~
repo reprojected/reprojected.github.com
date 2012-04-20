@@ -1,0 +1,26 @@
+---
+date: '2009-02-10 23:03:26'
+layout: post
+slug: tidal-power-dss
+status: publish
+title: Tidal Power DSS
+wordpress_id: '91'
+categories:
+- General
+---
+
+One of the things I have been working on this last couple of months was a prototype of a Decision Support System (DSS) for web based interaction with [In-Stream Tidal Power](http://en.wikipedia.org/wiki/Tidal_power) data and models. Renewable energy is a big interest of mine and I was lucky enough to be involved in a local effort to look at In-Stream Tidal Power potential for Washington State.
+
+
+
+
+[Here is a link to a video](http://www.reprojected.com/presentations/Videos/tisec/phase1/tisec_final.html) showing some of the basic operation of the tool. We worked to integrate some post-processing analysis of 2-D circulation modeling to create both visual (maps) and tabular (graphs) on the fly via the web interface. The work is based on [Django](http://www.djangoproject.com/), [ExtJS](http://extjs.com/), [OpenLayers](http://www.openlayers.org/), [Mapserver](http://mapserver.org/) and a few other Open Source GIS projects from [OSGeo](http://www.osgeo.org/). Hopefully round 2 funding will happen to continue allow us to continue on with this fun project.
+
+
+
+
+
+
+
+
+[![120308_wi_params](http://www.reprojected.com/geoblog/wp-content/uploads/2009/02/120308_wi_params-300x218.jpg)](http://www.reprojected.com/presentations/Videos/tisec/phase1/tisec_final.html)
