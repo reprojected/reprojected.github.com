@@ -4,7 +4,7 @@
   <title><![CDATA[Category: GIS Tool Dev | Reprojected]]></title>
   <link href="http://reprojected.github.com/blog/categories/gis-tool-dev/atom.xml" rel="self"/>
   <link href="http://reprojected.github.com/"/>
-  <updated>2012-04-08T23:19:07-07:00</updated>
+  <updated>2012-04-19T22:09:33-07:00</updated>
   <id>http://reprojected.github.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
@@ -20,13 +20,13 @@
     <id>http://reprojected.github.com/blog/2009/02/17/mirrormap</id>
     <content type="html"><![CDATA[<p>Another QGIS plugin idea I have had is to create a method of splitting the map canvas within QGIS to have two side-by-side maps that can track and interact with each other. There are lots of possibilities for this type of "reconfiguring" of the QGIS interface on the fly via plugins, so I decided to dive in and give it a go.</p>
 
-<p><a href="http://www.reprojected.com/presentations/Videos/mirrormap/alpha/mirrormap_final.html">Here is a link to a video</a> showing some of the basic operation of the MirrorMap plugin.</p>
+<p><a href="http://media.reprojected.com/presentations/Videos/mirrormap/alpha/mirrormap_final.html">Here is a link to a video</a> showing some of the basic operation of the MirrorMap plugin.</p>
 
 <p>*** This plugin is very "Alpha" in that it makes the size of the map canvas static after invoking the plugin (until you launch QGIS again), does not handle layers of differing projections, does not allow for re-ordering layers in the mirror canvas, and many other deficiencies I am sure. But hey, its just a test!</p>
 
-<p><img src="http://www.reprojected.com/geoblog/wp-content/uploads/2009/02/mirrormap-300x248.png" alt="MirrorMap in action" /></p>
+<p><img src="http://media.reprojected.com/geoblog/wp-content/uploads/2009/02/mirrormap-300x248.png" alt="MirrorMap in action" /></p>
 
-<p><a href="http://www.reprojected.com/presentations/Videos/mirrormap/alpha/mirrormap_final.html">Presentation</a></p>
+<p><a href="http://media.reprojected.com/presentations/Videos/mirrormap/alpha/mirrormap_final.html">Presentation</a></p>
 ]]></content>
   </entry>
   
@@ -98,9 +98,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
 
 <p>What do you get?  Well, an ultra portable GIS workstation weighing in at less than 2 lbs that is very fun!</p>
 
-<p><a href="http://www.reprojected.com/presentations/Videos/eee_qgis_install/eee_qgis_install.html">Check out a video:</a></p>
+<p><a href="http://media.reprojected.com/presentations/Videos/eee_qgis_install/eee_qgis_install.html">Check out a video:</a></p>
 
-<p><a href="http://www.reprojected.com/presentations/Videos/eee_qgis_install/eee_qgis_install.html">http://www.reprojected.com/presentations/Videos/eee_qgis_install/eee_qgis_install.html</a></p>
+<p><a href="http://media.reprojected.com/presentations/Videos/eee_qgis_install/eee_qgis_install.html">http://media.reprojected.com/presentations/Videos/eee_qgis_install/eee_qgis_install.html</a></p>
 ]]></content>
   </entry>
   
