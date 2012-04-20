@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: GIS Projects | Reprojected]]></title>
-  <link href="http://reprojected.github.com/blog/categories/gis-projects/atom.xml" rel="self"/>
-  <link href="http://reprojected.github.com/"/>
-  <updated>2012-04-19T22:30:12-07:00</updated>
-  <id>http://reprojected.github.com/</id>
+  <link href="http://www.reprojected.com/blog/categories/gis-projects/atom.xml" rel="self"/>
+  <link href="http://www.reprojected.com/"/>
+  <updated>2012-04-19T22:33:08-07:00</updated>
+  <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[New Open Source Paper Submitted]]></title>
-    <link href="http://reprojected.github.com/blog/2007/03/02/new-open-source-paper-submitted/"/>
+    <link href="http://www.reprojected.com/blog/2007/03/02/new-open-source-paper-submitted/"/>
     <updated>2007-03-02T23:58:51-08:00</updated>
-    <id>http://reprojected.github.com/blog/2007/03/02/new-open-source-paper-submitted</id>
+    <id>http://www.reprojected.com/blog/2007/03/02/new-open-source-paper-submitted</id>
     <content type="html"><![CDATA[<p><img src="http://www.csc.noaa.gov/cz/images/logo.jpg" alt="CZ07" /></p>
 
 <p>Just <a href="http://www.reprojected.com/academic-papers/">posted</a> an <a href="http://media.reprojected.com/presentations/Papers/CZ07/cz07_aaron_racicot.pdf">extended abstract</a> for <a href="http://www.csc.noaa.gov/cz/index.html">Coastal Zone 07</a> to take place in Portland OR July 22nd-26th.  Great to get some more Open Source geospatial published...</p>
@@ -26,9 +26,9 @@
   
   <entry>
     <title type="html"><![CDATA[New Open Source based web mapping app - Map-Fu]]></title>
-    <link href="http://reprojected.github.com/blog/2006/12/08/new-open-source-based-web-mapping-app-map-fu/"/>
+    <link href="http://www.reprojected.com/blog/2006/12/08/new-open-source-based-web-mapping-app-map-fu/"/>
     <updated>2006-12-08T13:00:16-08:00</updated>
-    <id>http://reprojected.github.com/blog/2006/12/08/new-open-source-based-web-mapping-app-map-fu</id>
+    <id>http://www.reprojected.com/blog/2006/12/08/new-open-source-based-web-mapping-app-map-fu</id>
     <content type="html"><![CDATA[<p>A local group here at Portland State University has just announced a new mapping interface into the mix.  Check out the live demos and download the code.  Looks to be a great resource!  Thanks guys...</p>
 
 <pre><code> We are delighted to announce a new open source framework for web-mapping, your personal Ninja of web-mapping, ladies and gentlemen, it's:

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: GIS Tool Dev | Reprojected]]></title>
-  <link href="http://reprojected.github.com/blog/categories/gis-tool-dev/atom.xml" rel="self"/>
-  <link href="http://reprojected.github.com/"/>
-  <updated>2012-04-19T22:30:12-07:00</updated>
-  <id>http://reprojected.github.com/</id>
+  <link href="http://www.reprojected.com/blog/categories/gis-tool-dev/atom.xml" rel="self"/>
+  <link href="http://www.reprojected.com/"/>
+  <updated>2012-04-19T22:33:08-07:00</updated>
+  <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[MirrorMap]]></title>
-    <link href="http://reprojected.github.com/blog/2009/02/17/mirrormap/"/>
+    <link href="http://www.reprojected.com/blog/2009/02/17/mirrormap/"/>
     <updated>2009-02-17T22:39:35-08:00</updated>
-    <id>http://reprojected.github.com/blog/2009/02/17/mirrormap</id>
+    <id>http://www.reprojected.com/blog/2009/02/17/mirrormap</id>
     <content type="html"><![CDATA[<p>Another QGIS plugin idea I have had is to create a method of splitting the map canvas within QGIS to have two side-by-side maps that can track and interact with each other. There are lots of possibilities for this type of "reconfiguring" of the QGIS interface on the fly via plugins, so I decided to dive in and give it a go.</p>
 
 <p><a href="http://media.reprojected.com/presentations/Videos/mirrormap/alpha/mirrormap_final.html">Here is a link to a video</a> showing some of the basic operation of the MirrorMap plugin.</p>
@@ -32,9 +32,9 @@
   
   <entry>
     <title type="html"><![CDATA[Debugging QGIS Plugins...]]></title>
-    <link href="http://reprojected.github.com/blog/2009/02/06/debugging-qgis-plugins/"/>
+    <link href="http://www.reprojected.com/blog/2009/02/06/debugging-qgis-plugins/"/>
     <updated>2009-02-06T14:08:12-08:00</updated>
-    <id>http://reprojected.github.com/blog/2009/02/06/debugging-qgis-plugins</id>
+    <id>http://www.reprojected.com/blog/2009/02/06/debugging-qgis-plugins</id>
     <content type="html"><![CDATA[<p>Well, the title might better read "debugging <a href="http://www.riverbankcomputing.co.uk/software/pyqt/intro">PyQt</a> applications...", but much of my PyQt foo happens when developing <a href="http://qgisplugins.z-pulley.com/">QGIS plugins</a>. In general I am old school... <a href="http://www.gnu.org/software/emacs/">emacs</a> and <a href="http://www.gnu.org/software/gdb/">gdb</a> are my friends. When it comes to developing in PyQt there is one life saving code snip that will make your life much easier:</p>
 
 <pre><code>from PyQt4 import QtCore
@@ -70,9 +70,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[New python qgis plugin... raster file path info...]]></title>
-    <link href="http://reprojected.github.com/blog/2008/01/14/new-python-qgis-plugin-raster-file-path-info/"/>
+    <link href="http://www.reprojected.com/blog/2008/01/14/new-python-qgis-plugin-raster-file-path-info/"/>
     <updated>2008-01-14T12:23:46-08:00</updated>
-    <id>http://reprojected.github.com/blog/2008/01/14/new-python-qgis-plugin-raster-file-path-info</id>
+    <id>http://www.reprojected.com/blog/2008/01/14/new-python-qgis-plugin-raster-file-path-info</id>
     <content type="html"><![CDATA[<p><a href="http://blog.qgis.org/?q=node/104">http://blog.qgis.org/?q=node/104</a></p>
 
 <p>As I noted over on the QGIS blog I have started to organize my python plugins and will be adding more soon.</p>
@@ -81,9 +81,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[QGIS on the eee...]]></title>
-    <link href="http://reprojected.github.com/blog/2008/01/06/qgis-on-the-eee/"/>
+    <link href="http://www.reprojected.com/blog/2008/01/06/qgis-on-the-eee/"/>
     <updated>2008-01-06T00:46:26-08:00</updated>
-    <id>http://reprojected.github.com/blog/2008/01/06/qgis-on-the-eee</id>
+    <id>http://www.reprojected.com/blog/2008/01/06/qgis-on-the-eee</id>
     <content type="html"><![CDATA[<p>Well, I got Ubuntu 7.10 installed on an 8 gig SDHC card and away I go...</p>
 
 <p>4.5 gigs used for the base Ubuntu system as well as the base GIS software:</p>

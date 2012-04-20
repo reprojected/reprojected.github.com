@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Conferences | Reprojected]]></title>
-  <link href="http://reprojected.github.com/blog/categories/conferences/atom.xml" rel="self"/>
-  <link href="http://reprojected.github.com/"/>
-  <updated>2012-04-19T22:30:12-07:00</updated>
-  <id>http://reprojected.github.com/</id>
+  <link href="http://www.reprojected.com/blog/categories/conferences/atom.xml" rel="self"/>
+  <link href="http://www.reprojected.com/"/>
+  <updated>2012-04-19T22:33:08-07:00</updated>
+  <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[LinuxFestNW 2008 - Another great event!]]></title>
-    <link href="http://reprojected.github.com/blog/2008/04/28/linuxfestnw-2008-another-great-event/"/>
+    <link href="http://www.reprojected.com/blog/2008/04/28/linuxfestnw-2008-another-great-event/"/>
     <updated>2008-04-28T12:22:27-07:00</updated>
-    <id>http://reprojected.github.com/blog/2008/04/28/linuxfestnw-2008-another-great-event</id>
+    <id>http://www.reprojected.com/blog/2008/04/28/linuxfestnw-2008-another-great-event</id>
     <content type="html"><![CDATA[<p><img src="http://media.reprojected.com/presentations/Presentations/linuxfestnw2008/totem350a.png" alt="LinuxFestNW" /></p>
 
 <p>I had the privilege of giving a talk at <a href="http://www.linuxfestnorthwest.org/">LinuxFest Northwest</a> this year... and what a cool event this is.  We had a great room full of people interested in Geospatial technology, some great questions and I think some genuine interest from participants that could lead to some folks going home and hacking away with some mapping.  Great job to the organizers of the event and looking forward to helping make LinuxFestNW 2009 an even bigger and better event!</p>
@@ -38,9 +38,9 @@
   
   <entry>
     <title type="html"><![CDATA[None]]></title>
-    <link href="http://reprojected.github.com/blog/2007/04/23/45/"/>
+    <link href="http://www.reprojected.com/blog/2007/04/23/45/"/>
     <updated>2007-04-23T14:12:58-07:00</updated>
-    <id>http://reprojected.github.com/blog/2007/04/23/45</id>
+    <id>http://www.reprojected.com/blog/2007/04/23/45</id>
     <content type="html"><![CDATA[<p><img src="http://www.orurisa.org/graphics/hom_bnnr.gif" alt="URISA" /></p>
 
 <p>Just returned from a week on the road and one of the highlights was <a href="http://www.orurisa.org/events/gisinact/2007event/index.html">GIS in Action</a>, the <a href="http://www.orurisa.org/">Oregon and Southwest Washington URISA</a> annual GIS event.  There were over 300 people on site for 2 days of great talks, workshops and panels.  I was asked again to host one of the Open Source sessions at the conference and we participated on Wednesday.  I presented on the OSGeo, some sample applications of the Open Source GIS technology, and even had a quick online IRC chat with Chris Schmidt of Openlayers in front of the crowd.  We also had <a href="http://www.co.polk.or.us/Central%20Services/GIS.asp">Dean Anderson from Polk County</a> talking about doing open development when confined to a proprietary environment (often the case in government).  He had some great examples of developing Arc based software on SourceForge.  Finally we had <a href="http://staff.osuosl.org/~deborah/">Deborah Bryant</a> from the <a href="http://osuosl.org/">Oregon State University Open Source Lab (OSU OSL)</a> to talk about government uptake of Open Source technology.  She provides great insight to the front lines of getting Open Source accepted in main stream government.  She runs the <a href="http://goscon.org/">GOSCON</a> conference and is a wealth of knowledge on the current state of Open Source in government, big and small.</p>
@@ -51,9 +51,9 @@
   
   <entry>
     <title type="html"><![CDATA[New Open Source Paper Submitted]]></title>
-    <link href="http://reprojected.github.com/blog/2007/03/02/new-open-source-paper-submitted/"/>
+    <link href="http://www.reprojected.com/blog/2007/03/02/new-open-source-paper-submitted/"/>
     <updated>2007-03-02T23:58:51-08:00</updated>
-    <id>http://reprojected.github.com/blog/2007/03/02/new-open-source-paper-submitted</id>
+    <id>http://www.reprojected.com/blog/2007/03/02/new-open-source-paper-submitted</id>
     <content type="html"><![CDATA[<p><img src="http://www.csc.noaa.gov/cz/images/logo.jpg" alt="CZ07" /></p>
 
 <p>Just <a href="http://www.reprojected.com/academic-papers/">posted</a> an <a href="http://media.reprojected.com/presentations/Papers/CZ07/cz07_aaron_racicot.pdf">extended abstract</a> for <a href="http://www.csc.noaa.gov/cz/index.html">Coastal Zone 07</a> to take place in Portland OR July 22nd-26th.  Great to get some more Open Source geospatial published...</p>
@@ -62,9 +62,9 @@
   
   <entry>
     <title type="html"><![CDATA[FOSS4G 2007]]></title>
-    <link href="http://reprojected.github.com/blog/2007/01/16/foss4g-2007/"/>
+    <link href="http://www.reprojected.com/blog/2007/01/16/foss4g-2007/"/>
     <updated>2007-01-16T09:13:16-08:00</updated>
-    <id>http://reprojected.github.com/blog/2007/01/16/foss4g-2007</id>
+    <id>http://www.reprojected.com/blog/2007/01/16/foss4g-2007</id>
     <content type="html"><![CDATA[<p><img src="http://media.reprojected.com/images/FOSS4G/tempbanner.gif" alt="FOSS4G 2007" /></p>
 
 <p>Paul and company up in Victoria BC have posted info about the <a href="http://www.foss4g2007.org/index.html">2007 FOSS4G conference</a>.  I cant wait for September to role around... this should be a great conference this year!</p>
@@ -78,9 +78,9 @@
   
   <entry>
     <title type="html"><![CDATA[Working toward publishing presentations and papers]]></title>
-    <link href="http://reprojected.github.com/blog/2006/10/23/working-toward-publishing-presentations-and-papers/"/>
+    <link href="http://www.reprojected.com/blog/2006/10/23/working-toward-publishing-presentations-and-papers/"/>
     <updated>2006-10-23T17:30:10-07:00</updated>
-    <id>http://reprojected.github.com/blog/2006/10/23/working-toward-publishing-presentations-and-papers</id>
+    <id>http://www.reprojected.com/blog/2006/10/23/working-toward-publishing-presentations-and-papers</id>
     <content type="html"><![CDATA[<p>Started to work this evening to organize all of the papers and presentations I have done in the last couple of years dealing with Open Source GIS.  I will be adding more as I clean things up and fill in the blanks.</p>
 
 <p>Here is a link to the <a href="http://www.reprojected.com/presentations">Presentations</a> and <a href="http://www.reprojected.com/papers">Papers</a></p>

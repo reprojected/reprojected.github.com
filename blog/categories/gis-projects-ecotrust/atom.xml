@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: GIS Projects Ecotrust | Reprojected]]></title>
-  <link href="http://reprojected.github.com/blog/categories/gis-projects-ecotrust/atom.xml" rel="self"/>
-  <link href="http://reprojected.github.com/"/>
-  <updated>2012-04-19T22:30:12-07:00</updated>
-  <id>http://reprojected.github.com/</id>
+  <link href="http://www.reprojected.com/blog/categories/gis-projects-ecotrust/atom.xml" rel="self"/>
+  <link href="http://www.reprojected.com/"/>
+  <updated>2012-04-19T22:33:08-07:00</updated>
+  <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Demo's of new web mapping decision support tools...]]></title>
-    <link href="http://reprojected.github.com/blog/2007/03/28/demos-of-new-web-mapping-decision-support-tools/"/>
+    <link href="http://www.reprojected.com/blog/2007/03/28/demos-of-new-web-mapping-decision-support-tools/"/>
     <updated>2007-03-28T22:00:31-07:00</updated>
-    <id>http://reprojected.github.com/blog/2007/03/28/demos-of-new-web-mapping-decision-support-tools</id>
+    <id>http://www.reprojected.com/blog/2007/03/28/demos-of-new-web-mapping-decision-support-tools</id>
     <content type="html"><![CDATA[<p><img src="http://media.reprojected.com/geoblog/wp-content/uploads/2007/03/film_reel270.thumbnail.jpg" alt="film2" /></p>
 
 <p>(UPDATE: Ecotrust has asked me to remove material related to the Calzone and Gulf Tool. Please feel free to contact Ecotrust directly to find out more about those tools)</p>
@@ -38,9 +38,9 @@
   
   <entry>
     <title type="html"><![CDATA[New presentation...]]></title>
-    <link href="http://reprojected.github.com/blog/2007/02/26/new-presentation/"/>
+    <link href="http://www.reprojected.com/blog/2007/02/26/new-presentation/"/>
     <updated>2007-02-26T11:30:21-08:00</updated>
-    <id>http://reprojected.github.com/blog/2007/02/26/new-presentation</id>
+    <id>http://www.reprojected.com/blog/2007/02/26/new-presentation</id>
     <content type="html"><![CDATA[<p><img src="http://media.reprojected.com/images/general/psu.jpg" alt="PSU" /></p>
 
 <p>I have posted a <a href="http://www.reprojected.com/presentations/">new presentation</a> on Open Source GIS that I gave on Feb 21st 2007 at Portland State University. Included is an audio recording of the talk, a ppt presentation, and a flash demo of doing some simple GRASS interaction.</p>
@@ -55,9 +55,9 @@
   
   <entry>
     <title type="html"><![CDATA[FREE web hosting for non-profits]]></title>
-    <link href="http://reprojected.github.com/blog/2006/12/09/free-web-hosting-for-non-profits/"/>
+    <link href="http://www.reprojected.com/blog/2006/12/09/free-web-hosting-for-non-profits/"/>
     <updated>2006-12-09T00:37:28-08:00</updated>
-    <id>http://reprojected.github.com/blog/2006/12/09/free-web-hosting-for-non-profits</id>
+    <id>http://www.reprojected.com/blog/2006/12/09/free-web-hosting-for-non-profits</id>
     <content type="html"><![CDATA[<p>Man you cant get any better than this:</p>
 
 <p><a href="http://wiki.dreamhost.com/index.php/Non-profit_Discount">http://wiki.dreamhost.com/index.php/Non-profit_Discount</a></p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Reprojected]]></title>
-  <link href="http://reprojected.github.com/atom.xml" rel="self"/>
-  <link href="http://reprojected.github.com/"/>
-  <updated>2012-04-19T22:30:12-07:00</updated>
-  <id>http://reprojected.github.com/</id>
+  <link href="http://www.reprojected.com/atom.xml" rel="self"/>
+  <link href="http://www.reprojected.com/"/>
+  <updated>2012-04-19T22:33:08-07:00</updated>
+  <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[MirrorMap]]></title>
-    <link href="http://reprojected.github.com/blog/2009/02/17/mirrormap/"/>
+    <link href="http://www.reprojected.com/blog/2009/02/17/mirrormap/"/>
     <updated>2009-02-17T22:39:35-08:00</updated>
-    <id>http://reprojected.github.com/blog/2009/02/17/mirrormap</id>
+    <id>http://www.reprojected.com/blog/2009/02/17/mirrormap</id>
     <content type="html"><![CDATA[<p>Another QGIS plugin idea I have had is to create a method of splitting the map canvas within QGIS to have two side-by-side maps that can track and interact with each other. There are lots of possibilities for this type of &#8220;reconfiguring&#8221; of the QGIS interface on the fly via plugins, so I decided to dive in and give it a go.</p>
 
 <p><a href="http://media.reprojected.com/presentations/Videos/mirrormap/alpha/mirrormap_final.html">Here is a link to a video</a> showing some of the basic operation of the MirrorMap plugin.</p>
@@ -32,9 +32,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tidal Power DSS]]></title>
-    <link href="http://reprojected.github.com/blog/2009/02/10/tidal-power-dss/"/>
+    <link href="http://www.reprojected.com/blog/2009/02/10/tidal-power-dss/"/>
     <updated>2009-02-10T23:03:26-08:00</updated>
-    <id>http://reprojected.github.com/blog/2009/02/10/tidal-power-dss</id>
+    <id>http://www.reprojected.com/blog/2009/02/10/tidal-power-dss</id>
     <content type="html"><![CDATA[<p>One of the things I have been working on this last couple of months was a prototype of a Decision Support System (DSS) for web based interaction with <a href="http://en.wikipedia.org/wiki/Tidal_power">In-Stream Tidal Power</a> data and models. Renewable energy is a big interest of mine and I was lucky enough to be involved in a local effort to look at In-Stream Tidal Power potential for Washington State.</p>
 
 <p><a href="http://media.reprojected.com/presentations/Videos/tisec/phase1/tisec_final.html">Here is a link to a video</a> showing some of the basic operation of the tool. We worked to integrate some post-processing analysis of 2-D circulation modeling to create both visual (maps) and tabular (graphs) on the fly via the web interface. The work is based on <a href="http://www.djangoproject.com/">Django</a>, <a href="http://extjs.com/">ExtJS</a>, <a href="http://www.openlayers.org/">OpenLayers</a>, <a href="http://mapserver.org/">Mapserver</a> and a few other Open Source GIS projects from <a href="http://www.osgeo.org/">OSGeo</a>. Hopefully round 2 funding will happen to continue allow us to continue on with this fun project.</p>
@@ -45,9 +45,9 @@
   
   <entry>
     <title type="html"><![CDATA[RefMap - WebKit in PyQt]]></title>
-    <link href="http://reprojected.github.com/blog/2009/02/09/refmap-webkit-in-pyqt/"/>
+    <link href="http://www.reprojected.com/blog/2009/02/09/refmap-webkit-in-pyqt/"/>
     <updated>2009-02-09T10:25:39-08:00</updated>
-    <id>http://reprojected.github.com/blog/2009/02/09/refmap-webkit-in-pyqt</id>
+    <id>http://www.reprojected.com/blog/2009/02/09/refmap-webkit-in-pyqt</id>
     <content type="html"><![CDATA[<p>So one of the ideas I have been pondering is how WebKit integration into QT (and PyQt) could be leveraged inside of my favorite open source desktop GIS, QGIS. I decided to make a very alpha plugin to show some of the cool possibilities, but I am still looking for a final direction to take the plugin. As always my plugins for QGIS <a href="http://qgisplugins.z-pulley.com/">can be found here</a>.</p>
 
 <p>The general idea is to integrate many of the web based mapping API&#8217;s that exist into QGIS via a WebKit interface and try to link the QGIS map canvas to actions in those web pages.</p>
@@ -62,9 +62,9 @@
   
   <entry>
     <title type="html"><![CDATA[Debugging QGIS Plugins...]]></title>
-    <link href="http://reprojected.github.com/blog/2009/02/06/debugging-qgis-plugins/"/>
+    <link href="http://www.reprojected.com/blog/2009/02/06/debugging-qgis-plugins/"/>
     <updated>2009-02-06T14:08:12-08:00</updated>
-    <id>http://reprojected.github.com/blog/2009/02/06/debugging-qgis-plugins</id>
+    <id>http://www.reprojected.com/blog/2009/02/06/debugging-qgis-plugins</id>
     <content type="html"><![CDATA[<p>Well, the title might better read &#8220;debugging <a href="http://www.riverbankcomputing.co.uk/software/pyqt/intro">PyQt</a> applications&#8230;&#8221;, but much of my PyQt foo happens when developing <a href="http://qgisplugins.z-pulley.com/">QGIS plugins</a>. In general I am old school&#8230; <a href="http://www.gnu.org/software/emacs/">emacs</a> and <a href="http://www.gnu.org/software/gdb/">gdb</a> are my friends. When it comes to developing in PyQt there is one life saving code snip that will make your life much easier:</p>
 
 <pre><code>from PyQt4 import QtCore
@@ -100,9 +100,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[Back in the saddle...]]></title>
-    <link href="http://reprojected.github.com/blog/2009/02/05/back-in-the-saddle/"/>
+    <link href="http://www.reprojected.com/blog/2009/02/05/back-in-the-saddle/"/>
     <updated>2009-02-05T12:28:13-08:00</updated>
-    <id>http://reprojected.github.com/blog/2009/02/05/back-in-the-saddle</id>
+    <id>http://www.reprojected.com/blog/2009/02/05/back-in-the-saddle</id>
     <content type="html"><![CDATA[<p><img src="http://farm4.static.flickr.com/3117/3245828253_31750976af_m.jpg" alt="Spring pruning begins" /></p>
 
 <p>Well, its been a while since I have had a chance to even think about blogging. I am currently in-between projects and it has been a great time to catchup on getting my development environment up-to-date, test out some new ideas, and of course prune the orchard! Spring is here and with over 70 trees to get in shape much of the next couple of months will be on a ladder. Another development in the works is trying to start 2 bee hives in the orchard this year.</p>
@@ -115,18 +115,18 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[Moving on...]]></title>
-    <link href="http://reprojected.github.com/blog/2008/07/22/moving-on/"/>
+    <link href="http://www.reprojected.com/blog/2008/07/22/moving-on/"/>
     <updated>2008-07-22T13:52:09-07:00</updated>
-    <id>http://reprojected.github.com/blog/2008/07/22/moving-on</id>
+    <id>http://www.reprojected.com/blog/2008/07/22/moving-on</id>
     <content type="html"><![CDATA[<p><img src="http://media.reprojected.com/images/general/moving_on.jpg" alt="Moving on..." /> Well, as of July 8th I have made the transition out of Ecotrust and now am working on a contract basis full time. I am very excited about the move and look forward to continuing on with some of my ongoing contract work as well as starting to hit the pavement and drum up some new work. More to come as I get my feet on the ground and back up and running!</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[LinuxFestNW 2008 - Another great event!]]></title>
-    <link href="http://reprojected.github.com/blog/2008/04/28/linuxfestnw-2008-another-great-event/"/>
+    <link href="http://www.reprojected.com/blog/2008/04/28/linuxfestnw-2008-another-great-event/"/>
     <updated>2008-04-28T12:22:27-07:00</updated>
-    <id>http://reprojected.github.com/blog/2008/04/28/linuxfestnw-2008-another-great-event</id>
+    <id>http://www.reprojected.com/blog/2008/04/28/linuxfestnw-2008-another-great-event</id>
     <content type="html"><![CDATA[<p><img src="http://media.reprojected.com/presentations/Presentations/linuxfestnw2008/totem350a.png" alt="LinuxFestNW" /></p>
 
 <p>I had the privilege of giving a talk at <a href="http://www.linuxfestnorthwest.org/">LinuxFest Northwest</a> this year&#8230; and what a cool event this is.  We had a great room full of people interested in Geospatial technology, some great questions and I think some genuine interest from participants that could lead to some folks going home and hacking away with some mapping.  Great job to the organizers of the event and looking forward to helping make LinuxFestNW 2009 an even bigger and better event!</p>
@@ -147,9 +147,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[New python qgis plugin... raster file path info...]]></title>
-    <link href="http://reprojected.github.com/blog/2008/01/14/new-python-qgis-plugin-raster-file-path-info/"/>
+    <link href="http://www.reprojected.com/blog/2008/01/14/new-python-qgis-plugin-raster-file-path-info/"/>
     <updated>2008-01-14T12:23:46-08:00</updated>
-    <id>http://reprojected.github.com/blog/2008/01/14/new-python-qgis-plugin-raster-file-path-info</id>
+    <id>http://www.reprojected.com/blog/2008/01/14/new-python-qgis-plugin-raster-file-path-info</id>
     <content type="html"><![CDATA[<p><a href="http://blog.qgis.org/?q=node/104">http://blog.qgis.org/?q=node/104</a></p>
 
 <p>As I noted over on the QGIS blog I have started to organize my python plugins and will be adding more soon.</p>
@@ -158,18 +158,18 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[Updated install notes for Mapserver 5.0 with AGG on FC8]]></title>
-    <link href="http://reprojected.github.com/blog/2008/01/14/updated-install-notes-for-mapserver-50-with-agg-on-fc8/"/>
+    <link href="http://www.reprojected.com/blog/2008/01/14/updated-install-notes-for-mapserver-50-with-agg-on-fc8/"/>
     <updated>2008-01-14T11:19:45-08:00</updated>
-    <id>http://reprojected.github.com/blog/2008/01/14/updated-install-notes-for-mapserver-50-with-agg-on-fc8</id>
+    <id>http://www.reprojected.com/blog/2008/01/14/updated-install-notes-for-mapserver-50-with-agg-on-fc8</id>
     <content type="html"><![CDATA[<p>Had the need to install Mapserver/PostGIS/GDAL etc on a FC8 box. While 99% of what I do now is on Ubuntu (<a href="http://www.reprojected.com/how-tos/video/">here are some notes and vids on installing there</a>)&#8230; I occasionally need to play on a Fedora box. So, <a href="http://www.reprojected.com/how-tos/fc8-oh-why-am-i-installing-on-fedora/">here are some recent install notes</a> from a bare bones FC8 box to get it all going from source&#8230;</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[QGIS on the eee...]]></title>
-    <link href="http://reprojected.github.com/blog/2008/01/06/qgis-on-the-eee/"/>
+    <link href="http://www.reprojected.com/blog/2008/01/06/qgis-on-the-eee/"/>
     <updated>2008-01-06T00:46:26-08:00</updated>
-    <id>http://reprojected.github.com/blog/2008/01/06/qgis-on-the-eee</id>
+    <id>http://www.reprojected.com/blog/2008/01/06/qgis-on-the-eee</id>
     <content type="html"><![CDATA[<p>Well, I got Ubuntu 7.10 installed on an 8 gig SDHC card and away I go&#8230;</p>
 
 <p>4.5 gigs used for the base Ubuntu system as well as the base GIS software:</p>
@@ -192,9 +192,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[The new eee....]]></title>
-    <link href="http://reprojected.github.com/blog/2007/12/19/the-new-eee/"/>
+    <link href="http://www.reprojected.com/blog/2007/12/19/the-new-eee/"/>
     <updated>2007-12-19T23:28:33-08:00</updated>
-    <id>http://reprojected.github.com/blog/2007/12/19/the-new-eee</id>
+    <id>http://www.reprojected.com/blog/2007/12/19/the-new-eee</id>
     <content type="html"><![CDATA[<p>Oh Yeh, this post is being written from my new asus eee pc&#8230; 7 inches of cool gadget.  I dont think I have ever used a machine this small&#8230; so cool.</p>
 
 <p>$399 for the pc, $19 for 1 gig RAM upgrade, $21 for a 4 gig SDHC card and there you have a pretty fun machine.</p>
@@ -215,9 +215,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[Getting QGIS to install on windows AND support Python apps...]]></title>
-    <link href="http://reprojected.github.com/blog/2007/10/11/getting-qgis-to-install-on-windows-and-support-python-apps/"/>
+    <link href="http://www.reprojected.com/blog/2007/10/11/getting-qgis-to-install-on-windows-and-support-python-apps/"/>
     <updated>2007-10-11T09:55:56-07:00</updated>
-    <id>http://reprojected.github.com/blog/2007/10/11/getting-qgis-to-install-on-windows-and-support-python-apps</id>
+    <id>http://www.reprojected.com/blog/2007/10/11/getting-qgis-to-install-on-windows-and-support-python-apps</id>
     <content type="html"><![CDATA[<p>So here are the simple (kind of) steps as of today to get a windows install of QGIS working that supports PyQt and the python bindings to QGIS&#8230; all with out having to compile anything:</p>
 
 <p>1) Make sure you have Python 2.5 or newer installed on your machine&#8230; if you don&#8217;t have it you can download it from <a href="http://www.python.org/ftp/python/2.5.1/python-2.5.1.msi">HERE</a> (official) or <a href="http://media.reprojected.com/qgis_dev/dev_files/qt4.3.1_based/Python/python-2.5.1.msi">HERE</a> (my archive).</p>
@@ -236,9 +236,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[FOSS4G 2007... Back home]]></title>
-    <link href="http://reprojected.github.com/blog/2007/10/02/foss4g-2007-back-home/"/>
+    <link href="http://www.reprojected.com/blog/2007/10/02/foss4g-2007-back-home/"/>
     <updated>2007-10-02T15:33:33-07:00</updated>
-    <id>http://reprojected.github.com/blog/2007/10/02/foss4g-2007-back-home</id>
+    <id>http://www.reprojected.com/blog/2007/10/02/foss4g-2007-back-home</id>
     <content type="html"><![CDATA[<p><img src="http://www.foss4g2007.org/images/header_logo.gif" alt="" /></p>
 
 <p>Well, it was a great week in Victoria BC for this years <a href="http://www.foss4g2007.org/">FOSS4G</a> conference!  Besides the great chance to hang out with the OS GIS community, it was a great chance to take a look at what is hot in our field.  Keep checking back to the FOSS4G web site as many of the presentations as well as video from the plenaries are being uploaded.</p>
@@ -265,9 +265,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[Look who's watching...]]></title>
-    <link href="http://reprojected.github.com/blog/2007/06/18/look-whos-watching/"/>
+    <link href="http://www.reprojected.com/blog/2007/06/18/look-whos-watching/"/>
     <updated>2007-06-18T15:51:18-07:00</updated>
-    <id>http://reprojected.github.com/blog/2007/06/18/look-whos-watching</id>
+    <id>http://www.reprojected.com/blog/2007/06/18/look-whos-watching</id>
     <content type="html"><![CDATA[<p>Well, to my amazement I found this little nugget in my logs this afternoon (click to see full size)&#8230;</p>
 
 <p><a href="http://media.reprojected.com/images/general/esri_qgis.jpg"><img src="http://media.reprojected.com/images/general/esri_qgis.jpg" alt="esri" /></a></p>
@@ -278,9 +278,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[New video demo's...]]></title>
-    <link href="http://reprojected.github.com/blog/2007/05/15/new-video-demos/"/>
+    <link href="http://www.reprojected.com/blog/2007/05/15/new-video-demos/"/>
     <updated>2007-05-15T14:04:09-07:00</updated>
-    <id>http://reprojected.github.com/blog/2007/05/15/new-video-demos</id>
+    <id>http://www.reprojected.com/blog/2007/05/15/new-video-demos</id>
     <content type="html"><![CDATA[<p><img src="http://media.reprojected.com/images/general/holy.jpg" alt="Making Movies" /></p>
 
 <p>Well, you can now <a href="http://www.reprojected.com/how-tos/video/">watch me fumble around installing</a> a new Ubuntu system and getting it all ready for development using much of the Open Source GIS stack, including QGIS, PostGIS, GDAL/OGR and many others&#8230;</p>
@@ -301,9 +301,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[None]]></title>
-    <link href="http://reprojected.github.com/blog/2007/04/23/45/"/>
+    <link href="http://www.reprojected.com/blog/2007/04/23/45/"/>
     <updated>2007-04-23T14:12:58-07:00</updated>
-    <id>http://reprojected.github.com/blog/2007/04/23/45</id>
+    <id>http://www.reprojected.com/blog/2007/04/23/45</id>
     <content type="html"><![CDATA[<p><img src="http://www.orurisa.org/graphics/hom_bnnr.gif" alt="URISA" /></p>
 
 <p>Just returned from a week on the road and one of the highlights was <a href="http://www.orurisa.org/events/gisinact/2007event/index.html">GIS in Action</a>, the <a href="http://www.orurisa.org/">Oregon and Southwest Washington URISA</a> annual GIS event.  There were over 300 people on site for 2 days of great talks, workshops and panels.  I was asked again to host one of the Open Source sessions at the conference and we participated on Wednesday.  I presented on the OSGeo, some sample applications of the Open Source GIS technology, and even had a quick online IRC chat with Chris Schmidt of Openlayers in front of the crowd.  We also had <a href="http://www.co.polk.or.us/Central%20Services/GIS.asp">Dean Anderson from Polk County</a> talking about doing open development when confined to a proprietary environment (often the case in government).  He had some great examples of developing Arc based software on SourceForge.  Finally we had <a href="http://staff.osuosl.org/~deborah/">Deborah Bryant</a> from the <a href="http://osuosl.org/">Oregon State University Open Source Lab (OSU OSL)</a> to talk about government uptake of Open Source technology.  She provides great insight to the front lines of getting Open Source accepted in main stream government.  She runs the <a href="http://goscon.org/">GOSCON</a> conference and is a wealth of knowledge on the current state of Open Source in government, big and small.</p>
@@ -314,9 +314,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[Demo's of new web mapping decision support tools...]]></title>
-    <link href="http://reprojected.github.com/blog/2007/03/28/demos-of-new-web-mapping-decision-support-tools/"/>
+    <link href="http://www.reprojected.com/blog/2007/03/28/demos-of-new-web-mapping-decision-support-tools/"/>
     <updated>2007-03-28T22:00:31-07:00</updated>
-    <id>http://reprojected.github.com/blog/2007/03/28/demos-of-new-web-mapping-decision-support-tools</id>
+    <id>http://www.reprojected.com/blog/2007/03/28/demos-of-new-web-mapping-decision-support-tools</id>
     <content type="html"><![CDATA[<p><img src="http://media.reprojected.com/geoblog/wp-content/uploads/2007/03/film_reel270.thumbnail.jpg" alt="film2" /></p>
 
 <p>(UPDATE: Ecotrust has asked me to remove material related to the Calzone and Gulf Tool. Please feel free to contact Ecotrust directly to find out more about those tools)</p>
@@ -337,9 +337,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[CUGOS - Cascadia Users of Geospatial Open Source]]></title>
-    <link href="http://reprojected.github.com/blog/2007/03/20/cugos-cascadia-users-of-geospatial-open-source-2/"/>
+    <link href="http://www.reprojected.com/blog/2007/03/20/cugos-cascadia-users-of-geospatial-open-source-2/"/>
     <updated>2007-03-20T13:53:57-07:00</updated>
-    <id>http://reprojected.github.com/blog/2007/03/20/cugos-cascadia-users-of-geospatial-open-source-2</id>
+    <id>http://www.reprojected.com/blog/2007/03/20/cugos-cascadia-users-of-geospatial-open-source-2</id>
     <content type="html"><![CDATA[<p>CUGOSians,</p>
 
 <p>Hope all are well.  I just wanted to send out a quick reminder that we will be having our first <a href="http://groups.google.com/group/cugos">CUGOS meeting</a> tomorrow (Wednesday - 03/21/07) at the <a href="http://www.lizardtech.com/company/contact.php">Seattle LizardTech offices</a>.  We will kick things off at 5:30pm and wrap-up by 7pm.  Some of us will most likely grab a beer near by after as well.  Looks to be a great turnout with about 30 new people signed up!</p>
@@ -350,9 +350,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[Planet Geospatial Voodoo...]]></title>
-    <link href="http://reprojected.github.com/blog/2007/03/07/planet-geospatial-voodoo/"/>
+    <link href="http://www.reprojected.com/blog/2007/03/07/planet-geospatial-voodoo/"/>
     <updated>2007-03-07T15:12:52-08:00</updated>
-    <id>http://reprojected.github.com/blog/2007/03/07/planet-geospatial-voodoo</id>
+    <id>http://www.reprojected.com/blog/2007/03/07/planet-geospatial-voodoo</id>
     <content type="html"><![CDATA[<p><img src="http://media.reprojected.com/geoblog/wp-content/uploads/2007/03/voodoo.thumbnail.jpg" alt="Voodoo" /></p>
 
 <p>Well, I am back again after being been hit by the <a href="http://www.planetgs.com/">Planet Geospatial</a> Voodoo.  <a href="http://www.spatiallyadjusted.com/">James</a> has been nice enough to go under the hood of the <a href="http://www.spatiallyadjusted.com/2007/02/15/planet-gs-down-but-there-is-good-news/">ever so sensative PG</a> and re-link to my blog.  Must have been dropped in the shuffle of the last few months, but rest assured I have not gone away.  I have had some new info posted since last I was linked here and hope that some people find it useful&#8230;</p>
@@ -365,9 +365,9 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
   <entry>
     <title type="html"><![CDATA[New Open Source Paper Submitted]]></title>
-    <link href="http://reprojected.github.com/blog/2007/03/02/new-open-source-paper-submitted/"/>
+    <link href="http://www.reprojected.com/blog/2007/03/02/new-open-source-paper-submitted/"/>
     <updated>2007-03-02T23:58:51-08:00</updated>
-    <id>http://reprojected.github.com/blog/2007/03/02/new-open-source-paper-submitted</id>
+    <id>http://www.reprojected.com/blog/2007/03/02/new-open-source-paper-submitted</id>
     <content type="html"><![CDATA[<p><img src="http://www.csc.noaa.gov/cz/images/logo.jpg" alt="CZ07" /></p>
 
 <p>Just <a href="http://www.reprojected.com/academic-papers/">posted</a> an <a href="http://media.reprojected.com/presentations/Papers/CZ07/cz07_aaron_racicot.pdf">extended abstract</a> for <a href="http://www.csc.noaa.gov/cz/index.html">Coastal Zone 07</a> to take place in Portland OR July 22nd-26th.  Great to get some more Open Source geospatial published&#8230;</p>

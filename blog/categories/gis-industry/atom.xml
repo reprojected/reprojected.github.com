@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: GIS Industry | Reprojected]]></title>
-  <link href="http://reprojected.github.com/blog/categories/gis-industry/atom.xml" rel="self"/>
-  <link href="http://reprojected.github.com/"/>
-  <updated>2012-04-19T22:30:12-07:00</updated>
-  <id>http://reprojected.github.com/</id>
+  <link href="http://www.reprojected.com/blog/categories/gis-industry/atom.xml" rel="self"/>
+  <link href="http://www.reprojected.com/"/>
+  <updated>2012-04-19T22:33:08-07:00</updated>
+  <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[None]]></title>
-    <link href="http://reprojected.github.com/blog/2007/04/23/45/"/>
+    <link href="http://www.reprojected.com/blog/2007/04/23/45/"/>
     <updated>2007-04-23T14:12:58-07:00</updated>
-    <id>http://reprojected.github.com/blog/2007/04/23/45</id>
+    <id>http://www.reprojected.com/blog/2007/04/23/45</id>
     <content type="html"><![CDATA[<p><img src="http://www.orurisa.org/graphics/hom_bnnr.gif" alt="URISA" /></p>
 
 <p>Just returned from a week on the road and one of the highlights was <a href="http://www.orurisa.org/events/gisinact/2007event/index.html">GIS in Action</a>, the <a href="http://www.orurisa.org/">Oregon and Southwest Washington URISA</a> annual GIS event.  There were over 300 people on site for 2 days of great talks, workshops and panels.  I was asked again to host one of the Open Source sessions at the conference and we participated on Wednesday.  I presented on the OSGeo, some sample applications of the Open Source GIS technology, and even had a quick online IRC chat with Chris Schmidt of Openlayers in front of the crowd.  We also had <a href="http://www.co.polk.or.us/Central%20Services/GIS.asp">Dean Anderson from Polk County</a> talking about doing open development when confined to a proprietary environment (often the case in government).  He had some great examples of developing Arc based software on SourceForge.  Finally we had <a href="http://staff.osuosl.org/~deborah/">Deborah Bryant</a> from the <a href="http://osuosl.org/">Oregon State University Open Source Lab (OSU OSL)</a> to talk about government uptake of Open Source technology.  She provides great insight to the front lines of getting Open Source accepted in main stream government.  She runs the <a href="http://goscon.org/">GOSCON</a> conference and is a wealth of knowledge on the current state of Open Source in government, big and small.</p>
@@ -28,9 +28,9 @@
   
   <entry>
     <title type="html"><![CDATA[CUGOS - Cascadia Users of Geospatial Open Source]]></title>
-    <link href="http://reprojected.github.com/blog/2007/03/20/cugos-cascadia-users-of-geospatial-open-source-2/"/>
+    <link href="http://www.reprojected.com/blog/2007/03/20/cugos-cascadia-users-of-geospatial-open-source-2/"/>
     <updated>2007-03-20T13:53:57-07:00</updated>
-    <id>http://reprojected.github.com/blog/2007/03/20/cugos-cascadia-users-of-geospatial-open-source-2</id>
+    <id>http://www.reprojected.com/blog/2007/03/20/cugos-cascadia-users-of-geospatial-open-source-2</id>
     <content type="html"><![CDATA[<p>CUGOSians,</p>
 
 <p>Hope all are well.  I just wanted to send out a quick reminder that we will be having our first <a href="http://groups.google.com/group/cugos">CUGOS meeting</a> tomorrow (Wednesday - 03/21/07) at the <a href="http://www.lizardtech.com/company/contact.php">Seattle LizardTech offices</a>.  We will kick things off at 5:30pm and wrap-up by 7pm.  Some of us will most likely grab a beer near by after as well.  Looks to be a great turnout with about 30 new people signed up!</p>
@@ -41,9 +41,9 @@
   
   <entry>
     <title type="html"><![CDATA[What a day...]]></title>
-    <link href="http://reprojected.github.com/blog/2007/02/15/what-a-day/"/>
+    <link href="http://www.reprojected.com/blog/2007/02/15/what-a-day/"/>
     <updated>2007-02-15T10:05:25-08:00</updated>
-    <id>http://reprojected.github.com/blog/2007/02/15/what-a-day</id>
+    <id>http://www.reprojected.com/blog/2007/02/15/what-a-day</id>
     <content type="html"><![CDATA[<p>A little "trip report" from Whidbey Island!</p>
 
 <p>Yesterday I ventured off the Island in the afternoon for a whirl  wind tour of Seattle events.</p>

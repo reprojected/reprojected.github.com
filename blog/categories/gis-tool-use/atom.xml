@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: GIS Tool Use | Reprojected]]></title>
-  <link href="http://reprojected.github.com/blog/categories/gis-tool-use/atom.xml" rel="self"/>
-  <link href="http://reprojected.github.com/"/>
-  <updated>2012-04-19T22:30:12-07:00</updated>
-  <id>http://reprojected.github.com/</id>
+  <link href="http://www.reprojected.com/blog/categories/gis-tool-use/atom.xml" rel="self"/>
+  <link href="http://www.reprojected.com/"/>
+  <updated>2012-04-19T22:33:08-07:00</updated>
+  <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Adding SESSION based data store for Chameleon based apps.]]></title>
-    <link href="http://reprojected.github.com/blog/2006/10/23/adding-session-based-data-store-for-chameleon-based-apps/"/>
+    <link href="http://www.reprojected.com/blog/2006/10/23/adding-session-based-data-store-for-chameleon-based-apps/"/>
     <updated>2006-10-23T17:31:34-07:00</updated>
-    <id>http://reprojected.github.com/blog/2006/10/23/adding-session-based-data-store-for-chameleon-based-apps</id>
+    <id>http://www.reprojected.com/blog/2006/10/23/adding-session-based-data-store-for-chameleon-based-apps</id>
     <content type="html"><![CDATA[<p>I have had a great need for a directory structure like the following in my Chameleon based apps:</p>
 
 <p><strong><em>SESSION_DIR

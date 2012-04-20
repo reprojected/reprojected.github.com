@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: GIS Tool Install | Reprojected]]></title>
-  <link href="http://reprojected.github.com/blog/categories/gis-tool-install/atom.xml" rel="self"/>
-  <link href="http://reprojected.github.com/"/>
-  <updated>2012-04-19T22:30:12-07:00</updated>
-  <id>http://reprojected.github.com/</id>
+  <link href="http://www.reprojected.com/blog/categories/gis-tool-install/atom.xml" rel="self"/>
+  <link href="http://www.reprojected.com/"/>
+  <updated>2012-04-19T22:33:08-07:00</updated>
+  <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
     
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[Updated install notes for Mapserver 5.0 with AGG on FC8]]></title>
-    <link href="http://reprojected.github.com/blog/2008/01/14/updated-install-notes-for-mapserver-50-with-agg-on-fc8/"/>
+    <link href="http://www.reprojected.com/blog/2008/01/14/updated-install-notes-for-mapserver-50-with-agg-on-fc8/"/>
     <updated>2008-01-14T11:19:45-08:00</updated>
-    <id>http://reprojected.github.com/blog/2008/01/14/updated-install-notes-for-mapserver-50-with-agg-on-fc8</id>
+    <id>http://www.reprojected.com/blog/2008/01/14/updated-install-notes-for-mapserver-50-with-agg-on-fc8</id>
     <content type="html"><![CDATA[<p>Had the need to install Mapserver/PostGIS/GDAL etc on a FC8 box. While 99% of what I do now is on Ubuntu (<a href="http://www.reprojected.com/how-tos/video/">here are some notes and vids on installing there</a>)... I occasionally need to play on a Fedora box. So, <a href="http://www.reprojected.com/how-tos/fc8-oh-why-am-i-installing-on-fedora/">here are some recent install notes</a> from a bare bones FC8 box to get it all going from source...</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[QGIS on the eee...]]></title>
-    <link href="http://reprojected.github.com/blog/2008/01/06/qgis-on-the-eee/"/>
+    <link href="http://www.reprojected.com/blog/2008/01/06/qgis-on-the-eee/"/>
     <updated>2008-01-06T00:46:26-08:00</updated>
-    <id>http://reprojected.github.com/blog/2008/01/06/qgis-on-the-eee</id>
+    <id>http://www.reprojected.com/blog/2008/01/06/qgis-on-the-eee</id>
     <content type="html"><![CDATA[<p>Well, I got Ubuntu 7.10 installed on an 8 gig SDHC card and away I go...</p>
 
 <p>4.5 gigs used for the base Ubuntu system as well as the base GIS software:</p>
@@ -49,9 +49,9 @@
   
   <entry>
     <title type="html"><![CDATA[Getting QGIS to install on windows AND support Python apps...]]></title>
-    <link href="http://reprojected.github.com/blog/2007/10/11/getting-qgis-to-install-on-windows-and-support-python-apps/"/>
+    <link href="http://www.reprojected.com/blog/2007/10/11/getting-qgis-to-install-on-windows-and-support-python-apps/"/>
     <updated>2007-10-11T09:55:56-07:00</updated>
-    <id>http://reprojected.github.com/blog/2007/10/11/getting-qgis-to-install-on-windows-and-support-python-apps</id>
+    <id>http://www.reprojected.com/blog/2007/10/11/getting-qgis-to-install-on-windows-and-support-python-apps</id>
     <content type="html"><![CDATA[<p>So here are the simple (kind of) steps as of today to get a windows install of QGIS working that supports PyQt and the python bindings to QGIS... all with out having to compile anything:</p>
 
 <p>1) Make sure you have Python 2.5 or newer installed on your machine... if you don't have it you can download it from <a href="http://www.python.org/ftp/python/2.5.1/python-2.5.1.msi">HERE</a> (official) or <a href="http://media.reprojected.com/qgis_dev/dev_files/qt4.3.1_based/Python/python-2.5.1.msi">HERE</a> (my archive).</p>
@@ -70,9 +70,9 @@
   
   <entry>
     <title type="html"><![CDATA[New build notes for a web-based OSGIS stack on FC3 and FC4]]></title>
-    <link href="http://reprojected.github.com/blog/2007/01/11/new-build-notes-for-web-based-osgis-on-fc3-and-fc4/"/>
+    <link href="http://www.reprojected.com/blog/2007/01/11/new-build-notes-for-web-based-osgis-on-fc3-and-fc4/"/>
     <updated>2007-01-11T23:36:32-08:00</updated>
-    <id>http://reprojected.github.com/blog/2007/01/11/new-build-notes-for-web-based-osgis-on-fc3-and-fc4</id>
+    <id>http://www.reprojected.com/blog/2007/01/11/new-build-notes-for-web-based-osgis-on-fc3-and-fc4</id>
     <content type="html"><![CDATA[<p>I went ahead and added some build notes that I have created in the past for setting up new Fedora based machines with a web GIS stack.  Currently building on FC6 and will post soon.  Hope this helps some folks out.</p>
 
 <p><a href="http://media.reprojected.com/geoblog/how-tos/fc3-setup-old-but-good/">FC3</a> and <a href="http://media.reprojected.com/geoblog/how-tos/fc4-getting-warmer/">FC4 </a></p>
@@ -83,9 +83,9 @@
   
   <entry>
     <title type="html"><![CDATA[FREE web hosting for non-profits]]></title>
-    <link href="http://reprojected.github.com/blog/2006/12/09/free-web-hosting-for-non-profits/"/>
+    <link href="http://www.reprojected.com/blog/2006/12/09/free-web-hosting-for-non-profits/"/>
     <updated>2006-12-09T00:37:28-08:00</updated>
-    <id>http://reprojected.github.com/blog/2006/12/09/free-web-hosting-for-non-profits</id>
+    <id>http://www.reprojected.com/blog/2006/12/09/free-web-hosting-for-non-profits</id>
     <content type="html"><![CDATA[<p>Man you cant get any better than this:</p>
 
 <p><a href="http://wiki.dreamhost.com/index.php/Non-profit_Discount">http://wiki.dreamhost.com/index.php/Non-profit_Discount</a></p>
