@@ -9,7 +9,7 @@ wordpress_id: '2'
 
 ![Aaron](http://media.reprojected.com/images/about/aaron.png) _**Aaron Racicot**_
 
-I own a private software development company called Z-Pulley Inc.  I received my B.S. in Computer Science from the University of Washington and my M.S. in Environmental Science from [Oregon Health and Science University](http://www.ogi.edu/ebs/).  I am a certified [GIS professional (GISP - 00053691)](http://www.gisci.org/) with over 6 years of professional GIS experience.  I worked as an embedded systems developer for many years before turning my focus toward GIS combining for over 13 years of professional software development experience.
+I own a private software development company called Z-Pulley Inc.  I received my B.S. in Computer Science from the University of Washington and my M.S. in Environmental Science from [Oregon Health and Science University](http://www.ogi.edu/ebs/).  I am a certified [GIS professional (GISP - 00053691)](http://www.gisci.org/) with over 6 years of professional GIS experience.  I worked as an embedded systems developer for many years before turning my focus toward GIS combining for over 15 years of professional software development experience.
 
 ![Tele](http://media.reprojected.com/images/about/kent_lake_001.png)
 
