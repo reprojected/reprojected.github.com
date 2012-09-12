@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Video - Reprojected</title>
+  <title>Extracting extent from gdalinfo on the command line - Reprojected</title>
   <meta name="author" content="Aaron Racicot">
 
   
-  <meta name="description" content="Video May 14th, 2007 Here is a roll of videos I have produced: ??/07 - (soon to come) Cross compiling python/QGIS apps on Mac, Win and Linux ??/07 &hellip;">
+  <meta name="description" content="Had a question on #gdal IRC yesterday on how to get the extent from gdalinfo. Well&#8230; here is some command line hackity hack to get it in a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.reprojected.com/how-tos/video">
+  <link rel="canonical" href="http://www.reprojected.com/blog/2012/09/12/extracting-extent-from-gdalinfo-on-the-command-line">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -69,48 +69,15 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Video</h1>
-    <p class="meta">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-05-14T17:20:17-07:00" pubdate data-updated="true">May 14<span>th</span>, 2007</time></p>
-  </header>
-  
-  <p><em><strong>Here is a roll of videos I have produced:</strong></em></p>
-
-<p>??/07 - (soon to come) Cross compiling python/QGIS apps on Mac, Win and Linux</p>
-
-<p>??/07 - (soon to come) Adding to base python tutorials toward a new application framework</p>
-
-<p>??/07 - (soon to come) Mapserver stack from source</p>
-
-<p>??/07 - (soon to come) GRASS install and use</p>
-
-<p><strong>05/07 - (<a href="http://www.reprojected.com/presentations/Videos/qgis_tutorial_051407/qgis_tut_final.html">video</a>) Setting up the Martin/Tim tutorials for stand alone python apps using QGIS</strong></p>
-
-<p><strong>05/07 - (video <a href="http://www.reprojected.com/presentations/Videos/qgis_install_051407/qgis_final_1.html">Part 1</a> - <a href="http://www.reprojected.com/presentations/Videos/qgis_install_051407/qgis_final_2.html">Part 2</a> - <a href="http://www.reprojected.com/presentations/Videos/qgis_install_051407/install_qgis.txt">txt</a>) Installing 0.9 branch of QGIS with Python bindings</strong></p>
-
-<p><strong>05/07 - (video <a href="http://www.reprojected.com/presentations/Videos/base_install_051107/base_final_1.html">Part 1</a> - <a href="http://www.reprojected.com/presentations/Videos/base_install_051107/base_final_2.html">Part 2</a> - <a href="http://www.reprojected.com/presentations/Videos/base_install_051107/install_base.txt">txt</a>) Installing base GIS tools</strong></p>
-
-<p><strong>05/07 - (<a href="http://www.reprojected.com/presentations/Videos/ubuntu_install_050907/ubuntu_install_final.html">video</a>) Installing Ubuntu 7.04 on new hardware</strong></p>
-
-  
-    <footer>
+    
+      <h1 class="entry-title">Extracting Extent From Gdalinfo on the Command Line</h1>
+    
+    
       <p class="meta">
         
-        
 
 
 
@@ -122,21 +89,70 @@
   
 
 
-<time datetime="2007-05-14T17:20:17-07:00" pubdate data-updated="true">May 14<span>th</span>, 2007</time>
+<time datetime="2012-09-12T13:00:00-07:00" pubdate data-updated="true">Sep 12<span>th</span>, 2012</time>
         
       </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Had a question on #gdal IRC yesterday on how to get the extent from <code>gdalinfo</code>.</p>
+
+<p>Well&#8230; here is some command line hackity hack to get it in a format that can be passed into things like <code>gdal_translate</code> with the <code>-projwin</code> flag:</p>
+
+<pre><code>gdalinfo my.tif | awk '/(Upper Left)|(Lower Right)/' | awk '{gsub(/,|\)|\(/," ");print $3 " " $4}' | sed ':a;N;$!ba;s/\n/ /g'
+</code></pre>
+
+<p>From this you get some simple output of the UL and LR corners of the image:</p>
+
+<pre><code>418081.036 3613108.883 1589231.036 2678608.883
+</code></pre>
+
+<p>Hope that helps someone else out&#8230;</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
       
-        <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.reprojected.com/how-tos/video/index.html" data-via="reprojected" data-counturl="http://www.reprojected.com/how-tos/video/index.html" >Tweet</a>
+
+<span class="byline author vcard">Posted by <span class="fn">Aaron Racicot</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-12T13:00:00-07:00" pubdate data-updated="true">Sep 12<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.reprojected.com/blog/2012/09/12/extracting-extent-from-gdalinfo-on-the-command-line/" data-via="reprojected" data-counturl="http://www.reprojected.com/blog/2012/09/12/extracting-extent-from-gdalinfo-on-the-command-line/" >Tweet</a>
   
   
   
 </div>
 
+    
+    <p class="meta">
       
-    </footer>
-  
+        <a class="basic-alignment left" href="/blog/2009/02/17/mirrormap/" title="Previous Post: MirrorMap">&laquo; MirrorMap</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

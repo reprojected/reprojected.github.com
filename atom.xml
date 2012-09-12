@@ -4,7 +4,7 @@
   <title><![CDATA[Reprojected]]></title>
   <link href="http://www.reprojected.com/atom.xml" rel="self"/>
   <link href="http://www.reprojected.com/"/>
-  <updated>2012-04-23T11:52:51-07:00</updated>
+  <updated>2012-09-12T13:06:48-07:00</updated>
   <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Extracting extent from gdalinfo on the command line]]></title>
+    <link href="http://www.reprojected.com/blog/2012/09/12/extracting-extent-from-gdalinfo-on-the-command-line/"/>
+    <updated>2012-09-12T13:00:00-07:00</updated>
+    <id>http://www.reprojected.com/blog/2012/09/12/extracting-extent-from-gdalinfo-on-the-command-line</id>
+    <content type="html"><![CDATA[<p>Had a question on #gdal IRC yesterday on how to get the extent from <code>gdalinfo</code>.</p>
+
+<p>Well&#8230; here is some command line hackity hack to get it in a format that can be passed into things like <code>gdal_translate</code> with the <code>-projwin</code> flag:</p>
+
+<pre><code>gdalinfo my.tif | awk '/(Upper Left)|(Lower Right)/' | awk '{gsub(/,|\)|\(/," ");print $3 " " $4}' | sed ':a;N;$!ba;s/\n/ /g'
+</code></pre>
+
+<p>From this you get some simple output of the UL and LR corners of the image:</p>
+
+<pre><code>418081.036 3613108.883 1589231.036 2678608.883
+</code></pre>
+
+<p>Hope that helps someone else out&#8230;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[MirrorMap]]></title>
@@ -360,17 +381,6 @@ Quantum GIS - 1.1.0-Unstable-trunk
 <p><a href="http://www.reprojected.com/presentations/">New Presentation</a></p>
 
 <p><a href="http://www.reprojected.com/academic-papers/">New Paper</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[New Open Source Paper Submitted]]></title>
-    <link href="http://www.reprojected.com/blog/2007/03/02/new-open-source-paper-submitted/"/>
-    <updated>2007-03-02T23:58:51-08:00</updated>
-    <id>http://www.reprojected.com/blog/2007/03/02/new-open-source-paper-submitted</id>
-    <content type="html"><![CDATA[<p><img src="http://www.csc.noaa.gov/cz/images/logo.jpg" alt="CZ07" /></p>
-
-<p>Just <a href="http://www.reprojected.com/academic-papers/">posted</a> an <a href="http://media.reprojected.com/presentations/Papers/CZ07/cz07_aaron_racicot.pdf">extended abstract</a> for <a href="http://www.csc.noaa.gov/cz/index.html">Coastal Zone 07</a> to take place in Portland OR July 22nd-26th.  Great to get some more Open Source geospatial published&#8230;</p>
 ]]></content>
   </entry>
   
