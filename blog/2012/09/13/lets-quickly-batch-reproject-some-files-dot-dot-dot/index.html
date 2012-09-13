@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Reprojected</title>
+  <title>Lets quickly batch reproject some files... - Reprojected</title>
   <meta name="author" content="Aaron Racicot">
 
   
-  <meta name="description" content="Reprojected is&#8230; Recent Posts Lets quickly batch reproject some files... Extracting extent from gdalinfo on the command line MirrorMap Tidal &hellip;">
+  <meta name="description" content="Lets say we have a directory full of .jpg files that are geo-referenced (could be any extension like .tif as well): for f in *.jpg; do gdalwarp - &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.reprojected.com/.old">
+  <link rel="canonical" href="http://www.reprojected.com/blog/2012/09/13/lets-quickly-batch-reproject-some-files-dot-dot-dot">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -69,11 +69,83 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
-  Reprojected is&#8230;
+  <header>
+    
+      <h1 class="entry-title">Lets Quickly Batch Reproject Some Files...</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
 
   
+
+
+<time datetime="2012-09-13T12:02:00-07:00" pubdate data-updated="true">Sep 13<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Lets say we have a directory full of .jpg files that are geo-referenced (could be any extension like .tif as well):</p>
+
+<pre><code>for f in *.jpg; do gdalwarp -t_srs EPSG:900913 $f ${f/.jpg}_900913.jpg; done
+</code></pre>
+
+<p>Boom&#8230; that simple.  Love GDAL.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Aaron Racicot</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-13T12:02:00-07:00" pubdate data-updated="true">Sep 13<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.reprojected.com/blog/2012/09/13/lets-quickly-batch-reproject-some-files-dot-dot-dot/" data-via="reprojected" data-counturl="http://www.reprojected.com/blog/2012/09/13/lets-quickly-batch-reproject-some-files-dot-dot-dot/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/09/12/extracting-extent-from-gdalinfo-on-the-command-line/" title="Previous Post: Extracting extent from gdalinfo on the command line">&laquo; Extracting extent from gdalinfo on the command line</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

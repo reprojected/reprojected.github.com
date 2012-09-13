@@ -9,7 +9,7 @@
   <meta name="author" content="Aaron Racicot">
 
   
-  <meta name="description" content="Had a question on #gdal IRC yesterday on how to get the extent from gdalinfo. Well&#8230; here is some command line hackity hack to get it in a &hellip;">
+  <meta name="description" content="Lets say we have a directory full of .jpg files that are geo-referenced (could be any extension like .tif as well): for f in *.jpg; do gdalwarp - &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -70,6 +70,47 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/13/lets-quickly-batch-reproject-some-files-dot-dot-dot/">Lets Quickly Batch Reproject Some Files&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-13T12:02:00-07:00" pubdate data-updated="true">Sep 13<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Lets say we have a directory full of .jpg files that are geo-referenced (could be any extension like .tif as well):</p>
+
+<pre><code>for f in *.jpg; do gdalwarp -t_srs EPSG:900913 $f ${f/.jpg}_900913.jpg; done
+</code></pre>
+
+<p>Boom&#8230; that simple.  Love GDAL.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -478,42 +519,6 @@ Quantum GIS - 1.1.0-Unstable-trunk
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2008/01/14/updated-install-notes-for-mapserver-50-with-agg-on-fc8/">Updated Install Notes for Mapserver 5.0 With AGG on FC8</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-01-14T11:19:45-08:00" pubdate data-updated="true">Jan 14<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Had the need to install Mapserver/PostGIS/GDAL etc on a FC8 box. While 99% of what I do now is on Ubuntu (<a href="http://www.reprojected.com/how-tos/video/">here are some notes and vids on installing there</a>)&#8230; I occasionally need to play on a Fedora box. So, <a href="http://www.reprojected.com/how-tos/fc8-oh-why-am-i-installing-on-fedora/">here are some recent install notes</a> from a bare bones FC8 box to get it all going from source&#8230;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -529,6 +534,10 @@ Quantum GIS - 1.1.0-Unstable-trunk
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/09/13/lets-quickly-batch-reproject-some-files-dot-dot-dot/">Lets quickly batch reproject some files&#8230;</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/09/12/extracting-extent-from-gdalinfo-on-the-command-line/">Extracting extent from gdalinfo on the command line</a>
       </li>
     
@@ -542,10 +551,6 @@ Quantum GIS - 1.1.0-Unstable-trunk
     
       <li class="post">
         <a href="/blog/2009/02/09/refmap-webkit-in-pyqt/">RefMap - WebKit in PyQt</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2009/02/06/debugging-qgis-plugins/">Debugging QGIS Plugins&#8230;</a>
       </li>
     
   </ul>

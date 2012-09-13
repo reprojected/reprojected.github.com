@@ -4,7 +4,7 @@
   <title><![CDATA[Reprojected]]></title>
   <link href="http://www.reprojected.com/atom.xml" rel="self"/>
   <link href="http://www.reprojected.com/"/>
-  <updated>2012-09-12T15:38:29-07:00</updated>
+  <updated>2012-09-13T12:04:26-07:00</updated>
   <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lets quickly batch reproject some files...]]></title>
+    <link href="http://www.reprojected.com/blog/2012/09/13/lets-quickly-batch-reproject-some-files-dot-dot-dot/"/>
+    <updated>2012-09-13T12:02:00-07:00</updated>
+    <id>http://www.reprojected.com/blog/2012/09/13/lets-quickly-batch-reproject-some-files-dot-dot-dot</id>
+    <content type="html"><![CDATA[<p>Lets say we have a directory full of .jpg files that are geo-referenced (could be any extension like .tif as well):</p>
+
+<pre><code>for f in *.jpg; do gdalwarp -t_srs EPSG:900913 $f ${f/.jpg}_900913.jpg; done
+</code></pre>
+
+<p>Boom&#8230; that simple.  Love GDAL.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Extracting extent from gdalinfo on the command line]]></title>
@@ -366,21 +380,6 @@ Quantum GIS - 1.1.0-Unstable-trunk
 <p>Hope all are well.  I just wanted to send out a quick reminder that we will be having our first <a href="http://groups.google.com/group/cugos">CUGOS meeting</a> tomorrow (Wednesday - 03/21/07) at the <a href="http://www.lizardtech.com/company/contact.php">Seattle LizardTech offices</a>.  We will kick things off at 5:30pm and wrap-up by 7pm.  Some of us will most likely grab a beer near by after as well.  Looks to be a great turnout with about 30 new people signed up!</p>
 
 <p>I am really looking forward to meeting everyone and making these meetings a great venue for social interaction and learning for Open Source GIS professionals.  See you all tomorrow!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Planet Geospatial Voodoo...]]></title>
-    <link href="http://www.reprojected.com/blog/2007/03/07/planet-geospatial-voodoo/"/>
-    <updated>2007-03-07T15:12:52-08:00</updated>
-    <id>http://www.reprojected.com/blog/2007/03/07/planet-geospatial-voodoo</id>
-    <content type="html"><![CDATA[<p><img src="http://media.reprojected.com/geoblog/wp-content/uploads/2007/03/voodoo.thumbnail.jpg" alt="Voodoo" /></p>
-
-<p>Well, I am back again after being been hit by the <a href="http://www.planetgs.com/">Planet Geospatial</a> Voodoo.  <a href="http://www.spatiallyadjusted.com/">James</a> has been nice enough to go under the hood of the <a href="http://www.spatiallyadjusted.com/2007/02/15/planet-gs-down-but-there-is-good-news/">ever so sensative PG</a> and re-link to my blog.  Must have been dropped in the shuffle of the last few months, but rest assured I have not gone away.  I have had some new info posted since last I was linked here and hope that some people find it useful&#8230;</p>
-
-<p><a href="http://www.reprojected.com/presentations/">New Presentation</a></p>
-
-<p><a href="http://www.reprojected.com/academic-papers/">New Paper</a></p>
 ]]></content>
   </entry>
   
