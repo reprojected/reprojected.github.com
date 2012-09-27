@@ -4,7 +4,7 @@
   <title><![CDATA[Reprojected]]></title>
   <link href="http://www.reprojected.com/atom.xml" rel="self"/>
   <link href="http://www.reprojected.com/"/>
-  <updated>2012-09-13T12:04:26-07:00</updated>
+  <updated>2012-09-27T13:27:03-07:00</updated>
   <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[some simple psql formating tips]]></title>
+    <link href="http://www.reprojected.com/blog/2012/09/27/some-simple-psql-formating-tips/"/>
+    <updated>2012-09-27T13:17:00-07:00</updated>
+    <id>http://www.reprojected.com/blog/2012/09/27/some-simple-psql-formating-tips</id>
+    <content type="html"><![CDATA[<p><img class="center" src="image/simple_query.png" title="Default Look" ></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lets quickly batch reproject some files...]]></title>
@@ -367,19 +376,6 @@ Quantum GIS - 1.1.0-Unstable-trunk
 <p><a href="http://media.reprojected.com/demo/gulf-demo.html">http://media.reprojected.com/demo/gulf-demo.html</a></p>
 
 <p>Just a snapshot into some of the DST development we are undertaking and very excited about.  Hope you enjoy&#8230;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[CUGOS - Cascadia Users of Geospatial Open Source]]></title>
-    <link href="http://www.reprojected.com/blog/2007/03/20/cugos-cascadia-users-of-geospatial-open-source-2/"/>
-    <updated>2007-03-20T13:53:57-07:00</updated>
-    <id>http://www.reprojected.com/blog/2007/03/20/cugos-cascadia-users-of-geospatial-open-source-2</id>
-    <content type="html"><![CDATA[<p>CUGOSians,</p>
-
-<p>Hope all are well.  I just wanted to send out a quick reminder that we will be having our first <a href="http://groups.google.com/group/cugos">CUGOS meeting</a> tomorrow (Wednesday - 03/21/07) at the <a href="http://www.lizardtech.com/company/contact.php">Seattle LizardTech offices</a>.  We will kick things off at 5:30pm and wrap-up by 7pm.  Some of us will most likely grab a beer near by after as well.  Looks to be a great turnout with about 30 new people signed up!</p>
-
-<p>I am really looking forward to meeting everyone and making these meetings a great venue for social interaction and learning for Open Source GIS professionals.  See you all tomorrow!</p>
 ]]></content>
   </entry>
   
