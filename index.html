@@ -9,7 +9,7 @@
   <meta name="author" content="Aaron Racicot">
 
   
-  <meta name="description" content="So you are neck deep in psql and are doing some queries&#8230; but the output looks like crap and the pager keeps getting in your way. First&#8230; &hellip;">
+  <meta name="description" content="So I am sitting here on my trusty Ubuntu workstation in the office and realised I am running out of space. Well, here is an easy command to find out &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -70,6 +70,63 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/27/where-did-all-my-space-go/">Where Did All My Space Go</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-27T15:01:00-07:00" pubdate data-updated="true">Sep 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So I am sitting here on my trusty Ubuntu workstation in the office and realised I am running out of space.  Well, here is an easy command to find out where your top offending directories are:</p>
+
+<pre><code>du -h --max-depth=1 | sort -rh | head
+</code></pre>
+
+<p>Here it is in action:</p>
+
+<pre><code>aaronr@aaron-zlinux-office1:~$ du -h --max-depth=1 | sort -rh | head
+146G                           .
+52G                            ./.VirtualBox
+34G                            ./downloads
+18G                            ./work
+12G                            ./Dropbox
+8.9G                           ./VirtualBox VMs
+7.5G                           ./.local
+4.0G                           ./purgatory
+1.5G                           ./tmp
+1.4G                           ./vm_shared
+aaronr@aaron-zlinux-office1:~$ 
+</code></pre>
+
+<p><code>du</code> to look from your current location down (recurse), <code>-h</code> for human readable, <code>--max-depth=1</code> so you just get top level dir summaries&#8230; piped into <code>sort</code> in reverse order with <code>-r</code> and top that off with <code>-h</code> to make sure it sorts on human readable sizes&#8230; finally pipe that into head to look at the first 10 with an optional <code>-n 20</code> to look at more.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -483,56 +540,6 @@ Quantum GIS - 1.1.0-Unstable-trunk
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2008/04/28/linuxfestnw-2008-another-great-event/">LinuxFestNW 2008 - Another Great Event!</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-04-28T12:22:27-07:00" pubdate data-updated="true">Apr 28<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="http://media.reprojected.com/presentations/Presentations/linuxfestnw2008/totem350a.png" alt="LinuxFestNW" /></p>
-
-<p>I had the privilege of giving a talk at <a href="http://www.linuxfestnorthwest.org/">LinuxFest Northwest</a> this year&#8230; and what a cool event this is.  We had a great room full of people interested in Geospatial technology, some great questions and I think some genuine interest from participants that could lead to some folks going home and hacking away with some mapping.  Great job to the organizers of the event and looking forward to helping make LinuxFestNW 2009 an even bigger and better event!</p>
-
-<p>Here are the links to my talk:</p>
-
-<p><a href="http://media.reprojected.com/presentations/Presentations/linuxfestnw2008/racicot_linuxfest042708.pdf">PDF 4.5M</a>
-<a href="http://media.reprojected.com/presentations/Presentations/linuxfestnw2008/racicot_linuxfest042708.odp">ODP 8M</a>
-<a href="http://media.reprojected.com/presentations/Presentations/linuxfestnw2008/racicot_linuxfest042708.ppt">PPT 8M</a></p>
-
-<p>(UPDATE 042808): They have now posted a link to the video of my talk:</p>
-
-<p><a href="http://www.ustream.tv/recorded/377931">http://www.ustream.tv/recorded/377931</a></p>
-
-<p><a href="http://www.cugos.org">CUGOS</a> - For those local to the Pacific Northwest, come visit us and make some local Geospatial friends!!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -548,6 +555,10 @@ Quantum GIS - 1.1.0-Unstable-trunk
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/09/27/where-did-all-my-space-go/">Where did all my space go</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/09/27/some-simple-psql-formating-tips/">simple psql formating tips</a>
       </li>
     
@@ -561,10 +572,6 @@ Quantum GIS - 1.1.0-Unstable-trunk
     
       <li class="post">
         <a href="/blog/2009/02/17/mirrormap/">MirrorMap</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2009/02/10/tidal-power-dss/">Tidal Power DSS</a>
       </li>
     
   </ul>

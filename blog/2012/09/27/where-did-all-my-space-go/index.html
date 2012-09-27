@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Debugging QGIS Plugins... - Reprojected</title>
+  <title>Where did all my space go - Reprojected</title>
   <meta name="author" content="Aaron Racicot">
 
   
-  <meta name="description" content="Well, the title might better read &#8220;debugging PyQt applications&#8230;&#8221;, but much of my PyQt foo happens when developing QGIS plugins. In &hellip;">
+  <meta name="description" content="So I am sitting here on my trusty Ubuntu workstation in the office and realised I am running out of space. Well, here is an easy command to find out &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.reprojected.com/blog/2009/02/06/debugging-qgis-plugins">
+  <link rel="canonical" href="http://www.reprojected.com/blog/2012/09/27/where-did-all-my-space-go">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -73,7 +73,7 @@
   
   <header>
     
-      <h1 class="entry-title">Debugging QGIS Plugins...</h1>
+      <h1 class="entry-title">Where Did All My Space Go</h1>
     
     
       <p class="meta">
@@ -89,43 +89,35 @@
   
 
 
-<time datetime="2009-02-06T14:08:12-08:00" pubdate data-updated="true">Feb 6<span>th</span>, 2009</time>
+<time datetime="2012-09-27T15:01:00-07:00" pubdate data-updated="true">Sep 27<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Well, the title might better read &#8220;debugging <a href="http://www.riverbankcomputing.co.uk/software/pyqt/intro">PyQt</a> applications&#8230;&#8221;, but much of my PyQt foo happens when developing <a href="http://qgisplugins.z-pulley.com/">QGIS plugins</a>. In general I am old school&#8230; <a href="http://www.gnu.org/software/emacs/">emacs</a> and <a href="http://www.gnu.org/software/gdb/">gdb</a> are my friends. When it comes to developing in PyQt there is one life saving code snip that will make your life much easier:</p>
+<div class="entry-content"><p>So I am sitting here on my trusty Ubuntu workstation in the office and realised I am running out of space.  Well, here is an easy command to find out where your top offending directories are:</p>
 
-<pre><code>from PyQt4 import QtCore
-import pdb
-...
-QtCore.pyqtRemoveInputHook()
-pdb.set_trace()
+<pre><code>du -h --max-depth=1 | sort -rh | head
 </code></pre>
 
-<p>This not only sets a trace (breakpoint) in your code, but it stops the PyQt event loop. The call to <a href="http://www.riverbankcomputing.co.uk/static/Docs/PyQt4/pyqt4ref.html#using-pyqt-from-the-python-shell">pyqtRemoveInputHook()</a> is a tasty little tidbit in PyQt to allow for this &#8220;stop it in it&#8217;s tracks&#8221; behavior.  This is a must have for debugging PyQGIS or Python based plugins.</p>
+<p>Here it is in action:</p>
 
-<p>Once you are in <a href="http://docs.python.org/library/pdb.html">pdb</a>, you are set to go with interactive debugging:</p>
-
-<pre><code>--Return--
-&gt; /home/aaronr/.qgis/python/plugins/refmap/refmap.py(101)__init__()-&gt;None
--&gt; pdb.set_trace()
-(Pdb) bt
-&lt;string&gt;(1)&lt;module&gt;()
-/home/aaronr/.qgis/python/plugins/refmap/refmap.py(144)initGui()
--&gt; self.refmap_gui = ReferenceMapWindow(self.iface,flags,self)
-&gt; /home/aaronr/.qgis/python/plugins/refmap/refmap.py(101)__init__()-&gt;None
--&gt; pdb.set_trace()
-(Pdb) print self
-&lt;refmap.refmap.ReferenceMapWindow object at 0x8cc6c2c&gt;
-(Pdb) print self.iface.mainWindow().windowTitle()
-Quantum GIS - 1.1.0-Unstable-trunk
-(Pdb)
+<pre><code>aaronr@aaron-zlinux-office1:~$ du -h --max-depth=1 | sort -rh | head
+146G                           .
+52G                            ./.VirtualBox
+34G                            ./downloads
+18G                            ./work
+12G                            ./Dropbox
+8.9G                           ./VirtualBox VMs
+7.5G                           ./.local
+4.0G                           ./purgatory
+1.5G                           ./tmp
+1.4G                           ./vm_shared
+aaronr@aaron-zlinux-office1:~$ 
 </code></pre>
 
-<p>Happy debugging!!!</p>
+<p><code>du</code> to look from your current location down (recurse), <code>-h</code> for human readable, <code>--max-depth=1</code> so you just get top level dir summaries&#8230; piped into <code>sort</code> in reverse order with <code>-r</code> and top that off with <code>-h</code> to make sure it sorts on human readable sizes&#8230; finally pipe that into head to look at the first 10 with an optional <code>-n 20</code> to look at more.</p>
 </div>
 
 
@@ -148,21 +140,15 @@ Quantum GIS - 1.1.0-Unstable-trunk
   
 
 
-<time datetime="2009-02-06T14:08:12-08:00" pubdate data-updated="true">Feb 6<span>th</span>, 2009</time>
+<time datetime="2012-09-27T15:01:00-07:00" pubdate data-updated="true">Sep 27<span>th</span>, 2012</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/gis-tool-dev/'>GIS Tool Dev</a>, <a class='category' href='/blog/categories/general/'>General</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.reprojected.com/blog/2009/02/06/debugging-qgis-plugins/" data-via="reprojected" data-counturl="http://www.reprojected.com/blog/2009/02/06/debugging-qgis-plugins/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.reprojected.com/blog/2012/09/27/where-did-all-my-space-go/" data-via="reprojected" data-counturl="http://www.reprojected.com/blog/2012/09/27/where-did-all-my-space-go/" >Tweet</a>
   
   
   
@@ -171,10 +157,8 @@ Quantum GIS - 1.1.0-Unstable-trunk
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2009/02/05/back-in-the-saddle/" title="Previous Post: Back in the saddle...">&laquo; Back in the saddle...</a>
+        <a class="basic-alignment left" href="/blog/2012/09/27/some-simple-psql-formating-tips/" title="Previous Post: simple psql formating tips">&laquo; simple psql formating tips</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2009/02/09/refmap-webkit-in-pyqt/" title="Next Post: RefMap - WebKit in PyQt">RefMap - WebKit in PyQt &raquo;</a>
       
     </p>
   </footer>
