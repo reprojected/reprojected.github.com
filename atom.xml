@@ -4,7 +4,7 @@
   <title><![CDATA[Reprojected]]></title>
   <link href="http://www.reprojected.com/atom.xml" rel="self"/>
   <link href="http://www.reprojected.com/"/>
-  <updated>2012-09-27T13:27:03-07:00</updated>
+  <updated>2012-09-27T13:31:09-07:00</updated>
   <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.reprojected.com/blog/2012/09/27/some-simple-psql-formating-tips/"/>
     <updated>2012-09-27T13:17:00-07:00</updated>
     <id>http://www.reprojected.com/blog/2012/09/27/some-simple-psql-formating-tips</id>
-    <content type="html"><![CDATA[<p><img class="center" src="image/simple_query.png" title="Default Look" ></p>
+    <content type="html"><![CDATA[<p><img class="center" src="images/simple_query.png" title="Default Look" ></p>
 ]]></content>
   </entry>
   
