@@ -9,8 +9,7 @@
   <meta name="author" content="Aaron Racicot">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="So you are neck deep in psql and are doing some queries&#8230; but the output looks like crap and the pager keeps getting in your way. First&#8230; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -100,7 +99,23 @@
   </header>
 
 
-  <div class="entry-content"><p><img class="center" src="/images/simple_query.png" title="Default Look" ></p>
+  <div class="entry-content"><p>So you are neck deep in <code>psql</code> and are doing some queries&#8230; but the output looks like crap and the pager keeps getting in your way.</p>
+
+<p><img class="center" src="/images/simple_query_result.png" title="Horible Output" ></p>
+
+<p>First&#8230; turn off the pager</p>
+
+<pre><code>\pset pager
+</code></pre>
+
+<p>Next, turn on expanded display</p>
+
+<pre><code>\x
+</code></pre>
+
+<p>Now&#8230; things look a bit better.  You dont loose your initial page by going into the pager, and your output is readable.  This is especially true for very wide columns as is always happens with GIS data in postgis.</p>
+
+<p><img class="center" src="/images/simple_query_better.png" title="Better Output" ></p>
 </div>
   
   
