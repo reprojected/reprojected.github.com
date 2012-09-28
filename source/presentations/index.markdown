@@ -11,6 +11,10 @@ wordpress_id: '9'
 
 **Most are focussing on Open Source GIS.**
 
+**03/12 -** Presentation given with Will Simms (presentation written by Will) on the 3 month apprenticeship program we participated in... focused on OSM
+
+[PDF Presentation Link](/presentations/gis_apprentice_2012/GISApprenticeship_final.pdf)
+
 **04/27/08 - ****[LinuxFestNW 2008 (Bellingham, WA)](http://www.linuxfestnorthwest.org/)
 **
 
