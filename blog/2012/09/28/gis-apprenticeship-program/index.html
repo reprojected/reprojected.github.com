@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Extracting extent from gdalinfo on the command line - Reprojected</title>
+  <title>GIS Apprenticeship Program - Reprojected</title>
   <meta name="author" content="Aaron Racicot">
 
   
-  <meta name="description" content="Had a question on #gdal IRC yesterday on how to get the extent from gdalinfo. Well&#8230; here is some command line hackity hack to get it in a &hellip;">
+  <meta name="description" content="This last spring (2012) I had the opportunity to host a local 7th grader for 3 months as an &#8220;apprentice&#8221;. This was the first time for me &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.reprojected.com/blog/2012/09/12/extracting-extent-from-gdalinfo-on-the-command-line">
+  <link rel="canonical" href="http://www.reprojected.com/blog/2012/09/28/gis-apprenticeship-program">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -85,7 +85,7 @@
   
   <header>
     
-      <h1 class="entry-title">Extracting Extent From Gdalinfo on the Command Line</h1>
+      <h1 class="entry-title">GIS Apprenticeship Program</h1>
     
     
       <p class="meta">
@@ -101,26 +101,24 @@
   
 
 
-<time datetime="2012-09-12T13:00:00-07:00" pubdate data-updated="true">Sep 12<span>th</span>, 2012</time>
+<time datetime="2012-09-28T11:51:00-07:00" pubdate data-updated="true">Sep 28<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Had a question on #gdal IRC yesterday on how to get the extent from <code>gdalinfo</code>.</p>
+<div class="entry-content"><p><img class="left" src="/images/will_gis.jpg" width="200" height="400" title="Will Simms" ></p>
 
-<p>Well&#8230; here is some command line hackity hack to get it in a format that can be passed into things like <code>gdal_translate</code> with the <code>-projwin</code> flag:</p>
+<p>This last spring (2012) I had the opportunity to host a local 7th grader for 3 months as an &#8220;apprentice&#8221;.  This was the first time for me as a small business owner to participate&#8230; but it turned out to be a great experience.</p>
 
-<pre><code>gdalinfo my.tif | awk '/(Upper Left)|(Lower Right)/' | awk '{gsub(/,|\)|\(/," ");print $3 " " $4}' | sed ':a;N;$!ba;s/\n/ /g'
-</code></pre>
+<p>We had the opportunity to <a href="http://www.openstreetmap.org/?lat=48.03622&amp;lon=-122.40634&amp;zoom=16&amp;layers=M">edit OSM data</a> in our local community, get out and do some GPS data collection, and <a href="http://www.serviceeducationadventure.org/">share our experience with other apprenticeship programs</a> in the region.</p>
 
-<p>From this you get some simple output of the UL and LR corners of the image:</p>
+<p>Will Simms (my apprentice and all around great kid) did some great work and as part of the program generated a presentation in OpenOffice (on an Ubuntu laptop) which you can check out here:</p>
 
-<pre><code>418081.036 3613108.883 1589231.036 2678608.883
-</code></pre>
+<p><a href="/presentations/gis_apprentice_2012/GISApprenticeship_final.pdf">Final presentation</a> <a href="/presentations/gis_apprentice_2012/GISApprenticeship_final.pdf"><img class="right" src="/images/will_first_page.png" title="Presentation" ></a></p>
 
-<p>Hope that helps someone else out&#8230;</p>
+<p>Looking forward to participating in the program again this spring&#8230; and encourage all you GIS folks out there to find a way to participate in education through your local school system&#8230; there are always lots of opportunities!</p>
 </div>
 
 
@@ -143,7 +141,7 @@
   
 
 
-<time datetime="2012-09-12T13:00:00-07:00" pubdate data-updated="true">Sep 12<span>th</span>, 2012</time>
+<time datetime="2012-09-28T11:51:00-07:00" pubdate data-updated="true">Sep 28<span>th</span>, 2012</time>
       
 
 
@@ -151,7 +149,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.reprojected.com/blog/2012/09/12/extracting-extent-from-gdalinfo-on-the-command-line/" data-via="reprojected" data-counturl="http://www.reprojected.com/blog/2012/09/12/extracting-extent-from-gdalinfo-on-the-command-line/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.reprojected.com/blog/2012/09/28/gis-apprenticeship-program/" data-via="reprojected" data-counturl="http://www.reprojected.com/blog/2012/09/28/gis-apprenticeship-program/" >Tweet</a>
   
   
   
@@ -160,10 +158,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2009/02/17/mirrormap/" title="Previous Post: MirrorMap">&laquo; MirrorMap</a>
+        <a class="basic-alignment left" href="/blog/2012/09/27/where-did-all-my-space-go/" title="Previous Post: Where did all my space go">&laquo; Where did all my space go</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/09/13/lets-quickly-batch-reproject-some-files-dot-dot-dot/" title="Next Post: Lets quickly batch reproject some files...">Lets quickly batch reproject some files... &raquo;</a>
       
     </p>
   </footer>

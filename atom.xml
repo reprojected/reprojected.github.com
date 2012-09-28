@@ -4,7 +4,7 @@
   <title><![CDATA[Reprojected]]></title>
   <link href="http://www.reprojected.com/atom.xml" rel="self"/>
   <link href="http://www.reprojected.com/"/>
-  <updated>2012-09-28T09:12:59-07:00</updated>
+  <updated>2012-09-28T12:22:33-07:00</updated>
   <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[GIS Apprenticeship Program]]></title>
+    <link href="http://www.reprojected.com/blog/2012/09/28/gis-apprenticeship-program/"/>
+    <updated>2012-09-28T11:51:00-07:00</updated>
+    <id>http://www.reprojected.com/blog/2012/09/28/gis-apprenticeship-program</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://www.reprojected.com/images/will_gis.jpg" width="200" height="400" title="Will Simms" ></p>
+
+<p>This last spring (2012) I had the opportunity to host a local 7th grader for 3 months as an &#8220;apprentice&#8221;.  This was the first time for me as a small business owner to participate&#8230; but it turned out to be a great experience.</p>
+
+<p>We had the opportunity to <a href="http://www.openstreetmap.org/?lat=48.03622&amp;lon=-122.40634&amp;zoom=16&amp;layers=M">edit OSM data</a> in our local community, get out and do some GPS data collection, and <a href="http://www.serviceeducationadventure.org/">share our experience with other apprenticeship programs</a> in the region.</p>
+
+<p>Will Simms (my apprentice and all around great kid) did some great work and as part of the program generated a presentation in OpenOffice (on an Ubuntu laptop) which you can check out here:</p>
+
+<p><a href="http://www.reprojected.com/presentations/gis_apprentice_2012/GISApprenticeship_final.pdf">Final presentation</a> <a href="http://www.reprojected.com/presentations/gis_apprentice_2012/GISApprenticeship_final.pdf"><img class="right" src="http://www.reprojected.com/images/will_first_page.png" title="Presentation" ></a></p>
+
+<p>Looking forward to participating in the program again this spring&#8230; and encourage all you GIS folks out there to find a way to participate in education through your local school system&#8230; there are always lots of opportunities!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Where did all my space go]]></title>
@@ -386,19 +405,6 @@ Quantum GIS - 1.1.0-Unstable-trunk
 <p>Enjoy, and I would be interested if there are things in the Open Source stack that people are interested in seeing a demo of&#8230;</p>
 
 <p>NOTE: you can link to the video page from the right pane of the blog window under <a href="http://www.reprojected.com/how-tos/video/">GIS How-To&#8217;s -> Video</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[None]]></title>
-    <link href="http://www.reprojected.com/blog/2007/04/23/45/"/>
-    <updated>2007-04-23T14:12:58-07:00</updated>
-    <id>http://www.reprojected.com/blog/2007/04/23/45</id>
-    <content type="html"><![CDATA[<p><img src="http://www.orurisa.org/graphics/hom_bnnr.gif" alt="URISA" /></p>
-
-<p>Just returned from a week on the road and one of the highlights was <a href="http://www.orurisa.org/events/gisinact/2007event/index.html">GIS in Action</a>, the <a href="http://www.orurisa.org/">Oregon and Southwest Washington URISA</a> annual GIS event.  There were over 300 people on site for 2 days of great talks, workshops and panels.  I was asked again to host one of the Open Source sessions at the conference and we participated on Wednesday.  I presented on the OSGeo, some sample applications of the Open Source GIS technology, and even had a quick online IRC chat with Chris Schmidt of Openlayers in front of the crowd.  We also had <a href="http://www.co.polk.or.us/Central%20Services/GIS.asp">Dean Anderson from Polk County</a> talking about doing open development when confined to a proprietary environment (often the case in government).  He had some great examples of developing Arc based software on SourceForge.  Finally we had <a href="http://staff.osuosl.org/~deborah/">Deborah Bryant</a> from the <a href="http://osuosl.org/">Oregon State University Open Source Lab (OSU OSL)</a> to talk about government uptake of Open Source technology.  She provides great insight to the front lines of getting Open Source accepted in main stream government.  She runs the <a href="http://goscon.org/">GOSCON</a> conference and is a wealth of knowledge on the current state of Open Source in government, big and small.</p>
-
-<p><a href="http://www.reprojected.com/presentations/">All of the presentations from our Open Source session are posted in my presentation archive&#8230;</a></p>
 ]]></content>
   </entry>
   
