@@ -17,4 +17,4 @@ Will Simms (my apprentice and all around great kid) did some great work and as p
 [Final presentation](/presentations/gis_apprentice_2012/GISApprenticeship_final.pdf) [{% img right /images/will_first_page.png Presentation %}](/presentations/gis_apprentice_2012/GISApprenticeship_final.pdf)
 
 
-Looking forward to participating in the program again this spring... and encourage all you GIS folks out there to find a way to participate in education through your local school system... there are always lots of opportunities!
+Looking forward to participating in the program again this spring... and encourage all you GIS folks out there to find a way to participate in education through your local school system... there are always lots of opportunities!!
