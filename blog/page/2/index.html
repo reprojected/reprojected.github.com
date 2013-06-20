@@ -9,7 +9,7 @@
   <meta name="author" content="Aaron Racicot">
 
   
-  <meta name="description" content="Well, its been a while since I have had a chance to even think about blogging. I am currently in-between projects and it has been a great time to &hellip;">
+  <meta name="description" content="Well, the title might better read &#8220;debugging PyQt applications&#8230;&#8221;, but much of my PyQt foo happens when developing QGIS plugins. In &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -82,6 +82,71 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/02/06/debugging-qgis-plugins/">Debugging QGIS Plugins&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-06T14:08:12-08:00" pubdate data-updated="true">Feb 6<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Well, the title might better read &#8220;debugging <a href="http://www.riverbankcomputing.co.uk/software/pyqt/intro">PyQt</a> applications&#8230;&#8221;, but much of my PyQt foo happens when developing <a href="http://qgisplugins.z-pulley.com/">QGIS plugins</a>. In general I am old school&#8230; <a href="http://www.gnu.org/software/emacs/">emacs</a> and <a href="http://www.gnu.org/software/gdb/">gdb</a> are my friends. When it comes to developing in PyQt there is one life saving code snip that will make your life much easier:</p>
+
+<pre><code>from PyQt4 import QtCore
+import pdb
+...
+QtCore.pyqtRemoveInputHook()
+pdb.set_trace()
+</code></pre>
+
+<p>This not only sets a trace (breakpoint) in your code, but it stops the PyQt event loop. The call to <a href="http://www.riverbankcomputing.co.uk/static/Docs/PyQt4/pyqt4ref.html#using-pyqt-from-the-python-shell">pyqtRemoveInputHook()</a> is a tasty little tidbit in PyQt to allow for this &#8220;stop it in it&#8217;s tracks&#8221; behavior.  This is a must have for debugging PyQGIS or Python based plugins.</p>
+
+<p>Once you are in <a href="http://docs.python.org/library/pdb.html">pdb</a>, you are set to go with interactive debugging:</p>
+
+<pre><code>--Return--
+&gt; /home/aaronr/.qgis/python/plugins/refmap/refmap.py(101)__init__()-&gt;None
+-&gt; pdb.set_trace()
+(Pdb) bt
+&lt;string&gt;(1)&lt;module&gt;()
+/home/aaronr/.qgis/python/plugins/refmap/refmap.py(144)initGui()
+-&gt; self.refmap_gui = ReferenceMapWindow(self.iface,flags,self)
+&gt; /home/aaronr/.qgis/python/plugins/refmap/refmap.py(101)__init__()-&gt;None
+-&gt; pdb.set_trace()
+(Pdb) print self
+&lt;refmap.refmap.ReferenceMapWindow object at 0x8cc6c2c&gt;
+(Pdb) print self.iface.mainWindow().windowTitle()
+Quantum GIS - 1.1.0-Unstable-trunk
+(Pdb)
+</code></pre>
+
+<p>Happy debugging!!!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -491,46 +556,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2007/06/18/look-whos-watching/">Look Who&#8217;s Watching&#8230;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-06-18T15:51:18-07:00" pubdate data-updated="true">Jun 18<span>th</span>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Well, to my amazement I found this little nugget in my logs this afternoon (click to see full size)&#8230;</p>
-
-<p><a href="http://media.reprojected.com/images/general/esri_qgis.jpg"><img src="http://media.reprojected.com/images/general/esri_qgis.jpg" alt="esri" /></a></p>
-
-<p>Looks like someone from Redlands is drinking afternoon coffee while watching some vids!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -548,6 +573,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/06/20/coastgis-2013/">CoastGIS 2013</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/05/28/foss4g-na-2013-was-a-home-run/">FOSS4G-NA 2013 - A Home Run!</a>
       </li>
     
@@ -561,10 +590,6 @@
     
       <li class="post">
         <a href="/blog/2012/09/27/some-simple-psql-formating-tips/">simple psql formating tips</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/13/lets-quickly-batch-reproject-some-files-dot-dot-dot/">Lets quickly batch reproject some files&#8230;</a>
       </li>
     
   </ul>

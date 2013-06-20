@@ -4,7 +4,7 @@
   <title><![CDATA[Reprojected]]></title>
   <link href="http://www.reprojected.com/atom.xml" rel="self"/>
   <link href="http://www.reprojected.com/"/>
-  <updated>2013-05-28T14:58:26-07:00</updated>
+  <updated>2013-06-20T10:28:56-07:00</updated>
   <id>http://www.reprojected.com/</id>
   <author>
     <name><![CDATA[Aaron Racicot]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[CoastGIS 2013]]></title>
+    <link href="http://www.reprojected.com/blog/2013/06/20/coastgis-2013/"/>
+    <updated>2013-06-20T09:22:00-07:00</updated>
+    <id>http://www.reprojected.com/blog/2013/06/20/coastgis-2013</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://www.reprojected.com/images/coastgis2013.jpg" width="200" height="300" title="CoastGIS-2013" ></p>
+
+<p>I had the good fortune of being invited to come give the opening keynote address for the <a href="http://coinatlantic.ca/index.php/home-coastgis">CoastGIS 2013</a> conference being held in Victoria BC this week.  I have to admit I was a backup choice for the keynote, as <a href="https://twitter.com/deepseadawn">Dawn Wright</a> of OSU and ESRI fame had to cancel.  I actually was really looking forward to re-connecting with Dawn and hearing her talk&#8230; she is always inspiring.  It turned out that this was a great opportunity for me to work with <a href="http://response.restoration.noaa.gov/">my team at NOAA</a> to come up with a compelling rendition of our experience during the Deepwater Horizon oil spill.  It also allowed me to re-connect at the conference with many people I used to work with in the &#8220;Marine GIS&#8221; space during my years at <a href="http://www.ecotrust.org/">Ecotrust</a>.</p>
+
+<p>The ferry ride up from Anacortes to Sidney BC was glorious&#8230; always a very relaxing a beautiful journey.  Straight down to Victoria to get settled for the night at the Marriot.  Was fortunate enough to hook up for dinner with my good buddy <a href="https://twitter.com/anthonylukach">Anthony Lukach</a> (from our local <a href="http://cugos.org/">CUGOS</a> group, who now lives in Victoria).  Off to the conference bright and early the next morning at the <a href="http://www.uvic.ca/">University of Victoria</a>.  A stroll through campus with my coffee and camera was a perfect way to kick of what was an excellent day.</p>
+
+<p><img class="right" src="http://www.reprojected.com/images/coastgis2013_ferry.jpg" width="400" height="275" title="CoastGIS-2013-Ferry" ></p>
+
+<p>The conference was opened with a song/prayer/story session from two elders from the local Coast and Straits Salish People.  It gave me goose bumps and I have to say I have been thinking about their message for the last 2 days.  The affects of modern society on indigenous people is a sad story without a clear solution&#8230; yet the positive energy from the speakers was inspiring.</p>
+
+<p>I had the privilege to kick the conference off with the story of <a href="http://response.restoration.noaa.gov/maps-and-spatial-data/environmental-response-management-application-erma">ERMA</a>&#8230; which is really the story of how we are trying to drive the next generation of &#8220;Response Management&#8221; tools from within NOAA.  It is a story of small teams of people doing big things, of positive lessons learned from horrific events, and the story of Open Source and Open Data.  From the reactions I got in person and on twitter I think the message resonated with the audience and I am very glad I was able to share our story.</p>
+
+<p><img class="left" src="http://www.reprojected.com/images/coastgis2013_tweet.png" width="400" height="275" title="CoastGIS-2013-Twitter" ></p>
+
+<p>For this talk I used the really cool JS/CSS presentation framework <a href="https://github.com/hakimel/reveal.js">Reveal.js</a>.  I love the concept of <a href="http://daringfireball.net/projects/markdown/">Markdown</a> (as this blog is using <a href="http://octopress.org/">Octopress</a> and markdown, hosted on <a href="http://pages.github.com/">gitpages</a>) so I ended up stripping down the Reveal.js stuff to basically allow me to write my entire presentation in a single Markdown file, yet render as a Reveal.js presentation.  The starter for that is on my github account called <a href="https://github.com/aaronr/revealz">revealz</a> (I like adding z&#8217;s to everything&#8230; since my company is called Z-Pulley Inc!).  I think I will be using this as the starter for presentations moving forward.  Using Markdown under version control just has so many benefits.</p>
+
+<p>The other great thing is that you can just post your slides to gitpages and be sharing&#8230; so in that light here are the slides from my CoastGIS 2013 keynote:</p>
+
+<p><a href="http://aaronr.github.io/coastgis2013"><img src="http://www.reprojected.com/images/coastgis2013_front.png" width="600" height="300" title="CoastGIS-2013-Slides" ></a>
+<a href="http://aaronr.github.io/coastgis2013">aaronr.github.io/coastgis2013</a></p>
+
+<p>My approach to making Reveal.js presentations is that the right arrow will cycle you through the main slides, but if the down arrow is active, use it to reveal backup points or more detail on a topic.  Pretty simple&#8230;</p>
+
+<p>I have also posted some <a href="https://www.flickr.com/photos/racicot/sets/72157634234402298/">pictures on Flickr</a> of the journey up to the conference.  We truly do live in one of the most spectacular parts of the world.</p>
+
+<p>To the <a href="http://coinatlantic.ca/index.php/contact/conference-committee">conference committee</a> of CoastGIS 2013, thanks for the invite.  I had a great time and I hope my participation added something fun and interesting to your conference!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[FOSS4G-NA 2013 - A Home Run!]]></title>
@@ -414,19 +448,6 @@ Quantum GIS - 1.1.0-Unstable-trunk
 <p>Clip #6 (<a href="http://media.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_6.m3u">streaming</a>  or  <a href="http://media.reprojected.com/presentations/Presentations/FOSS4G_2007/foss4g_qgis_workshop_6.mp3">mp3</a>)</p>
 
 <p>We also had a great <a href="http://wiki.osgeo.org/index.php/FOSS4G2007_BOF_Sessions">QGIS BOF</a> session which was well attended by a <a href="http://media.reprojected.com/presentations/Presentations/FOSS4G_2007/bof_2.jpg">diverse group</a> of <a href="http://media.reprojected.com/presentations/Presentations/FOSS4G_2007/bof_3.jpg">developers</a>, <a href="http://media.reprojected.com/presentations/Presentations/FOSS4G_2007/bof_1.jpg">users</a>, and interested newbies.  All in all I think QGIS had a great showing at FOSS4G and am looking forward to pushing many of the ideas talked about there forward.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Look who's watching...]]></title>
-    <link href="http://www.reprojected.com/blog/2007/06/18/look-whos-watching/"/>
-    <updated>2007-06-18T15:51:18-07:00</updated>
-    <id>http://www.reprojected.com/blog/2007/06/18/look-whos-watching</id>
-    <content type="html"><![CDATA[<p>Well, to my amazement I found this little nugget in my logs this afternoon (click to see full size)&#8230;</p>
-
-<p><a href="http://media.reprojected.com/images/general/esri_qgis.jpg"><img src="http://media.reprojected.com/images/general/esri_qgis.jpg" alt="esri" /></a></p>
-
-<p>Looks like someone from Redlands is drinking afternoon coffee while watching some vids!</p>
 ]]></content>
   </entry>
   
